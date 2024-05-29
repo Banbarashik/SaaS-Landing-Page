@@ -1,0 +1,186 @@
+:root {
+  // COLOR
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-primary-900: #1d1178;
+  --color-primary-800: #2d1d92;
+  --color-primary-700: #432eb5;
+  --color-primary-600: #5e43d8;
+  --color-primary-500: #7c5cfc;
+  --color-primary-400: #9f84fd;
+  --color-primary-300: #b49dfe;
+  --color-primary-200: #cebefe;
+  --color-primary-100: #e7defe;
+
+  --color-succsess-900: #3b6506;
+  --color-succsess-800: #4c7a0b;
+  --color-succsess-700: #659711;
+  --color-succsess-600: #7fb519;
+  --color-succsess-500: #9cd323;
+  --color-succsess-400: #bce455;
+  --color-succsess-300: #d3f178;
+  --color-succsess-200: #e8faa6;
+  --color-succsess-100: #f5fcd2;
+
+  --color-error-900: #7a0619;
+  --color-error-800: #930b16;
+  --color-error-700: #b71112;
+  --color-error-600: #db2719;
+  --color-error-500: #ff4423;
+  --color-error-400: #ff7f59;
+  --color-error-300: #ffa37a;
+  --color-error-200: #ffc8a6;
+  --color-error-100: #ffe7d3;
+
+  --color-warning-900: #7a4d0b;
+  --color-warning-800: #936312;
+  --color-warning-700: #b7821d;
+  --color-warning-600: #dba32a;
+  --color-warning-500: #ffc73a;
+  --color-warning-400: #ffd96b;
+  --color-warning-300: #ffe488;
+  --color-warning-200: #ffefb0;
+  --color-warning-100: #fff8d7;
+
+  --color-information-900: #102e7a;
+  --color-information-800: #1a4393;
+  --color-information-700: #2a60b7;
+  --color-information-600: #3d81db;
+  --color-information-500: #54a6ff;
+  --color-information-400: #7ec2ff;
+  --color-information-300: #98d3ff;
+  --color-information-200: #bae5ff;
+  --color-information-100: #dcf3ff;
+
+  --color-secondary-900: #040815;
+  --color-secondary-800: #080c19;
+  --color-secondary-700: #0d121f;
+  --color-secondary-600: #131825;
+  --color-secondary-500: #1a202c;
+  --color-secondary-400: #596780;
+  --color-secondary-300: #90a3bf;
+  --color-secondary-200: #c3d4e9;
+  --color-secondary-100: #e0e9f4;
+
+  // TYPOGRAPHY
+  --line-height-basic: 1.5;
+  --line-height-auto: normal;
+
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --text-color: var(--color-black);
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 36px;
+  --text-4xl: 40px;
+  --text-5xl: 72px;
+
+  --text-regular: 400;
+  --text-medium: 500;
+  --text-semibold: 600;
+  --text-bold: 700;
+
+  // ELEMENTS
+
+  // BUTTON (primary, large)
+  --btnRadius: 60px;
+  --btnPadding: 14px 23.5px;
+  --btnOutlineColor: transparent;
+  --btnBg: var(--color-primary-500);
+  --btnTextColor: var(--color-white);
+  --btnTextSize: var(--text-base);
+  --btnOpacity: 1;
+  --btnDisabledOpacity: 0.4;
+}
+
+//* temporary button element reset
+button {
+  all: unset; /* Reset all inherited and non-inherited properties */
+  display: inline-block; /* Ensure it behaves like a block-level element inside inline context */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  font-family: inherit; /* Inherit font family from parent */
+  font-size: inherit; /* Inherit font size from parent */
+  color: inherit; /* Inherit color from parent */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove text decoration */
+  cursor: pointer; /* Ensure the cursor indicates the button is clickable */
+  outline: none; /* Remove default outline */
+  -webkit-appearance: none; /* Remove default WebKit appearance */
+  -moz-appearance: none; /* Remove default Mozilla appearance */
+  appearance: none; /* Remove default appearance for all browsers */
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+
+  line-height: var(--line-height-basic);
+}
+
+.btn {
+  padding: var(--btnPadding);
+  border-radius: var(--btnRadius);
+
+  font-size: var(--btnTextSize);
+
+  color: var(--btnTextColor);
+  background-color: var(--btnBg);
+  box-shadow: inset 0 0 0 1px var(--btnOutlineColor);
+  opacity: var(--btnOpacity);
+
+  // SIZE
+  &--sm {
+    --btnPadding: 5px 16px;
+    --btnTextSize: var(--text-xs);
+  }
+  &--md {
+    --btnPadding: 9px 16px;
+    --btnTextSize: var(--text-xs);
+  }
+
+  // ROLE/STYLE
+  &--primary {
+    &:focus {
+      --btnOutlineColor: var(--color-primary-200);
+    }
+    &:hover {
+      --btnBg: var(--color-primary-600);
+    }
+    &:active {
+      --btnBg: var(--color-primary-700);
+    }
+    &:disabled {
+      --btnOpacity: var(--btnDisabledOpacity);
+    }
+  }
+
+  &--secondary {
+    --btnBg: var(--color-white);
+    --btnTextColor: var(--color-secondary-500);
+    --btnOutlineColor: var(--color-secondary-200);
+
+    &:focus {
+      --btnOutlineColor: var(--color-secondary-100);
+    }
+    &:hover {
+      --btnOutlineColor: var(--color-secondary-400);
+    }
+    &:active {
+      --btnBg: var(--color-secondary-100);
+      --btnOutlineColor: var(--color-secondary-200);
+    }
+    &:disabled {
+      --btnOpacity: var(--color-secondary-100);
+    }
+  }
+}
