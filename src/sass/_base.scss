@@ -138,6 +138,14 @@ body {
   box-shadow: inset 0 0 0 1px var(--btnOutlineColor);
   opacity: var(--btnOpacity);
 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &--icon {
+    --btnPadding: 8px;
+  }
+
   // SIZE
   &--sm {
     --btnPadding: 5px 16px;
@@ -148,7 +156,7 @@ body {
     --btnTextSize: var(--text-xs);
   }
 
-  // ROLE/STYLE
+  // TYPE
   &--primary {
     &:focus {
       --btnOutlineColor: var(--color-primary-200);
@@ -163,7 +171,6 @@ body {
       --btnOpacity: var(--btnDisabledOpacity);
     }
   }
-
   &--secondary {
     --btnBg: var(--color-white);
     --btnTextColor: var(--color-secondary-500);
@@ -180,7 +187,28 @@ body {
       --btnOutlineColor: var(--color-secondary-200);
     }
     &:disabled {
-      --btnOpacity: var(--color-secondary-100);
+      --btnTextColor: var(--color-secondary-400);
+      --btnOutlineColor: var(--color-secondary-100);
+    }
+  }
+  &--minimal {
+    --btnBg: transparent;
+    --btnTextColor: var(--color-secondary-300);
+
+    &:focus {
+      --btnTextColor: var(--color-secondary-500);
+      --btnOutlineColor: var(--color-secondary-300);
+    }
+    &:hover {
+      --btnBg: var(--color-white);
+      --btnTextColor: var(--color-secondary-500);
+    }
+    &:active {
+      --btnBg: var(--color-secondary-100);
+      --btnTextColor: var(--color-secondary-500);
+    }
+    &:disabled {
+      --btnTextColor: var(--color-secondary-400);
     }
   }
 }
