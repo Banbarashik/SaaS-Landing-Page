@@ -97,6 +97,10 @@
   --btnTextSize: var(--text-base);
   --btnOpacity: 1;
   --btnDisabledOpacity: 0.4;
+
+  // TESTIMONY
+  --testimonyRadius: 12px;
+  --testimonyTextColor: var(--color-white);
 }
 
 //* temporary button element reset
@@ -125,6 +129,33 @@ body {
   font-size: var(--text-base);
 
   line-height: var(--line-height-basic);
+}
+
+.testimonial {
+  max-width: 384px;
+  padding: 32px;
+  border-radius: var(--testimonyRadius);
+
+  background-color: var(--color-black);
+
+  color: var(--testimonyTextColor);
+
+  &__heading {
+    font-size: var(--text-md);
+    font-weight: var(--text-semibold);
+  }
+  &__body {
+    font-weight: var(--text-medium);
+  }
+  &__author {
+    &-name {
+      font-size: var(--text-md);
+      font-weight: var(--text-bold);
+    }
+    &-description {
+      font-size: var(--text-sm);
+    }
+  }
 }
 
 .btn {
