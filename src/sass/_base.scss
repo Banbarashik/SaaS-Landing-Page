@@ -1,3 +1,12 @@
+@mixin horizontalLine($height: 1px, $bg, $opacity: 1, $x: 0px, $y: 0px) {
+  content: '';
+  display: block;
+  height: $height;
+  background-color: $bg;
+  opacity: $opacity;
+  transform: translate($x, $y);
+}
+
 :root {
   // COLOR
   --color-black: #000;
@@ -86,6 +95,12 @@
   --text-semibold: 600;
   --text-bold: 700;
 
+  // SPACING
+
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 66px;
+
   // ELEMENTS
 
   // BUTTON (primary, large)
@@ -141,11 +156,21 @@ body {
   color: var(--testimonyTextColor);
 
   &__heading {
+    margin-bottom: var(--spacing-sm);
     font-size: var(--text-md);
     font-weight: var(--text-semibold);
   }
   &__body {
+    margin-bottom: var(--spacing-lg);
     font-weight: var(--text-medium);
+
+    &::after {
+      @include horizontalLine(
+        $bg: var(--color-secondary-300),
+        $opacity: 0.2,
+        $y: var(--spacing-md)
+      );
+    }
   }
   &__author {
     &-name {
