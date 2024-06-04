@@ -77,18 +77,18 @@
   --line-height-auto: normal;
 
   --font-family: 'Plus Jakarta Sans', sans-serif;
-  --text-color: var(--color-black);
+  --font-color: var(--color-black);
 
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 16px;
-  --text-md: 18px;
-  --text-lg: 20px;
-  --text-xl: 24px;
-  --text-2xl: 32px;
-  --text-3xl: 36px;
-  --text-4xl: 40px;
-  --text-5xl: 72px;
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 2rem; /* 32px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-5xl: 2.5rem; /* 40px */
+  --text-6xl: 4.5rem; /* 72px */
 
   --text-regular: 400;
   --text-medium: 500;
@@ -97,9 +97,11 @@
 
   // SPACING
 
-  --spacing-sm: 16px;
-  --spacing-md: 32px;
-  --spacing-lg: 66px;
+  --spacing-xs: 0.875rem; /* 14px */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 4.125rem; /* 66px */
 
   // ELEMENTS
 
@@ -115,7 +117,7 @@
 
   // TESTIMONY
   --testimonyRadius: 12px;
-  --testimonyTextColor: var(--color-white);
+  --testimonyTextColor: var(--color-secondary-100);
 }
 
 //* temporary button element reset
@@ -148,16 +150,16 @@ body {
 
 .testimonial {
   max-width: 384px;
-  padding: 32px;
+  padding: var(--spacing-md);
   border-radius: var(--testimonyRadius);
 
-  background-color: var(--color-black);
+  background-color: var(--color-secondary-500);
 
   color: var(--testimonyTextColor);
 
   &__heading {
     margin-bottom: var(--spacing-sm);
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     font-weight: var(--text-semibold);
   }
   &__body {
@@ -174,7 +176,7 @@ body {
   }
   &__author {
     &-name {
-      font-size: var(--text-md);
+      font-size: var(--text-lg);
       font-weight: var(--text-bold);
     }
     &-description {
