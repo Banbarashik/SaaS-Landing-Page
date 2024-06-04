@@ -99,9 +99,11 @@
 
   --spacing-xs: 0.875rem; /* 14px */
   --spacing-sm: 1rem; /* 16px */
-  --spacing-md: 1.5rem; /* 24px */
-  --spacing-lg: 2rem; /* 32px */
-  --spacing-xl: 4.125rem; /* 66px */
+  --spacing-md: 1.25rem; /* 20px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4.125rem; /* 66px */
 
   // ELEMENTS
 
@@ -114,10 +116,6 @@
   --btnTextSize: var(--text-base);
   --btnOpacity: 1;
   --btnDisabledOpacity: 0.4;
-
-  // TESTIMONY
-  --testimonyRadius: 12px;
-  --testimonyTextColor: var(--color-secondary-100);
 }
 
 //* temporary button element reset
@@ -149,21 +147,38 @@ body {
 }
 
 .testimonial {
+  --testimonial-padding: var(--spacing-md);
+  --heading-margin-bottom: var(--spacing-md);
+  --heading-font-size: var(--text-base);
+  --body-margin-bottom: var(--spacing-2xl);
+  --authorName-font-size: var(--text-base);
+  --authorDescription-font-size: var(--text-xs);
+
+  @media (min-width: 375px) {
+    --testimonial-padding: var(--spacing-lg);
+    --heading-margin-bottom: var(--spacing-sm);
+    --heading-font-size: var(--text-lg);
+    --body-margin-bottom: var(--spacing-3xl);
+    --authorName-font-size: var(--text-lg);
+    --authorDescription-font-size: var(--text-sm);
+  }
+
   max-width: 384px;
-  padding: var(--spacing-md);
-  border-radius: var(--testimonyRadius);
+  padding: var(--testimonial-padding);
+  border-radius: 12px;
 
   background-color: var(--color-secondary-500);
-
-  color: var(--testimonyTextColor);
+  color: var(--color-secondary-100);
 
   &__heading {
-    margin-bottom: var(--spacing-sm);
-    font-size: var(--text-lg);
+    margin-bottom: var(--heading-margin-bottom);
+    font-size: var(--heading-font-size);
     font-weight: var(--text-semibold);
+    color: var(--color-white);
   }
+
   &__body {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--body-margin-bottom);
     font-weight: var(--text-medium);
 
     &::after {
@@ -174,13 +189,14 @@ body {
       );
     }
   }
+
   &__author {
     &-name {
-      font-size: var(--text-lg);
+      font-size: var(--authorName-font-size);
       font-weight: var(--text-bold);
     }
     &-description {
-      font-size: var(--text-sm);
+      font-size: var(--authorDescription-font-size);
     }
   }
 }
