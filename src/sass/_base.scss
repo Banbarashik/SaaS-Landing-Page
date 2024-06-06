@@ -104,8 +104,9 @@ $spacing-xl: 1rem; /* 16px */
 $spacing-2xl: 1.25rem; /* 20px */
 $spacing-3xl: 1.5rem; /* 24px */
 $spacing-4xl: 2rem; /* 32px */
-$spacing-5xl: 3rem; /* 48px */
-$spacing-6xl: 4rem; /* 64px */
+$spacing-5xl: 2.5rem; /* 40px */
+$spacing-6xl: 3rem; /* 48px */
+$spacing-7xl: 4rem; /* 64px */
 
 $breakpoint: 375px;
 
@@ -151,16 +152,21 @@ body {
   background-color: $color-secondary-100;
 
   &__heading-name {
+    margin-bottom: $spacing-md;
+
     font-size: var(--headingName-font-size);
     font-weight: $text-semibold;
     color: $color-secondary-700;
   }
   &__heading-annotation {
+    margin-bottom: $spacing-3xl;
+
     font-size: var(--headingAnnotation-font-size);
     color: $color-secondary-400;
   }
 
   &__price {
+    margin-bottom: $spacing-3xl;
   }
   &__amount {
     font-size: var(--amount-font-size);
@@ -180,6 +186,8 @@ body {
   }
 
   &__features-list {
+    margin-bottom: $spacing-5xl;
+
     font-size: var(--feature-font-size);
     font-weight: $text-medium;
     color: $color-secondary-700;
@@ -198,7 +206,7 @@ body {
   --testimonial-padding: #{$spacing-2xl};
   --heading-margin-bottom: #{$spacing-2xl};
   --heading-font-size: #{$text-base};
-  --body-margin-bottom: #{$spacing-5xl};
+  --body-margin-bottom: #{$spacing-6xl};
   --authorName-font-size: #{$text-base};
   --authorDescription-font-size: #{$text-xs};
 
@@ -206,7 +214,7 @@ body {
     --testimonial-padding: #{$spacing-3xl};
     --heading-margin-bottom: #{$spacing-xl};
     --heading-font-size: #{$text-lg};
-    --body-margin-bottom: #{$spacing-6xl};
+    --body-margin-bottom: #{$spacing-7xl};
     --authorName-font-size: #{$text-lg};
     --authorDescription-font-size: #{$text-sm};
   }
