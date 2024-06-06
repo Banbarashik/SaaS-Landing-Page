@@ -98,13 +98,14 @@ $text-bold: 700;
 // SPACING
 $spacing-xs: 0.25rem; /* 4px */
 $spacing-sm: 0.5rem; /* 8px */
-$spacing-md: 0.875rem; /* 14px */
-$spacing-lg: 1rem; /* 16px */
-$spacing-xl: 1.25rem; /* 20px */
-$spacing-2xl: 1.5rem; /* 24px */
-$spacing-3xl: 2rem; /* 32px */
-$spacing-4xl: 3rem; /* 48px */
-$spacing-5xl: 4rem; /* 64px */
+$spacing-md: 0.75rem; /* 12px */
+$spacing-lg: 0.875rem; /* 14px */
+$spacing-xl: 1rem; /* 16px */
+$spacing-2xl: 1.25rem; /* 20px */
+$spacing-3xl: 1.5rem; /* 24px */
+$spacing-4xl: 2rem; /* 32px */
+$spacing-5xl: 3rem; /* 48px */
+$spacing-6xl: 4rem; /* 64px */
 
 $breakpoint: 375px;
 
@@ -121,23 +122,23 @@ body {
 }
 
 .pricing {
-  --pricing-padding: #{$spacing-2xl};
+  --pricing-padding: #{$spacing-3xl};
   --headingName-font-size: #{$text-2xl};
   --headingAnnotation-font-size: #{$text-sm};
   --amount-font-size: #{$text-3xl};
   --period-font-size: #{$text-sm};
   --description-font-size: #{$text-sm};
-  --description-margin-bottom: #{$spacing-2xl};
+  --description-margin-bottom: #{$spacing-3xl};
   --feature-font-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
-    --pricing-padding: #{$spacing-3xl};
+    --pricing-padding: #{$spacing-4xl};
     --headingName-font-size: #{$text-3xl};
     --headingAnnotation-font-size: #{$text-base};
     --amount-font-size: #{$text-5xl};
     --period-font-size: #{$text-lg};
     --description-font-size: #{$text-base};
-    --description-margin-bottom: #{$spacing-3xl};
+    --description-margin-bottom: #{$spacing-4xl};
     --feature-font-size: #{$text-lg};
   }
 
@@ -180,18 +181,18 @@ body {
 }
 
 .testimonial {
-  --testimonial-padding: #{$spacing-xl};
-  --heading-margin-bottom: #{$spacing-xl};
+  --testimonial-padding: #{$spacing-2xl};
+  --heading-margin-bottom: #{$spacing-2xl};
   --heading-font-size: #{$text-base};
-  --body-margin-bottom: #{$spacing-4xl};
+  --body-margin-bottom: #{$spacing-5xl};
   --authorName-font-size: #{$text-base};
   --authorDescription-font-size: #{$text-xs};
 
   @media (min-width: $breakpoint) {
-    --testimonial-padding: #{$spacing-2xl};
-    --heading-margin-bottom: #{$spacing-lg};
+    --testimonial-padding: #{$spacing-3xl};
+    --heading-margin-bottom: #{$spacing-xl};
     --heading-font-size: #{$text-lg};
-    --body-margin-bottom: #{$spacing-5xl};
+    --body-margin-bottom: #{$spacing-6xl};
     --authorName-font-size: #{$text-lg};
     --authorDescription-font-size: #{$text-sm};
   }
@@ -218,7 +219,7 @@ body {
       @include horizontalLine(
         $color-secondary-300,
         $opacity: 0.2,
-        $y: $spacing-xl
+        $y: $spacing-2xl
       );
     }
   }
@@ -239,7 +240,7 @@ body {
   align-items: center;
   gap: $spacing-sm;
 
-  padding: $spacing-md $spacing-2xl;
+  padding: $spacing-lg $spacing-3xl;
   border-radius: 60px;
 
   font-size: $text-base;
@@ -253,11 +254,11 @@ body {
 
   // SIZE
   &--sm {
-    padding: $spacing-xs $spacing-lg;
+    padding: $spacing-xs $spacing-xl;
     font-size: $text-xs;
   }
   &--md {
-    padding: $spacing-sm $spacing-lg;
+    padding: $spacing-sm $spacing-xl;
     font-size: $text-xs;
   }
 
