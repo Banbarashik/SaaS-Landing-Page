@@ -104,18 +104,6 @@
   --spacing-xl: 2rem; /* 32px */
   --spacing-2xl: 3rem; /* 48px */
   --spacing-3xl: 4.125rem; /* 66px */
-
-  // ELEMENTS
-
-  // BUTTON (primary, large)
-  --btnRadius: 60px;
-  --btnPadding: 14px 23.5px;
-  --btnOutlineColor: transparent;
-  --btnBg: var(--color-primary-500);
-  --btnTextColor: var(--color-white);
-  --btnTextSize: var(--text-base);
-  --btnOpacity: 1;
-  --btnDisabledOpacity: 0.4;
 }
 
 //* temporary button element reset
@@ -202,6 +190,15 @@ body {
 }
 
 .btn {
+  --btnRadius: 60px;
+  --btnPadding: 14px 23.5px;
+  --btnOutlineColor: transparent;
+  --btnBg: var(--color-primary-500);
+  --btnTextColor: var(--color-white);
+  --btnTextSize: var(--text-base);
+  --btnOpacity: 1;
+  --btnDisabledOpacity: 0.4;
+
   padding: var(--btnPadding);
   border-radius: var(--btnRadius);
 
