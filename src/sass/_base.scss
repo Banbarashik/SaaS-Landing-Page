@@ -146,9 +146,11 @@ body {
     &-name {
       font-size: var(--headingName-font-size);
       font-weight: $text-semibold;
+      color: $color-secondary-700;
     }
     &-annotation {
       font-size: var(--headingAnnotation-font-size);
+      color: $color-secondary-400;
     }
   }
 
@@ -157,22 +159,28 @@ body {
   &__amount {
     font-size: var(--amount-font-size);
     font-weight: $text-semibold;
+    color: $color-secondary-700;
   }
   &__period {
     font-size: var(--period-font-size);
     font-weight: $text-medium;
+    color: $color-secondary-400;
   }
 
   &__description {
     margin-bottom: var(--description-margin-bottom);
     font-size: var(--description-font-size);
+    color: $color-secondary-500;
   }
 
   &__features-list {
     font-size: var(--feature-font-size);
+    font-weight: $text-medium;
+    color: $color-secondary-700;
   }
   &__feature {
     &--disabled {
+      color: $color-secondary-400;
     }
   }
 
