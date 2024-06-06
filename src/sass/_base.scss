@@ -1,10 +1,14 @@
-@mixin horizontalLine($height: 1px, $bg, $opacity: 1, $x: 0px, $y: 0px) {
+@mixin horizontalLine($color, $height: 1px, $opacity: 1, $x: 0px, $y: 0px) {
   content: '';
   display: block;
   height: $height;
-  background-color: $bg;
+  background-color: $color;
   opacity: $opacity;
   transform: translate($x, $y);
+}
+
+@mixin insetOutline($color, $width: 1px) {
+  box-shadow: inset 0 0 0 $width $color;
 }
 
 // COLOR
@@ -150,7 +154,7 @@ body {
 
     &::after {
       @include horizontalLine(
-        $bg: $color-secondary-300,
+        $color-secondary-300,
         $opacity: 0.2,
         $y: $spacing-md
       );
@@ -198,7 +202,7 @@ body {
   // TYPE
   &--primary {
     &:focus {
-      box-shadow: inset 0 0 0 1px $color-primary-200;
+      @include insetOutline($color-primary-200);
     }
     &:hover {
       background-color: $color-primary-600;
@@ -211,23 +215,23 @@ body {
     }
   }
   &--secondary {
+    @include insetOutline($color-secondary-200);
     background-color: $color-primary-0;
     color: $color-secondary-500;
-    box-shadow: inset 0 0 0 1px $color-secondary-200;
 
     &:focus {
-      box-shadow: inset 0 0 0 1px $color-secondary-100;
+      @include insetOutline($color-secondary-100);
     }
     &:hover {
-      box-shadow: inset 0 0 0 1px $color-secondary-400;
+      @include insetOutline($color-secondary-400);
     }
     &:active {
+      @include insetOutline($color-secondary-200);
       background-color: $color-secondary-100;
-      box-shadow: inset 0 0 0 1px $color-secondary-200;
     }
     &:disabled {
+      @include insetOutline($color-secondary-100);
       color: $color-secondary-400;
-      box-shadow: inset 0 0 0 1px $color-secondary-100;
     }
   }
   &--minimal {
@@ -235,8 +239,8 @@ body {
     color: $color-secondary-300;
 
     &:focus {
+      @include insetOutline($color-secondary-300);
       color: $color-secondary-500;
-      box-shadow: inset 0 0 0 1px $color-secondary-300;
     }
     &:hover {
       background-color: $color-primary-0;
