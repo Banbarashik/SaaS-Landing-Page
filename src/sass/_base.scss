@@ -8,9 +8,6 @@
 }
 
 // COLOR
-$color-black: #000;
-$color-white: #fff;
-
 $color-primary-900: #1d1178;
 $color-primary-800: #2d1d92;
 $color-primary-700: #432eb5;
@@ -20,6 +17,7 @@ $color-primary-400: #9f84fd;
 $color-primary-300: #b49dfe;
 $color-primary-200: #cebefe;
 $color-primary-100: #e7defe;
+$color-primary-0: #ffffff;
 
 $color-succsess-900: #3b6506;
 $color-succsess-800: #4c7a0b;
@@ -76,7 +74,6 @@ $line-height-basic: 1.5;
 $line-height-auto: normal;
 
 $font-family: 'Plus Jakarta Sans', sans-serif;
-$font-color: $color-black;
 
 $text-xs: 0.75rem; /* 12px */
 $text-sm: 0.875rem; /* 14px */
@@ -104,25 +101,9 @@ $spacing-xl: 2rem; /* 32px */
 $spacing-2xl: 3rem; /* 48px */
 $spacing-3xl: 4.125rem; /* 66px */
 
-//* temporary button element reset
-button {
-  all: unset; /* Reset all inherited and non-inherited properties */
-  display: inline-block; /* Ensure it behaves like a block-level element inside inline context */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  padding: 0; /* Reset padding */
-  margin: 0; /* Reset margin */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  font-family: inherit; /* Inherit font family from parent */
-  font-size: inherit; /* Inherit font size from parent */
-  color: inherit; /* Inherit color from parent */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove text decoration */
-  cursor: pointer; /* Ensure the cursor indicates the button is clickable */
-  outline: none; /* Remove default outline */
-  -webkit-appearance: none; /* Remove default WebKit appearance */
-  -moz-appearance: none; /* Remove default Mozilla appearance */
-  appearance: none; /* Remove default appearance for all browsers */
+:root {
+  --light-text: #{$color-secondary-400};
+  --dark-text: #{$color-secondary-900};
 }
 
 body {
@@ -160,7 +141,7 @@ body {
     margin-bottom: var(--heading-margin-bottom);
     font-size: var(--heading-font-size);
     font-weight: $text-semibold;
-    color: $color-white;
+    color: $color-primary-0;
   }
 
   &__body {
@@ -192,7 +173,7 @@ body {
   --btnPadding: 14px 23.5px;
   --btnOutlineColor: transparent;
   --btnBg: #{$color-primary-500};
-  --btnTextColor: #{$color-white};
+  --btnTextColor: #{$color-primary-0};
   --btnTextSize: #{$text-base};
   --btnOpacity: 1;
   --btnDisabledOpacity: 0.4;
@@ -241,7 +222,7 @@ body {
     }
   }
   &--secondary {
-    --btnBg: #{$color-white};
+    --btnBg: #{$color-primary-0};
     --btnTextColor: #{$color-secondary-500};
     --btnOutlineColor: #{$color-secondary-200};
 
@@ -269,7 +250,7 @@ body {
       --btnOutlineColor: #{$color-secondary-300};
     }
     &:hover {
-      --btnBg: #{$color-white};
+      --btnBg: #{$color-primary-0};
       --btnTextColor: #{$color-secondary-500};
     }
     &:active {
