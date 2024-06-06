@@ -169,96 +169,85 @@ body {
 }
 
 .btn {
-  --btnRadius: 60px;
-  --btnPadding: 14px 23.5px;
-  --btnOutlineColor: transparent;
-  --btnBg: #{$color-primary-500};
-  --btnTextColor: #{$color-primary-0};
-  --btnTextSize: #{$text-base};
-  --btnOpacity: 1;
-  --btnDisabledOpacity: 0.4;
-
-  padding: var(--btnPadding);
-  border-radius: var(--btnRadius);
-
-  font-size: var(--btnTextSize);
-
-  color: var(--btnTextColor);
-  background-color: var(--btnBg);
-  box-shadow: inset 0 0 0 1px var(--btnOutlineColor);
-  opacity: var(--btnOpacity);
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
+  padding: 14px 24px;
+  border-radius: 60px;
+
+  font-size: $text-base;
+
+  color: $color-primary-0;
+  background-color: $color-primary-500;
+
   &--icon {
-    --btnPadding: 8px;
+    padding: 8px;
   }
 
   // SIZE
   &--sm {
-    --btnPadding: 5px 16px;
-    --btnTextSize: #{$text-xs};
+    padding: 5px 16px;
+    font-size: $text-xs;
   }
   &--md {
-    --btnPadding: 9px 16px;
-    --btnTextSize: #{$text-xs};
+    padding: 9px 16px;
+    font-size: $text-xs;
   }
 
   // TYPE
   &--primary {
     &:focus {
-      --btnOutlineColor: #{$color-primary-200};
+      box-shadow: inset 0 0 0 1px $color-primary-200;
     }
     &:hover {
-      --btnBg: #{$color-primary-600};
+      background-color: $color-primary-600;
     }
     &:active {
-      --btnBg: #{$color-primary-700};
+      background-color: $color-primary-700;
     }
     &:disabled {
-      --btnOpacity: var(--btnDisabledOpacity);
+      opacity: 0.4;
     }
   }
   &--secondary {
-    --btnBg: #{$color-primary-0};
-    --btnTextColor: #{$color-secondary-500};
-    --btnOutlineColor: #{$color-secondary-200};
+    background-color: $color-primary-0;
+    color: $color-secondary-500;
+    box-shadow: inset 0 0 0 1px $color-secondary-200;
 
     &:focus {
-      --btnOutlineColor: #{$color-secondary-100};
+      box-shadow: inset 0 0 0 1px $color-secondary-100;
     }
     &:hover {
-      --btnOutlineColor: #{$color-secondary-400};
+      box-shadow: inset 0 0 0 1px $color-secondary-400;
     }
     &:active {
-      --btnBg: #{$color-secondary-100};
-      --btnOutlineColor: #{$color-secondary-200};
+      background-color: $color-secondary-100;
+      box-shadow: inset 0 0 0 1px $color-secondary-200;
     }
     &:disabled {
-      --btnTextColor: #{$color-secondary-400};
-      --btnOutlineColor: #{$color-secondary-100};
+      color: $color-secondary-400;
+      box-shadow: inset 0 0 0 1px $color-secondary-100;
     }
   }
   &--minimal {
-    --btnBg: transparent;
-    --btnTextColor: #{$color-secondary-300};
+    background-color: transparent;
+    color: $color-secondary-300;
 
     &:focus {
-      --btnTextColor: #{$color-secondary-500};
-      --btnOutlineColor: #{$color-secondary-300};
+      color: $color-secondary-500;
+      box-shadow: inset 0 0 0 1px $color-secondary-300;
     }
     &:hover {
-      --btnBg: #{$color-primary-0};
-      --btnTextColor: #{$color-secondary-500};
+      background-color: $color-primary-0;
+      color: $color-secondary-500;
     }
     &:active {
-      --btnBg: #{$color-secondary-100};
-      --btnTextColor: #{$color-secondary-500};
+      background-color: $color-secondary-100;
+      color: $color-secondary-500;
     }
     &:disabled {
-      --btnTextColor: #{$color-secondary-400};
+      color: $color-secondary-400;
     }
   }
 }
