@@ -141,22 +141,31 @@ body {
 
   &__heading {
     &-name {
+      font-size: var(--headingName-font-size);
+      font-weight: $text-semibold;
     }
     &-annotation {
+      font-size: var(--headingAnnotation-font-size);
     }
   }
 
   &__price {
   }
   &__amount {
+    font-size: var(--amount-font-size);
+    font-weight: $text-semibold;
   }
   &__period {
+    font-size: var(--period-font-size);
+    font-weight: $text-medium;
   }
 
   &__description {
+    font-size: var(--description-font-size);
   }
 
   &__features-list {
+    font-size: var(--feature-font-size);
   }
   &__feature {
     &--disabled {
