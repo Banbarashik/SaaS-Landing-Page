@@ -127,6 +127,7 @@ body {
   --amount-font-size: #{$text-3xl};
   --period-font-size: #{$text-sm};
   --description-font-size: #{$text-sm};
+  --description-margin-bottom: #{$spacing-2xl};
   --feature-font-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
@@ -136,6 +137,7 @@ body {
     --amount-font-size: #{$text-5xl};
     --period-font-size: #{$text-lg};
     --description-font-size: #{$text-base};
+    --description-margin-bottom: #{$spacing-3xl};
     --feature-font-size: #{$text-lg};
   }
 
@@ -161,6 +163,7 @@ body {
   }
 
   &__description {
+    margin-bottom: var(--description-margin-bottom);
     font-size: var(--description-font-size);
   }
 
