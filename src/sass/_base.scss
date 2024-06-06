@@ -106,6 +106,8 @@ $spacing-3xl: 2rem; /* 32px */
 $spacing-4xl: 3rem; /* 48px */
 $spacing-5xl: 4rem; /* 64px */
 
+$breakpoint: 375px;
+
 :root {
   --light-text: #{$color-secondary-400};
   --dark-text: #{$color-secondary-900};
@@ -118,6 +120,53 @@ body {
   line-height: $line-height-basic;
 }
 
+.pricing {
+  --pricing-padding: #{$spacing-2xl};
+  --headingName-font-size: #{$text-2xl};
+  --headingAnnotation-font-size: #{$text-sm};
+  --amount-font-size: #{$text-3xl};
+  --period-font-size: #{$text-sm};
+  --description-font-size: #{$text-sm};
+  --feature-font-size: #{$text-sm};
+
+  @media (min-width: $breakpoint) {
+    --pricing-padding: #{$spacing-3xl};
+    --headingName-font-size: #{$text-3xl};
+    --headingAnnotation-font-size: #{$text-base};
+    --amount-font-size: #{$text-5xl};
+    --period-font-size: #{$text-lg};
+    --description-font-size: #{$text-base};
+    --feature-font-size: #{$text-lg};
+  }
+
+  &__heading {
+    &-name {
+    }
+    &-annotation {
+    }
+  }
+
+  &__price {
+  }
+  &__amount {
+  }
+  &__period {
+  }
+
+  &__description {
+  }
+
+  &__features-list {
+  }
+  &__feature {
+    &--disabled {
+    }
+  }
+
+  &__button {
+  }
+}
+
 .testimonial {
   --testimonial-padding: #{$spacing-xl};
   --heading-margin-bottom: #{$spacing-xl};
@@ -126,7 +175,7 @@ body {
   --authorName-font-size: #{$text-base};
   --authorDescription-font-size: #{$text-xs};
 
-  @media (min-width: 375px) {
+  @media (min-width: $breakpoint) {
     --testimonial-padding: #{$spacing-2xl};
     --heading-margin-bottom: #{$spacing-lg};
     --heading-font-size: #{$text-lg};
