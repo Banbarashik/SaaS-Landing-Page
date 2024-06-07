@@ -11,6 +11,13 @@
   box-shadow: inset 0 0 0 $width $color;
 }
 
+@mixin icon($url, $size: 24px) {
+  content: url($url);
+  display: block;
+  width: $size;
+  height: $size;
+}
+
 // COLOR
 $color-primary-900: #1d1178;
 $color-primary-800: #2d1d92;
@@ -134,6 +141,7 @@ body {
   --period-font-size: #{$text-sm};
   --details-font-size: #{$text-sm};
   --details-margin-bottom: #{$spacing-4xl};
+  --feature-icon-size: 20px;
   --feature-font-size: #{$text-sm};
   --feature-margin-bottom: #{$spacing-2xl};
 
@@ -148,6 +156,7 @@ body {
     --period-font-size: #{$text-lg};
     --details-font-size: #{$text-base};
     --details-margin-bottom: #{$spacing-5xl};
+    --feature-icon-size: 24px;
     --feature-font-size: #{$text-lg};
     --feature-margin-bottom: #{$spacing-4xl};
   }
@@ -213,8 +222,16 @@ body {
   &__feature {
     margin-bottom: var(--feature-margin-bottom);
 
+    &::before {
+      @include icon('../img/icon/tick-circle.svg', var(--feature-icon-size));
+    }
+
     &--disabled {
       color: $color-secondary-400;
+
+      &::before {
+        @include icon('../img/icon/close-circle.svg', var(--feature-icon-size));
+      }
     }
   }
 
