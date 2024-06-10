@@ -130,6 +130,33 @@ body {
   line-height: $line-height-basic;
 }
 
+.benefit {
+  --title-font-size: #{$text-lg};
+  --description-font-size: #{$text-xs};
+
+  @media (min-width: $breakpoint) {
+    --title-font-size: #{$text-2xl};
+    --description-font-size: #{$text-base};
+  }
+
+  display: flex;
+  flex-direction: column;
+  max-width: 384px;
+
+  &__title {
+    font-size: var(--title-font-size);
+    font-weight: $text-semibold;
+    margin-bottom: $spacing-md;
+  }
+  &__description {
+    font-size: var(--description-font-size);
+  }
+  &__image {
+    order: -1;
+    margin-bottom: $spacing-4xl;
+  }
+}
+
 .pricing-plan {
   --pricingPlan-padding: #{$spacing-4xl};
   --pricingPlan-border-radius: 10px;
