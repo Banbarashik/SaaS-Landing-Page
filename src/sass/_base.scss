@@ -238,6 +238,7 @@ body {
   }
 
   &__button {
+    width: 100%;
   }
 }
 
@@ -299,6 +300,7 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: $spacing-sm;
 
   padding: $spacing-lg $spacing-4xl;
