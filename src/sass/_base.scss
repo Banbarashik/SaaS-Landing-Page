@@ -130,6 +130,61 @@ body {
   line-height: $line-height-basic;
 }
 
+img {
+  max-width: 100%;
+}
+
+.how-it-works {
+  --max-width: 235px;
+  --title-text-size: #{$text-sm};
+
+  @media (min-width: $breakpoint) {
+    --max-width: 200px;
+    --title-text-size: #{$text-xl};
+  }
+
+  //* temporary
+  margin-left: 100px;
+  margin-top: 100px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-4xl;
+
+  max-width: var(--max-width);
+
+  &__title {
+    font-size: var(--title-font-size);
+    font-weight: $text-medium;
+    text-align: center;
+    color: $color-primary-0;
+  }
+  &__image {
+    order: -1;
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    outline: 6px solid $color-secondary-700;
+    border-radius: 50%;
+    background-color: $color-primary-500;
+    transform: translate(-50%, -50%);
+    color: $color-primary-0;
+    font-weight: $text-semibold;
+    font-size: $spacing-4xl;
+  }
+}
+
 .benefit {
   --title-font-size: #{$text-lg};
   --description-font-size: #{$text-xs};
