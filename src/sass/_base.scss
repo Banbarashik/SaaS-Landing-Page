@@ -395,6 +395,23 @@ img {
   }
 }
 
+.toggle {
+  padding: 2px;
+  border-radius: 30px;
+
+  background-color: $color-secondary-100;
+
+  &__button {
+    padding: $spacing-lg $spacing-5xl;
+    font-weight: $text-semibold;
+
+    &:not(&--active) {
+      background-color: inherit;
+      color: $color-secondary-300;
+    }
+  }
+}
+
 .btn {
   @include center-flex(true);
 
