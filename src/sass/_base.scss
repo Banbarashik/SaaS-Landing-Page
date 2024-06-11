@@ -1,5 +1,10 @@
-@mixin center-flex {
-  display: flex;
+@mixin center-flex($inline: false) {
+  @if $inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
   align-items: center;
   justify-content: center;
 }
@@ -391,9 +396,8 @@ img {
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include center-flex(true);
+
   gap: $spacing-sm;
 
   padding: $spacing-lg $spacing-4xl;
