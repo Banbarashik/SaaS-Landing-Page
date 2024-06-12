@@ -398,10 +398,21 @@ img {
 .toggle-switch {
   width: 70px;
   height: 36px;
+  padding: $spacing-xs;
+  border-radius: 30px;
+
   background-color: $color-primary-500;
+  cursor: pointer;
 
   & * {
     display: none;
+  }
+
+  &::before {
+    @include circle(28px);
+    content: '';
+    display: block;
+    background-color: $color-primary-0;
   }
 }
 
