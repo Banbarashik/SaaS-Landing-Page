@@ -395,21 +395,31 @@ img {
   }
 }
 
-.toggle {
+.toggle-switch {
+  width: 70px;
+  height: 36px;
+  background-color: $color-primary-500;
+
+  & * {
+    display: none;
+  }
+}
+
+.toggle-with-buttons {
   display: inline-flex;
 
   padding: 2px;
   border-radius: 30px;
 
   background-color: $color-secondary-100;
+}
 
-  &__button {
-    font-weight: $text-semibold;
+.toggle-button {
+  font-weight: $text-semibold;
 
-    &:not(&--active) {
-      background-color: inherit;
-      color: $color-secondary-300;
-    }
+  &:not(&--active) {
+    background-color: inherit;
+    color: $color-secondary-300;
   }
 }
 
