@@ -402,7 +402,6 @@ img {
   background-color: $color-secondary-100;
 
   &__button {
-    padding: $spacing-lg $spacing-5xl;
     font-weight: $text-semibold;
 
     &:not(&--active) {
@@ -413,8 +412,15 @@ img {
 }
 
 .btn {
+  --btn-width: 100%;
+
+  @media (min-width: $breakpoint) {
+    --btn-width: auto;
+  }
+
   @include center-flex(true);
 
+  width: var(--btn-width);
   gap: $spacing-sm;
   border-radius: 60px;
   color: $color-primary-0;
@@ -425,19 +431,19 @@ img {
   }
 
   // SIZE
-  &--xs {
+  &--sm {
     padding: $spacing-xs $spacing-xl;
     font-size: $text-xs;
   }
-  &--sm {
+  &--md {
     padding: $spacing-sm $spacing-xl;
     font-size: $text-xs;
   }
-  &--md {
+  &--lg {
     padding: $spacing-lg $spacing-4xl;
     font-size: $text-base;
   }
-  &--lg {
+  &--xl {
     padding: $spacing-lg $spacing-5xl;
     font-size: $text-base;
   }
