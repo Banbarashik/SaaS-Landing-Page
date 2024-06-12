@@ -432,6 +432,11 @@ img {
   border-radius: 30px;
 
   background-color: $color-secondary-100;
+
+  > input {
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 .toggle-button {
@@ -452,11 +457,15 @@ img {
 
   @include center-flex(true);
 
-  width: var(--btn-width);
   gap: $spacing-sm;
+
+  width: var(--btn-width);
   border-radius: 60px;
+
   color: $color-primary-0;
   background-color: $color-primary-500;
+
+  cursor: pointer;
 
   &--icon {
     padding: $spacing-sm;

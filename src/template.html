@@ -99,22 +99,21 @@
     </div>
 
     <div class="toggle-with-buttons">
-      <button
-        class="toggle-button toggle-button--active btn btn--xl"
-        aria-pressed="true"
+      <label for="with" class="toggle-button toggle-button--active btn btn--xl"
+        >With Spend.In</label
       >
-        With Spend.In
-      </button>
-      <button class="toggle-button btn btn--xl" aria-pressed="false">
-        Without Spend.In
-      </button>
+      <input type="radio" name="spendIn" id="with" checked />
+      <label for="without" class="toggle-button btn btn--xl"
+        >Without Spend.In</label
+      >
+      <input type="radio" name="spendIn" id="without" />
     </div>
 
     <div class="">
       <label for="monthly">Monthly</label>
       <label for="yearly">Yearly</label>
       <div class="toggle-switch">
-        <input type="radio" name="period" id="monthly" />
+        <input type="radio" name="period" id="monthly" checked` />
         <input type="radio" name="period" id="yearly" />
       </div>
     </div>
