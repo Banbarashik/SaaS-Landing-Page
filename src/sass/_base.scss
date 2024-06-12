@@ -413,6 +413,15 @@ img {
     content: '';
     display: block;
     background-color: $color-primary-0;
+    transition: {
+      property: margin-left transform;
+      duration: 1s;
+    }
+  }
+
+  &--right::before {
+    margin-left: 100%;
+    transform: translateX(-100%);
   }
 }
 
