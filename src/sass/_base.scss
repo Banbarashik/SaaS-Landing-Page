@@ -138,6 +138,9 @@ $breakpoint: 375px;
 :root {
   --light-text: #{$color-secondary-400};
   --dark-text: #{$color-secondary-900};
+
+  --light-bg: #{$color-primary-0};
+  --dark-bg: #{$color-secondary-700};
 }
 
 body {
