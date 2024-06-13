@@ -133,9 +133,11 @@ $spacing-6xl: 2.5rem; /* 40px */
 $spacing-7xl: 3rem; /* 48px */
 $spacing-8xl: 4rem; /* 64px */
 
-$breakpoint: 375px;
+$breakpoint: 376px;
 
 :root {
+  // light - less contrasting colors
+  // dark - higher contrasting colors
   --light-text: #{$color-secondary-400};
   --dark-text: #{$color-secondary-900};
 
@@ -148,6 +150,15 @@ body {
   font-size: $text-base;
 
   line-height: $line-height-basic;
+}
+
+// todo: change selector
+main:nth-child(odd) {
+  --light-text: #{$color-secondary-300};
+  --dark-text: #{$color-primary-0};
+
+  // todo: think if it's better to set bg color on children elements and then change the global prop here
+  background-color: var(--dark-bg);
 }
 
 img {
