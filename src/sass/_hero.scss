@@ -1,6 +1,7 @@
 .hero {
   --heading-margin-bottom: #{$spacing-md};
   --body-padding-top: #{$spacing-7xl};
+  --body-padding-bottom: 25vh;
   --body-margin-bottom: #{$spacing-5xl};
   --buttonDemo-margin-bottom: #{$spacing-4xl};
   --image-translate-y: 35%;
@@ -10,13 +11,14 @@
 
     --heading-margin-bottom: #{$spacing-4xl};
     --body-padding-top: 120px;
+    --body-padding-bottom: calc(15vh + 20vw);
     --body-margin-bottom: #{$spacing-6xl};
     --buttonDemo-margin-bottom: 0;
     --image-translate-y: 55%;
   }
 
   position: relative;
-  padding: var(--body-padding-top) 28px 50%;
+  padding: var(--body-padding-top) 28px var(--body-padding-bottom);
   overflow-y: hidden;
 
   &__container {
