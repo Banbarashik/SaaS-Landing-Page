@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  padding: 48px 28px /* calc(255px - 90px + 56px) */ calc(50%);
+  // padding: 48px 28px;
+  // height: calc(100vh - 88px);
+  overflow-y: hidden;
+
+  &__heading {
+    margin-bottom: $spacing-md;
+  }
+
+  &__body {
+    margin-bottom: $spacing-5xl;
+  }
+
+  &__button-demo {
+    margin-bottom: $spacing-4xl;
+  }
+  &__button-pricing {
+    // margin-bottom: 56px;
+    // margin-bottom: 204px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: inherit;
+    padding-right: inherit;
+    transform: translateY(35%);
+
+    @media (min-width: $breakpoint) {
+      transform: translateY(55%);
+    }
+  }
+}

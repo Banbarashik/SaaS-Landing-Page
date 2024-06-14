@@ -133,7 +133,8 @@ $spacing-6xl: 2.5rem; /* 40px */
 $spacing-7xl: 3rem; /* 48px */
 $spacing-8xl: 4rem; /* 64px */
 
-$breakpoint: 376px;
+// $breakpoint: 376px;
+$breakpoint: 640px;
 
 :root {
   // light - less contrasting colors
@@ -146,14 +147,28 @@ $breakpoint: 376px;
 }
 
 body {
+  --font-size: #{$text-sm};
+
+  @media (min-width: $breakpoint) {
+    --font-size: #{$text-2xl};
+  }
+
   font-family: $font-family;
-  font-size: $text-base;
+  font-size: var(--font-size);
 
   line-height: $line-height-basic;
+
+  color: var(--light-text);
+}
+
+main > * {
+  padding: 32px 28px;
+
+  background-color: var(--light-bg);
 }
 
 // todo: change selector
-main:nth-child(odd) {
+main > :nth-child(odd) {
   --light-text: #{$color-secondary-300};
   --dark-text: #{$color-primary-0};
 
@@ -510,6 +525,8 @@ img {
 
   width: var(--btn-width);
   border-radius: 60px;
+
+  font-weight: $text-semibold;
 
   color: $color-primary-0;
   background-color: $color-primary-500;
