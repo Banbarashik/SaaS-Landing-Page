@@ -1,36 +1,49 @@
 .hero {
+  --heading-margin-bottom: #{$spacing-md};
+  --body-padding-top: #{$spacing-7xl};
+  --body-margin-bottom: #{$spacing-5xl};
+  --buttonDemo-margin-bottom: #{$spacing-4xl};
+  --image-translate-y: 35%;
+
+  @media (min-width: $breakpoint) {
+    text-align: center;
+
+    --heading-margin-bottom: #{$spacing-4xl};
+    --body-padding-top: 120px;
+    --body-margin-bottom: #{$spacing-6xl};
+    --buttonDemo-margin-bottom: 0;
+    --image-translate-y: 55%;
+  }
+
   position: relative;
-  padding: 48px 28px /* calc(255px - 90px + 56px) */ calc(50%);
-  // padding: 48px 28px;
-  // height: calc(100vh - 88px);
+  padding: var(--body-padding-top) 28px 50%;
   overflow-y: hidden;
 
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   &__heading {
-    margin-bottom: $spacing-md;
+    margin-bottom: var(--heading-margin-bottom);
   }
 
   &__body {
-    margin-bottom: $spacing-5xl;
+    margin-bottom: var(--body-margin-bottom);
   }
 
   &__button-demo {
-    margin-bottom: $spacing-4xl;
+    margin-bottom: var(--buttonDemo-margin-bottom);
   }
   &__button-pricing {
-    // margin-bottom: 56px;
-    // margin-bottom: 204px;
   }
 
   &__image {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
     padding-left: inherit;
     padding-right: inherit;
-    transform: translateY(35%);
-
-    @media (min-width: $breakpoint) {
-      transform: translateY(55%);
-    }
+    transform: translate(-50%, var(--image-translate-y));
   }
 }
