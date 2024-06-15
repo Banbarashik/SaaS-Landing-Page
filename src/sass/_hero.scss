@@ -1,5 +1,5 @@
 .hero {
-  --container-margin-bottom: 56px;
+  --container-margin-bottom: #{$spacing-8xl};
   --heading-margin-bottom: #{$spacing-md};
   --body-padding-top: #{$spacing-7xl};
   --body-margin-bottom: #{$spacing-5xl};
@@ -8,15 +8,15 @@
   @media (min-width: $breakpoint) {
     text-align: center;
 
-    --container-margin-bottom: 80px;
+    --container-margin-bottom: #{$spacing-10xl};
     --heading-margin-bottom: #{$spacing-4xl};
-    --body-padding-top: 120px;
+    --body-padding-top: #{$spacing-11xl};
     --body-margin-bottom: #{$spacing-6xl};
     --image-max-height: calc(15vh + 15vw);
   }
 
   position: relative;
-  padding: var(--body-padding-top) 28px 0;
+  padding: var(--body-padding-top) $spacing-4\.5xl 0;
   overflow-y: hidden;
 
   &__container {
