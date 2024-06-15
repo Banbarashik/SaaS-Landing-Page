@@ -1,19 +1,24 @@
 .benefit-section {
-  &__title-and-description {
-    @media (min-width: $breakpoint) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: $spacing-5xl;
-      margin-bottom: $spacing-9xl;
-    }
+  --grid-columns: 1fr;
+  --titleAndDescription-gap: #{$spacing-md};
+  --titleAndDescription-margin-bottom: #{$spacing-5xl};
 
+  @media (min-width: $breakpoint) {
+    --grid-columns: repeat(3, 1fr);
+    --titleAndDescription-gap: #{$spacing-5xl};
+    --titleAndDescription-margin-bottom: #{$spacing-9xl};
+  }
+
+  &__title-and-description {
     display: grid;
-    gap: $spacing-md;
-    margin-bottom: $spacing-5xl;
+    grid-template-columns: var(--grid-columns);
+    gap: var(--titleAndDescription-gap);
+    margin-bottom: var(--titleAndDescription-margin-bottom);
   }
 
   &__heading-tertiary {
     // TODO add 6px spacing to the system
-    margin-bottom: 6px;
+    margin-bottom: $spacing-3;
   }
   &__heading-secondary {
   }
@@ -25,11 +30,7 @@
 }
 
 .benefits {
-  @media (min-width: $breakpoint) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-5xl;
-  }
-
   display: grid;
+  grid-template-columns: var(--grid-columns);
   gap: $spacing-5xl;
 }
