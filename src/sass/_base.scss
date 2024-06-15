@@ -164,22 +164,22 @@ body {
   font-size: var(--font-size);
 
   line-height: $line-height-basic;
+}
+
+main > * {
+  padding: $spacing-5xl $spacing-4\.5xl;
+
+  background-color: var(--light-bg);
 
   color: var(--light-text);
 }
 
-main > * {
-  padding: 32px 28px;
-
-  background-color: var(--light-bg);
-}
-
-// todo: change selector
+// TODO use another selector to handle the rule
 main > :nth-child(odd) {
   --light-text: #{$color-secondary-300};
   --dark-text: #{$color-primary-0};
 
-  // todo: think if it's better to set bg color on children elements and then change the global prop here
+  // TODO think if it's better to set bg color on children elements and then change the global prop here
   background-color: var(--dark-bg);
 }
 
