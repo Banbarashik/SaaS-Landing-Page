@@ -119,8 +119,11 @@ $text-medium: 500;
 $text-semibold: 600;
 $text-bold: 700;
 
+// TODO: replace with Tailwind's spacing system
 // SPACING
+// 1 = 0.125rem
 $spacing-xs: 0.25rem; /* 4px */
+$spacing-3: 0.375rem; /* 6px */
 $spacing-sm: 0.5rem; /* 8px */
 $spacing-md: 0.75rem; /* 12px */
 $spacing-lg: 0.875rem; /* 14px */
