@@ -166,8 +166,14 @@ body {
   line-height: $line-height-basic;
 }
 
+// TODO use another selector to handle the rule
 main > * {
   padding: $spacing-5xl $spacing-4\.5xl;
+
+  // TODO move the query selector to the place where all query selectors are handled
+  @media (min-width: $breakpoint) {
+    padding: $spacing-11xl;
+  }
 
   background-color: var(--light-bg);
 

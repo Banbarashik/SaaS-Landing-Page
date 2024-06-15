@@ -1,4 +1,6 @@
 .benefit-section {
+  display: grid;
+
   &__heading-tertiary {
     // TODO add 6px spacing to the system
     margin-bottom: 6px;
@@ -13,7 +15,8 @@
 }
 
 .benefits {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-5xl;
+}
+
+.benefit-item:not(:last-child) {
+  margin-bottom: $spacing-5xl;
 }
