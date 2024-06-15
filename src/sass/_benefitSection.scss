@@ -1,5 +1,9 @@
 .benefit-section {
-  display: grid;
+  &__title-and-description {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-5xl;
+  }
 
   &__heading-tertiary {
     // TODO add 6px spacing to the system
@@ -11,10 +15,15 @@
 
   &__description {
     margin-bottom: $spacing-5xl;
+    grid-column: 2 / -1;
+    max-width: 500px;
   }
 }
 
 .benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-5xl;
 }
 
 .benefit-item:not(:last-child) {
