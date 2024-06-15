@@ -1,8 +1,14 @@
 .benefit-section {
   &__title-and-description {
+    @media (min-width: $breakpoint) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-5xl;
+      margin-bottom: $spacing-9xl;
+    }
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-5xl;
+    gap: $spacing-md;
+    margin-bottom: $spacing-5xl;
   }
 
   &__heading-tertiary {
@@ -10,22 +16,26 @@
     margin-bottom: 6px;
   }
   &__heading-secondary {
-    margin-bottom: $spacing-md;
+    // margin-bottom: $spacing-md;
   }
 
   &__description {
-    margin-bottom: $spacing-5xl;
+    // margin-bottom: $spacing-5xl;
     grid-column: 2 / -1;
     max-width: 500px;
   }
 }
 
 .benefits {
+  @media (min-width: $breakpoint) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-5xl;
+  }
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: $spacing-5xl;
 }
 
 .benefit-item:not(:last-child) {
-  margin-bottom: $spacing-5xl;
+  // margin-bottom: $spacing-5xl;
 }
