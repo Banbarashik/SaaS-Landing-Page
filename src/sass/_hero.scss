@@ -3,16 +3,18 @@
   --heading-margin-bottom: #{$spacing-md};
   --body-padding-top: #{$spacing-7xl};
   --body-margin-bottom: #{$spacing-5xl};
+  --buttonDemo-margin-bottom: #{$spacing-4xl};
   --image-max-height: 15vh;
 
   @media (min-width: $breakpoint) {
-    text-align: center;
-
     --container-margin-bottom: #{$spacing-10xl};
     --heading-margin-bottom: #{$spacing-4xl};
     --body-padding-top: #{$spacing-11xl};
     --body-margin-bottom: #{$spacing-6xl};
+    --buttonDemo-margin-bottom: 0;
     --image-max-height: calc(15vh + 15vw);
+
+    text-align: center;
   }
 
   position: relative;
@@ -33,6 +35,7 @@
   }
 
   &__button-demo {
+    margin-bottom: var(--buttonDemo-margin-bottom);
   }
   &__button-pricing {
   }
