@@ -16,13 +16,11 @@
     margin-bottom: 6px;
   }
   &__heading-secondary {
-    // margin-bottom: $spacing-md;
   }
 
   &__description {
-    // margin-bottom: $spacing-5xl;
     grid-column: 2 / -1;
-    max-width: 500px;
+    max-width: 520px;
   }
 }
 
@@ -34,8 +32,4 @@
 
   display: grid;
   gap: $spacing-5xl;
-}
-
-.benefit-item:not(:last-child) {
-  // margin-bottom: $spacing-5xl;
 }

@@ -30,6 +30,9 @@
     margin-bottom: var(--heading-margin-bottom);
   }
 
+  // TODO change "body" to "description"
+  //* Unlike other body text which changes from 14px to 20px, here it changes to 24px
+  // TODO find out how to handle its font-size change
   &__body {
     margin-bottom: var(--body-margin-bottom);
   }

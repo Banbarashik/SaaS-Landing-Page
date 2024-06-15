@@ -157,7 +157,7 @@ body {
   --font-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
-    --font-size: #{$text-2xl};
+    --font-size: #{$text-xl};
   }
 
   font-family: $font-family;
