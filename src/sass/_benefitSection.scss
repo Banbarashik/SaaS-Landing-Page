@@ -1,2 +1,19 @@
 .benefit-section {
+  &__heading-tertiary {
+    // TODO add 6px spacing to the system
+    margin-bottom: 6px;
+  }
+  &__heading-secondary {
+    margin-bottom: $spacing-md;
+  }
+
+  &__description {
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-5xl;
 }
