@@ -1,13 +1,30 @@
 .how-it-works-section {
   &__heading-tertiary {
     margin-bottom: $spacing-3;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: $spacing-md;
+    }
   }
   &__heading-secondary {
     margin-bottom: $spacing-md;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: $spacing-4xl;
+    }
   }
 
   &__description {
-    margin-bottom: $spacing-36;
+    max-width: 650px;
+    margin: 0 auto $spacing-36;
+
+    @media (min-width: $breakpoint) {
+      margin: 0 auto $spacing-9xl;
+    }
+  }
+
+  @media (min-width: $breakpoint) {
+    text-align: center;
   }
 }
 
@@ -15,11 +32,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: $spacing-10xl;
 
   margin-bottom: $spacing-8xl;
 
   @media (min-width: $breakpoint) {
     margin-bottom: $spacing-9xl;
+    flex-direction: row;
   }
 }
