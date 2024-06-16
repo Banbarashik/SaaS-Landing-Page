@@ -40,6 +40,9 @@
 
   @media (min-width: $breakpoint) {
     margin: 0 auto $spacing-9xl;
+  }
+
+  @media (min-width: $breakpoint-md) {
     flex-direction: row;
   }
 }

@@ -144,8 +144,10 @@ $spacing-36: 4.5rem; /* 72px */
 $spacing-10xl: 5rem; /* 80px */
 $spacing-11xl: 7.5rem; /* 120px */
 
-// $breakpoint: 376px;
+// TODO rename to "breakpoint-sm"
 $breakpoint: 640px;
+
+$breakpoint-md: 1024px;
 
 :root {
   // light - less contrasting colors
@@ -237,8 +239,10 @@ img {
   --title-text-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
-    --max-width: 200px;
     --title-text-size: #{$text-xl};
+  }
+  @media (min-width: $breakpoint-md) {
+    --max-width: 200px;
   }
 
   position: relative;
