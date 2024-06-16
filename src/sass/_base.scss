@@ -505,13 +505,21 @@ img {
 }
 
 .toggle-with-buttons {
+  --width: 100%;
+
+  @media (min-width: $breakpoint) {
+    width: auto;
+  }
+
   display: inline-flex;
 
+  width: var(--width);
   padding: 2px;
   border-radius: 30px;
 
   background-color: $color-secondary-100;
 
+  // TODO give a class name to the input and use it
   > input {
     position: absolute;
     visibility: hidden;
@@ -528,17 +536,17 @@ img {
 }
 
 .btn {
-  --btn-width: 100%;
+  --width: 100%;
 
   @media (min-width: $breakpoint) {
-    --btn-width: auto;
+    --width: auto;
   }
 
   @include center-flex(true);
 
   gap: $spacing-sm;
 
-  width: var(--btn-width);
+  width: var(--width);
   border-radius: 60px;
 
   font-weight: $text-semibold;
@@ -561,6 +569,13 @@ img {
     padding: $spacing-sm $spacing-xl;
     font-size: $text-xs;
   }
+
+  // TODO rename
+  &--md2 {
+    padding: $spacing-lg $spacing-xl;
+    font-size: $text-xs;
+  }
+
   &--lg {
     padding: $spacing-lg $spacing-4xl;
     font-size: $text-base;
