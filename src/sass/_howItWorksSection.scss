@@ -1,0 +1,9 @@
+.how-it-works-section {
+}
+
+.how-it-works-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-10xl;
+}
