@@ -628,6 +628,8 @@ img {
 
   @media (min-width: $breakpoint) {
     --margin-bottom: 0;
+
+    margin-right: $spacing-xl;
   }
 
   margin-bottom: var(--margin-bottom);
