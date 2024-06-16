@@ -35,10 +35,11 @@
   justify-content: space-between;
   gap: $spacing-10xl;
 
-  margin-bottom: $spacing-8xl;
+  max-width: 945px;
+  margin: 0 auto $spacing-8xl;
 
   @media (min-width: $breakpoint) {
-    margin-bottom: $spacing-9xl;
+    margin: 0 auto $spacing-9xl;
     flex-direction: row;
   }
 }
