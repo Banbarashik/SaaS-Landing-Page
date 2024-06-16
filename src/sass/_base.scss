@@ -140,6 +140,7 @@ $spacing-6xl: 2.5rem; /* 40px */
 $spacing-7xl: 3rem; /* 48px */
 $spacing-8xl: 3.5rem; /* 56px */
 $spacing-9xl: 4rem; /* 64px */
+$spacing-36: 4.5rem; /* 72px */
 $spacing-10xl: 5rem; /* 80px */
 $spacing-11xl: 7.5rem; /* 120px */
 
@@ -244,7 +245,6 @@ img {
 
   display: flex;
   flex-direction: column;
-  // align-items: center;
   gap: $spacing-4xl;
 
   max-width: var(--max-width);
@@ -621,4 +621,16 @@ img {
       color: $color-secondary-400;
     }
   }
+}
+
+.button-demo {
+  --margin-bottom: #{$spacing-4xl};
+
+  @media (min-width: $breakpoint) {
+    --margin-bottom: 0;
+  }
+
+  margin-bottom: var(--margin-bottom);
+}
+.button-pricing {
 }
