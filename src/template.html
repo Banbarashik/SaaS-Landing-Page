@@ -139,43 +139,55 @@
       </section>
 
       <section class="success-stories">
-        <h2 style="display: none">Succsess stories</h2>
-        <p class="heading-tertiary success-stories__heading-tertiary">
-          INCREASE PRODUCTIVITY
-        </p>
-        <p class="heading-secondary success-stories__heading-secondary">
-          Reduce Time in Doing Manual Work Managing Expenses
-        </p>
-        <div class="toggle-with-buttons success-stories__toggle-with-buttons">
-          <label
-            for="with"
-            class="toggle-button toggle-button--active btn btn--md2 btn--xl"
-            >With Spend.In</label
-          >
-          <input type="radio" name="spendIn" id="with" checked />
-          <label for="without" class="toggle-button btn btn--md2 btn--xl"
-            >Without Spend.In</label
-          >
-          <input type="radio" name="spendIn" id="without" />
-        </div>
-        <p class="advantages-heading">
-          Track Business Expenses until its Milisecond
-        </p>
-        <ul class="advantages-list">
-          <li class="advantage-item">
-            Analyze your business cost easily with group transaction thorugh
-            tagging feature.
-          </li>
-          <li class="advantage-item">
-            Add more than one card for payment. Integrated with more than 50+
-            payment method and support bulk payment.
-          </li>
-          <li class="advantage-item">
-            Arrange your business expenses by date, name, etc., with just one
-            click.
-          </li>
-        </ul>
-        <img src="img/success_story.svg" alt="Positive balance grow graph" />
+        <header class="success-stories__header">
+          <h2 style="display: none">Succsess stories</h2>
+          <p class="heading-tertiary success-stories__heading-tertiary">
+            INCREASE PRODUCTIVITY
+          </p>
+          <p class="heading-secondary success-stories__heading-secondary">
+            Reduce Time in Doing Manual Work Managing Expenses
+          </p>
+        </header>
+        <main class="success-stories__main">
+          <div class="advantages">
+            <div class="toggle-with-buttons advantages__toggle-with-buttons">
+              <label
+                for="with"
+                class="toggle-button toggle-button--active btn btn--md2 btn--xl"
+                >With Spend.In</label
+              >
+              <input type="radio" name="spendIn" id="with" checked />
+              <label for="without" class="toggle-button btn btn--md2 btn--xl"
+                >Without Spend.In</label
+              >
+              <input type="radio" name="spendIn" id="without" />
+            </div>
+            <p class="advantages__heading">
+              Track Business Expenses until its Milisecond
+            </p>
+            <ul class="advantages__list">
+              <li class="advantages__list-item">
+                Analyze your business cost easily with group transaction through
+                tagging feature.
+              </li>
+              <li class="advantages__list-item">
+                Add more than one card for payment. Integrated with more than
+                50+ payment method and support bulk payment.
+              </li>
+              <li class="advantages__list-item">
+                Arrange your business expenses by date, name, etc., with just
+                one click.
+              </li>
+            </ul>
+          </div>
+          <div class="success-stories__image-container">
+            <img
+              class="success-stories__image"
+              src="img/success_story.svg"
+              alt="Positive balance grow graph"
+            />
+          </div>
+        </main>
       </section>
     </main>
 

@@ -174,7 +174,7 @@ body {
 }
 
 // TODO use another selector to handle the rule
-main > * {
+body > main > * {
   padding: $spacing-5xl $spacing-4\.5xl;
 
   // TODO move the query selector to the place where all query selectors are handled
@@ -188,7 +188,7 @@ main > * {
 }
 
 // TODO use another selector to handle the rule
-main > :nth-child(odd) {
+body > main > :nth-child(odd) {
   --light-text: #{$color-secondary-300};
   --dark-text: #{$color-primary-0};
 

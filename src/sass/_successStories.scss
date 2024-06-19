@@ -1,4 +1,18 @@
 .success-stories {
+  &__header {
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 462px;
+
+    @media (min-width: $breakpoint) {
+      flex-direction: row;
+    }
+  }
+
   &__heading-tertiary {
     margin-bottom: $spacing-3;
 
@@ -15,6 +29,19 @@
     }
   }
 
+  &__image-container {
+    flex: 1;
+    text-align: right;
+  }
+
+  &__image {
+    max-height: 100%;
+  }
+}
+
+.advantages {
+  flex-basis: 540px;
+
   &__toggle-with-buttons {
     margin-bottom: $spacing-5xl;
 
@@ -22,41 +49,41 @@
       margin-bottom: $spacing-7xl;
     }
   }
-}
 
-.advantages-heading {
-  margin-bottom: $spacing-5xl;
-
-  font-size: $text-base;
-  font-weight: $text-bold;
-  color: $color-secondary-700;
-
-  @media (min-width: $breakpoint) {
-    font-size: $text-2xl;
-  }
-}
-
-.advantages-list {
-  font-size: $text-xs;
-  font-weight: $text-medium;
-  color: $color-secondary-700;
-
-  margin-bottom: $spacing-9xl;
-
-  @media (min-width: $breakpoint) {
-    font-size: $text-lg;
-  }
-}
-
-.advantage-item {
-  display: flex;
-  gap: $spacing-md;
-
-  &:not(:last-child) {
+  &__heading {
     margin-bottom: $spacing-5xl;
+
+    font-size: $text-base;
+    font-weight: $text-bold;
+    color: $color-secondary-700;
+
+    @media (min-width: $breakpoint) {
+      font-size: $text-2xl;
+    }
   }
 
-  &::before {
-    @include icon('../img/icon/tick-circle.svg');
+  &__list {
+    font-size: $text-xs;
+    font-weight: $text-medium;
+    color: $color-secondary-700;
+
+    margin-bottom: $spacing-9xl;
+
+    @media (min-width: $breakpoint) {
+      font-size: $text-lg;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    gap: $spacing-md;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-5xl;
+    }
+
+    &::before {
+      @include icon('../img/icon/tick-circle.svg');
+    }
   }
 }
