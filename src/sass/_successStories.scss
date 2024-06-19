@@ -1,2 +1,42 @@
 .success-stories {
+  &__heading-tertiary {
+    margin-bottom: $spacing-3;
+  }
+
+  &__heading-secondary {
+    margin-bottom: $spacing-5xl;
+  }
+
+  &__toggle-with-buttons {
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+.advantages-heading {
+  margin-bottom: $spacing-5xl;
+
+  font-size: $text-base;
+  font-weight: $text-bold;
+  color: $color-secondary-700;
+}
+
+.advantages-list {
+  font-size: $text-xs;
+  font-weight: $text-medium;
+  color: $color-secondary-700;
+
+  margin-bottom: $spacing-9xl;
+}
+
+.advantage-item {
+  display: flex;
+  gap: $spacing-md;
+
+  &:not(:last-child) {
+    margin-bottom: $spacing-5xl;
+  }
+
+  &::before {
+    @include icon('../img/icon/tick-circle.svg');
+  }
 }

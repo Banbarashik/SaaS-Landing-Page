@@ -33,6 +33,7 @@
   display: block;
   width: $size;
   height: $size;
+  flex: 0 0 auto;
 }
 
 // COLOR
@@ -234,6 +235,113 @@ img {
   text-transform: uppercase;
 }
 
+.btn {
+  --btn-width: 100%;
+
+  @media (min-width: $breakpoint) {
+    --btn-width: auto;
+  }
+
+  @include center-flex(true);
+
+  gap: $spacing-sm;
+
+  width: var(--btn-width);
+  border-radius: 60px;
+
+  font-weight: $text-semibold;
+
+  color: $color-primary-0;
+  background-color: $color-primary-500;
+
+  cursor: pointer;
+
+  &--icon {
+    padding: $spacing-sm;
+  }
+
+  // SIZE
+  &--sm {
+    padding: $spacing-xs $spacing-xl;
+    font-size: $text-xs;
+  }
+  &--md {
+    padding: $spacing-sm $spacing-xl;
+    font-size: $text-xs;
+  }
+
+  // TODO rename
+  &--md2 {
+    padding: $spacing-lg $spacing-xl;
+    font-size: $text-xs;
+  }
+
+  &--lg {
+    padding: $spacing-lg $spacing-4xl;
+    font-size: $text-base;
+  }
+  &--xl {
+    padding: $spacing-lg $spacing-5xl;
+    font-size: $text-base;
+  }
+
+  // TYPE
+  &--primary {
+    &:focus {
+      @include inset-outline($color-primary-200);
+    }
+    &:hover {
+      background-color: $color-primary-600;
+    }
+    &:active {
+      background-color: $color-primary-700;
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+  &--secondary {
+    @include inset-outline($color-secondary-200);
+    background-color: $color-primary-0;
+    color: $color-secondary-500;
+
+    &:focus {
+      @include inset-outline($color-secondary-100);
+    }
+    &:hover {
+      @include inset-outline($color-secondary-400);
+    }
+    &:active {
+      @include inset-outline($color-secondary-200);
+      background-color: $color-secondary-100;
+    }
+    &:disabled {
+      @include inset-outline($color-secondary-100);
+      color: $color-secondary-400;
+    }
+  }
+  &--minimal {
+    background-color: transparent;
+    color: $color-secondary-300;
+
+    &:focus {
+      @include inset-outline($color-secondary-300);
+      color: $color-secondary-500;
+    }
+    &:hover {
+      background-color: $color-primary-0;
+      color: $color-secondary-500;
+    }
+    &:active {
+      background-color: $color-secondary-100;
+      color: $color-secondary-500;
+    }
+    &:disabled {
+      color: $color-secondary-400;
+    }
+  }
+}
+
 .how-it-works {
   --max-width: 235px;
   --title-text-size: #{$text-sm};
@@ -399,7 +507,10 @@ img {
   &__feature {
     display: flex;
     gap: $spacing-md;
-    margin-bottom: var(--feature-margin-bottom);
+
+    &:not(:last-child) {
+      margin-bottom: var(--feature-margin-bottom);
+    }
 
     &::before {
       @include icon('../img/icon/tick-circle.svg', var(--feature-icon-size));
@@ -415,7 +526,7 @@ img {
   }
 
   &__button {
-    width: 100%;
+    --btn-width: 100%;
   }
 }
 
@@ -505,7 +616,7 @@ img {
 }
 
 .toggle-with-buttons {
-  --width: 100%;
+  --toggle-width: 100%;
 
   @media (min-width: $breakpoint) {
     width: auto;
@@ -513,13 +624,13 @@ img {
 
   display: inline-flex;
 
-  width: var(--width);
+  width: var(--toggle-width);
   padding: 2px;
   border-radius: 30px;
 
   background-color: $color-secondary-100;
 
-  // TODO give a class name to the input and use it
+  // TODO give a class name to the input and use it OR create a utility class for accessible hiding
   > input {
     position: absolute;
     visibility: hidden;
@@ -532,113 +643,6 @@ img {
   &:not(&--active) {
     background-color: inherit;
     color: $color-secondary-300;
-  }
-}
-
-.btn {
-  --width: 100%;
-
-  @media (min-width: $breakpoint) {
-    --width: auto;
-  }
-
-  @include center-flex(true);
-
-  gap: $spacing-sm;
-
-  width: var(--width);
-  border-radius: 60px;
-
-  font-weight: $text-semibold;
-
-  color: $color-primary-0;
-  background-color: $color-primary-500;
-
-  cursor: pointer;
-
-  &--icon {
-    padding: $spacing-sm;
-  }
-
-  // SIZE
-  &--sm {
-    padding: $spacing-xs $spacing-xl;
-    font-size: $text-xs;
-  }
-  &--md {
-    padding: $spacing-sm $spacing-xl;
-    font-size: $text-xs;
-  }
-
-  // TODO rename
-  &--md2 {
-    padding: $spacing-lg $spacing-xl;
-    font-size: $text-xs;
-  }
-
-  &--lg {
-    padding: $spacing-lg $spacing-4xl;
-    font-size: $text-base;
-  }
-  &--xl {
-    padding: $spacing-lg $spacing-5xl;
-    font-size: $text-base;
-  }
-
-  // TYPE
-  &--primary {
-    &:focus {
-      @include inset-outline($color-primary-200);
-    }
-    &:hover {
-      background-color: $color-primary-600;
-    }
-    &:active {
-      background-color: $color-primary-700;
-    }
-    &:disabled {
-      opacity: 0.4;
-    }
-  }
-  &--secondary {
-    @include inset-outline($color-secondary-200);
-    background-color: $color-primary-0;
-    color: $color-secondary-500;
-
-    &:focus {
-      @include inset-outline($color-secondary-100);
-    }
-    &:hover {
-      @include inset-outline($color-secondary-400);
-    }
-    &:active {
-      @include inset-outline($color-secondary-200);
-      background-color: $color-secondary-100;
-    }
-    &:disabled {
-      @include inset-outline($color-secondary-100);
-      color: $color-secondary-400;
-    }
-  }
-  &--minimal {
-    background-color: transparent;
-    color: $color-secondary-300;
-
-    &:focus {
-      @include inset-outline($color-secondary-300);
-      color: $color-secondary-500;
-    }
-    &:hover {
-      background-color: $color-primary-0;
-      color: $color-secondary-500;
-    }
-    &:active {
-      background-color: $color-secondary-100;
-      color: $color-secondary-500;
-    }
-    &:disabled {
-      color: $color-secondary-400;
-    }
   }
 }
 
