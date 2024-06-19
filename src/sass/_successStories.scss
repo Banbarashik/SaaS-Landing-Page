@@ -1,14 +1,26 @@
 .success-stories {
   &__heading-tertiary {
     margin-bottom: $spacing-3;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: $spacing-md;
+    }
   }
 
   &__heading-secondary {
     margin-bottom: $spacing-5xl;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: $spacing-9xl;
+    }
   }
 
   &__toggle-with-buttons {
     margin-bottom: $spacing-5xl;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: $spacing-7xl;
+    }
   }
 }
 
@@ -18,6 +30,10 @@
   font-size: $text-base;
   font-weight: $text-bold;
   color: $color-secondary-700;
+
+  @media (min-width: $breakpoint) {
+    font-size: $text-2xl;
+  }
 }
 
 .advantages-list {
@@ -26,6 +42,10 @@
   color: $color-secondary-700;
 
   margin-bottom: $spacing-9xl;
+
+  @media (min-width: $breakpoint) {
+    font-size: $text-lg;
+  }
 }
 
 .advantage-item {
