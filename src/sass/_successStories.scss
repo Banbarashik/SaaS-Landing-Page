@@ -1,36 +1,41 @@
 .success-stories {
+  --main-flex-direction: column;
+  --main-gap: 0;
+  --main-max-height: auto;
+  --headingSecondary-margin-bottom: #{$spacing-5xl};
+  --headingTertiary-margin-bottom: #{$spacing-3};
+
+  @media (min-width: $breakpoint) {
+    --headingSecondary-margin-bottom: #{$spacing-9xl};
+    --headingTertiary-margin-bottom: #{$spacing-md};
+  }
+  @media (min-width: $bp-768) {
+    --main-flex-direction: row;
+    --main-gap: #{$spacing-8xl};
+  }
+  @media (min-width: $breakpoint-md) {
+    --main-gap: #{$spacing-10xl};
+    --main-max-height: 434px;
+  }
+
   &__header {
     max-width: 680px;
   }
 
   &__main {
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--main-flex-direction);
+    gap: var(--main-gap);
 
-    @media (min-width: $bp-768) {
-      flex-direction: row;
-      gap: $spacing-8xl;
-    }
-    @media (min-width: $breakpoint-md) {
-      max-height: 434px;
-      gap: $spacing-10xl;
-    }
+    max-height: var(--main-max-height);
   }
 
   &__heading-tertiary {
-    margin-bottom: $spacing-3;
-
-    @media (min-width: $breakpoint) {
-      margin-bottom: $spacing-md;
-    }
+    margin-bottom: var(--headingTertiary-margin-bottom);
   }
 
   &__heading-secondary {
-    margin-bottom: $spacing-5xl;
-
-    @media (min-width: $breakpoint) {
-      margin-bottom: $spacing-9xl;
-    }
+    margin-bottom: var(--headingSecondary-margin-bottom);
   }
 
   &__image-container {
@@ -44,44 +49,44 @@
 }
 
 .advantages {
-  margin-bottom: $spacing-9xl;
+  --advantages-margin-bottom: #{$spacing-9xl};
+  --advantages-flex-basis: auto;
+  --toggleWithButtons-margin-bottom: #{$spacing-5xl};
+  --heading-font-size: #{$text-base};
+  --list-font-size: #{$text-xs};
 
+  @media (min-width: $breakpoint) {
+    --toggleWithButtons-margin-bottom: #{$spacing-7xl};
+    --heading-font-size: #{$text-2xl};
+    --list-font-size: #{$text-lg};
+  }
   @media (min-width: $bp-768) {
-    margin-bottom: 0;
-    flex-basis: 380px;
+    --advantages-margin-bottom: 0;
+    --advantages-flex-basis: 380px;
   }
   @media (min-width: $breakpoint-md) {
-    flex-basis: min(50%, 540px);
+    --advantages-flex-basis: min(50%, 540px);
   }
 
-  &__toggle-with-buttons {
-    margin-bottom: $spacing-5xl;
+  flex-basis: var(--advantages-flex-basis);
+  margin-bottom: var(--advantages-margin-bottom);
 
-    @media (min-width: $breakpoint) {
-      margin-bottom: $spacing-7xl;
-    }
+  &__toggle-with-buttons {
+    margin-bottom: var(--toggleWithButtons-margin-bottom);
   }
 
   &__heading {
     margin-bottom: $spacing-5xl;
 
-    font-size: $text-base;
+    font-size: var(--heading-font-size);
     font-weight: $text-bold;
     color: $color-secondary-700;
-
-    @media (min-width: $breakpoint) {
-      font-size: $text-2xl;
-    }
   }
 
   &__list {
-    font-size: $text-xs;
+    font-size: var(--list-font-size);
     font-weight: $text-medium;
     color: $color-secondary-700;
-
-    @media (min-width: $breakpoint) {
-      font-size: $text-lg;
-    }
   }
 
   &__list-item {
