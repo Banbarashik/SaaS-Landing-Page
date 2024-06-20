@@ -163,14 +163,14 @@ $breakpoint-md: 1024px;
 }
 
 body {
-  --font-size: #{$text-sm};
+  --body-font-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
-    --font-size: #{$text-xl};
+    --body-font-size: #{$text-xl};
   }
 
   font-family: $font-family;
-  font-size: var(--font-size);
+  font-size: var(--body-font-size);
 
   line-height: $line-height-basic;
 }
@@ -206,35 +206,35 @@ img {
 }
 
 .heading-primary {
-  --font-size: #{$text-4xl};
+  --headingPrimary-font-size: #{$text-4xl};
 
   @media (min-width: $breakpoint) {
-    --font-size: #{$text-6xl};
+    --headingPrimary-font-size: #{$text-6xl};
   }
 
-  font-size: var(--font-size);
+  font-size: var(--headingPrimary-font-size);
   color: var(--dark-text);
   font-weight: $text-bold;
 }
 .heading-secondary {
-  --font-size: #{$text-2xl};
+  --headingSecondary-font-size: #{$text-2xl};
 
   @media (min-width: $breakpoint) {
-    --font-size: #{$text-5xl};
+    --headingSecondary-font-size: #{$text-5xl};
   }
 
-  font-size: var(--font-size);
+  font-size: var(--headingSecondary-font-size);
   color: var(--dark-text);
   font-weight: $text-bold;
 }
 .heading-tertiary {
-  --font-size: #{$text-xs};
+  --headingTertiary-font-size: #{$text-xs};
 
   @media (min-width: $breakpoint) {
-    --font-size: #{$text-xl};
+    --headingTertiary-font-size: #{$text-xl};
   }
 
-  font-size: var(--font-size);
+  font-size: var(--headingTertiary-font-size);
   font-weight: $text-semibold;
   color: $color-primary-500;
   text-transform: uppercase;
@@ -337,14 +337,14 @@ img {
 }
 
 .how-it-works {
-  --max-width: 235px;
+  --howItWorks-max-width: 235px;
   --title-text-size: #{$text-sm};
 
   @media (min-width: $breakpoint) {
     --title-text-size: #{$text-xl};
   }
   @media (min-width: $breakpoint-md) {
-    --max-width: 200px;
+    --howItWorks-max-width: 200px;
   }
 
   position: relative;
@@ -353,7 +353,7 @@ img {
   flex-direction: column;
   gap: $spacing-4xl;
 
-  max-width: var(--max-width);
+  max-width: var(--howItWorks-max-width);
 
   &__title {
     font-size: var(--title-font-size);
