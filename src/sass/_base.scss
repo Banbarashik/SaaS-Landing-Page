@@ -274,19 +274,8 @@ img {
     padding: $spacing-sm $spacing-xl;
     font-size: $text-xs;
   }
-
-  // TODO rename
-  &--md2 {
-    padding: $spacing-lg $spacing-xl;
-    font-size: $text-xs;
-  }
-
   &--lg {
     padding: $spacing-lg $spacing-4xl;
-    font-size: $text-base;
-  }
-  &--xl {
-    padding: $spacing-lg $spacing-5xl;
     font-size: $text-base;
   }
 
@@ -643,6 +632,16 @@ img {
 }
 
 .toggle-button {
+  --toggleButton-padding: #{$spacing-lg} #{$spacing-xl};
+  --toggleButton-font-size: #{$text-xs};
+
+  @media (min-width: $breakpoint) {
+    --toggleButton-padding: #{$spacing-lg} #{$spacing-5xl};
+    --toggleButton-font-size: #{$text-base};
+  }
+
+  padding: var(--toggleButton-padding);
+  font-size: var(--toggleButton-font-size);
   font-weight: $text-semibold;
 
   &:not(&--active) {
