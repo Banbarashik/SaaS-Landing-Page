@@ -148,6 +148,8 @@ $spacing-11xl: 7.5rem; /* 120px */
 // TODO rename to "breakpoint-sm"
 $breakpoint: 640px;
 
+$bp-768: 768px;
+
 $breakpoint-md: 1024px;
 
 :root {
@@ -179,6 +181,9 @@ body > main > * {
 
   // TODO move the query selector to the place where all query selectors are handled
   @media (min-width: $breakpoint) {
+    padding: $spacing-9xl;
+  }
+  @media (min-width: $breakpoint-md) {
     padding: $spacing-11xl;
   }
 
