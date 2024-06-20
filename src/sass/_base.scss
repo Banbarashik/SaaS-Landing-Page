@@ -17,11 +17,15 @@
 
 @mixin horizontal-line($color, $height: 1px, $opacity: 1, $x: 0px, $y: 0px) {
   content: '';
+  position: absolute;
+  top: $y;
+  left: $x;
+  right: 0;
+  transform: translateY(-100%);
   display: block;
   height: $height;
   background-color: $color;
   opacity: $opacity;
-  transform: translate($x, $y);
 }
 
 @mixin inset-outline($color, $width: 1px) {
@@ -525,10 +529,12 @@ img {
 }
 
 .testimonial {
+  --testimonial-height: 300px;
   --testimonial-padding: #{$spacing-3xl};
   --heading-margin-bottom: #{$spacing-3xl};
   --heading-font-size: #{$text-base};
-  --body-margin-bottom: #{$spacing-7xl};
+  --testimonialBody-font-size: #{$text-sm};
+  --author-line-y: -#{$spacing-4xl};
   --author-gap: #{$spacing-md};
   --authorName-font-size: #{$text-base};
   --authorName-margin-bottom: #{$spacing-xs};
@@ -536,10 +542,12 @@ img {
   --authorImage-size: 58px;
 
   @media (min-width: $breakpoint) {
+    --testimonial-height: 365px;
     --testimonial-padding: #{$spacing-4xl};
     --heading-margin-bottom: #{$spacing-xl};
     --heading-font-size: #{$text-lg};
-    --body-margin-bottom: #{$spacing-7xl};
+    --testimonialBody-font-size: #{$text-base};
+    --author-line-y: -#{$spacing-5xl};
     --author-gap: #{$spacing-4xl};
     --authorName-font-size: #{$text-lg};
     --authorName-margin-bottom: 0;
@@ -547,12 +555,20 @@ img {
     --authorImage-size: 70px;
   }
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: var(--testimonial-height);
   max-width: 384px;
   padding: var(--testimonial-padding);
   border-radius: 12px;
 
   background-color: $color-secondary-500;
   color: $color-secondary-100;
+
+  &__statement {
+  }
 
   &__heading {
     margin-bottom: var(--heading-margin-bottom);
@@ -562,25 +578,26 @@ img {
   }
 
   &__body {
-    margin-bottom: var(--body-margin-bottom);
+    font-size: var(--testimonialBody-font-size);
     font-weight: $text-medium;
-
-    &::after {
-      @include horizontal-line(
-        $color-secondary-300,
-        $opacity: 0.2,
-        $y: $spacing-3xl
-      );
-    }
   }
 
   &__author {
+    position: relative;
+
     display: flex;
     gap: var(--author-gap);
 
-    padding-top: $spacing-xs;
+    &::before {
+      @include horizontal-line(
+        $color-secondary-300,
+        $opacity: 0.2,
+        $y: var(--author-line-y)
+      );
+    }
 
     &-text {
+      padding-top: $spacing-xs;
     }
 
     &-name {
