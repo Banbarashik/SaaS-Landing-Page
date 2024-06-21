@@ -34,10 +34,10 @@
   --testimonials-gap: #{$spacing-4xl};
 
   @media (min-width: $breakpoint) {
-    --testimonials-flex-direction: row;
-    --testimonials-gap: #{$spacing-5xl};
   }
   @media (min-width: $bp-768) {
+    --testimonials-flex-direction: row;
+    --testimonials-gap: #{$spacing-5xl};
   }
   @media (min-width: $breakpoint-md) {
   }
