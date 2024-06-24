@@ -558,9 +558,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-shrink: 0;
 
   height: var(--testimonial-height);
-  max-width: 384px;
+  // max-width: 384px;
+  width: 384px;
   padding: var(--testimonial-padding);
   border-radius: 12px;
 
@@ -704,4 +706,19 @@ img {
   margin-bottom: var(--buttonDemo-margin-bottom);
 }
 .button-pricing {
+}
+
+.carousel {
+  max-width: calc(406px * 3);
+}
+
+.carousel-container {
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel--transition {
+  transition: transform 0.5s ease-in-out;
 }
