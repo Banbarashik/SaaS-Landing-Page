@@ -22,6 +22,8 @@ toggleSwitch.addEventListener('click', function (e) {
 const carousel = document.querySelector('.carousel');
 const leftArrow = document.querySelector('.arrow-button--left');
 const rightArrow = document.querySelector('.arrow-button--right');
+
+//* IMPORTANT: live representation of the DOM
 const testimonials = carousel.children;
 
 // const imageWidth = images[1].getBoundingClientRect().x;
@@ -29,17 +31,19 @@ const imageWidth = 406;
 
 leftArrow.addEventListener('click', (e) => {
   const btn = e.target;
-  const prevSlide = testimonials[0].cloneNode(true);
+  const lastSlide = testimonials[testimonials.length - 1];
+  const lastSlideClone = lastSlide.cloneNode(true);
 
+  // Prevent the button from being clicked for the next 0.5s
   btn.disabled = true;
 
-  // Move Carousel to the left by one image, and insert the image at currentIndex at the beginning of carousel's DOM
+  // Move Carousel to the left by one image, and insert the last image at the beginning of carousel's DOM
   carousel.style.transform = `translateX(-${imageWidth}px)`;
   carousel.insertBefore(
     testimonials[testimonials.length - 1],
     carousel.firstChild
   );
-  carousel.appendChild(prevSlide);
+  carousel.appendChild(lastSlideClone);
 
   // Now, let's start the transition effect, from -520 px to 0 px.
   setTimeout(() => {
@@ -50,7 +54,7 @@ leftArrow.addEventListener('click', (e) => {
   setTimeout(() => {
     btn.disabled = false;
 
-    prevSlide.remove();
+    lastSlideClone.remove();
 
     // By removing the transition class, we ensure that the transition only occurs when we want it to and that we have full control over the carousel's movement.
     carousel.classList.remove('carousel--transition');
@@ -59,18 +63,20 @@ leftArrow.addEventListener('click', (e) => {
 
 rightArrow.addEventListener('click', (e) => {
   const btn = e.target;
-  const prevSlide = testimonials[0].cloneNode(true);
+  const firstSlide = testimonials[0];
+  const firstSlideClone = firstSlide.cloneNode(true);
 
+  // Prevent the button from being clicked for the next 0.5s
   btn.disabled = true;
 
   carousel.classList.add('carousel--transition');
   carousel.style.transform = `translateX(-${imageWidth}px)`;
-  carousel.appendChild(prevSlide);
+  carousel.appendChild(firstSlideClone);
 
   setTimeout(() => {
     btn.disabled = false;
 
-    testimonials[0].remove();
+    firstSlide.remove();
 
     carousel.classList.remove('carousel--transition');
     carousel.style.transform = '';
