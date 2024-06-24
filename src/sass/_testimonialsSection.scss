@@ -31,20 +31,29 @@
 
 .testimonials-list {
   --testimonials-flex-direction: column;
-  --testimonials-gap: #{$spacing-4xl};
+  --testimonials-gap: #{$spacing-5xl};
+  --testimonials-max-width: auto;
+  --testimonials-visible-slides: 1;
 
   @media (min-width: $breakpoint) {
   }
   @media (min-width: $bp-768) {
-    --testimonials-flex-direction: row;
-    --testimonials-gap: #{$spacing-5xl};
   }
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $bp-1024) {
+    --testimonials-flex-direction: row;
+    --testimonials-gap: #{$spacing-4xl};
+    --testimonials-visible-slides: 2;
+  }
+  @media (min-width: $bp-1440) {
+    --testimonials-visible-slides: 3;
   }
 
   display: flex;
   flex-direction: var(--testimonials-flex-direction);
   gap: var(--testimonials-gap);
   align-items: center;
-  // justify-content: center;
+  max-width: calc(
+    ($testimonialsCard-max-width + var(--testimonials-gap)) *
+      var(--testimonials-visible-slides) - var(--testimonials-gap)
+  );
 }

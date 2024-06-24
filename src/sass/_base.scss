@@ -149,12 +149,16 @@ $spacing-36: 4.5rem; /* 72px */
 $spacing-10xl: 5rem; /* 80px */
 $spacing-11xl: 7.5rem; /* 120px */
 
-// TODO rename to "breakpoint-sm"
 $breakpoint: 640px;
-
-$bp-768: 768px;
-
 $breakpoint-md: 1024px;
+
+$bp-640: 640px;
+$bp-768: 768px;
+$bp-1024: 1024px;
+$bp-1280: 1280px;
+$bp-1440: 1440px;
+
+$testimonialsCard-max-width: 384px;
 
 :root {
   // light - less contrasting colors
@@ -184,10 +188,13 @@ body > main > * {
   padding: $spacing-5xl $spacing-4\.5xl;
 
   // TODO move the query selector to the place where all query selectors are handled
-  @media (min-width: $breakpoint) {
+  @media (min-width: $bp-640) {
     padding: $spacing-9xl;
   }
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $bp-1024) {
+    padding: $spacing-10xl;
+  }
+  @media (min-width: $bp-1440) {
     padding: $spacing-11xl;
   }
 
@@ -558,10 +565,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 
   height: var(--testimonial-height);
-  max-width: 384px;
+  max-width: $testimonialsCard-max-width;
   padding: var(--testimonial-padding);
   border-radius: 12px;
 
@@ -705,10 +712,6 @@ img {
   margin-bottom: var(--buttonDemo-margin-bottom);
 }
 .button-pricing {
-}
-
-.carousel {
-  max-width: calc(406px * 3);
 }
 
 .carousel-container {
