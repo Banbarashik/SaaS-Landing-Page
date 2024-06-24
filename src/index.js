@@ -20,28 +20,18 @@ toggleSwitch.addEventListener('click', function (e) {
 
 //* CAROUSEL *//
 const carousel = document.querySelector('.carousel');
-
 const leftArrow = document.querySelector('.arrow-button--left');
 const rightArrow = document.querySelector('.arrow-button--right');
-
-let currentIndex = 0;
-let prevIndex;
-// const testimonials = carousel.querySelectorAll('.testimonial');
 const testimonials = carousel.children;
-
-const totalTestimonials = Object.keys(testimonials).length;
 
 // const imageWidth = images[1].getBoundingClientRect().x;
 const imageWidth = 406;
 
 leftArrow.addEventListener('click', () => {
-  prevIndex = currentIndex;
-  currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-
   // Move Carousel to the left by one image, and insert the image at currentIndex at the beginning of carousel's DOM
   carousel.style.transform = `translateX(-${imageWidth}px)`;
   carousel.insertBefore(
-    testimonials[totalTestimonials - 1],
+    testimonials[testimonials.length - 1],
     carousel.firstChild
   );
   const prevSlide = testimonials[0].cloneNode(true);
