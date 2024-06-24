@@ -27,27 +27,34 @@ const testimonials = carousel.children;
 // const imageWidth = images[1].getBoundingClientRect().x;
 const imageWidth = 406;
 
-leftArrow.addEventListener('click', () => {
+leftArrow.addEventListener('click', (e) => {
+  const btn = e.target;
+  const prevSlide = testimonials[0].cloneNode(true);
+
+  btn.disabled = true;
+
   // Move Carousel to the left by one image, and insert the image at currentIndex at the beginning of carousel's DOM
   carousel.style.transform = `translateX(-${imageWidth}px)`;
   carousel.insertBefore(
     testimonials[testimonials.length - 1],
     carousel.firstChild
   );
-  const prevSlide = testimonials[0].cloneNode(true);
   carousel.appendChild(prevSlide);
 
   // Now, let's start the transition effect, from -520 px to 0 px.
   setTimeout(() => {
     carousel.style.transform = '';
     carousel.classList.add('carousel--transition');
-  }, 10);
+  }, 0);
 
   setTimeout(() => {
-    // By removing the transition class, we ensure that the transition only occurs when we want it to and that we have full control over the carousel's movement.
+    btn.disabled = false;
+
     prevSlide.remove();
+
+    // By removing the transition class, we ensure that the transition only occurs when we want it to and that we have full control over the carousel's movement.
     carousel.classList.remove('carousel--transition');
-  }, 490);
+  }, 500);
 });
 
 rightArrow.addEventListener('click', (e) => {
