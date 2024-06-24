@@ -34,23 +34,21 @@ const totalTestimonials = Object.keys(testimonials).length;
 // const imageWidth = images[1].getBoundingClientRect().x;
 const imageWidth = 406;
 
-rightArrow.addEventListener('click', () => {
+rightArrow.addEventListener('click', (e) => {
+  const btn = e.target;
+  const prevSlide = testimonials[0].cloneNode(true);
+
+  btn.disabled = true;
+
   carousel.classList.add('carousel--transition');
-
-  prevIndex = currentIndex;
-  currentIndex = (currentIndex + 1) % totalTestimonials;
-
   carousel.style.transform = `translateX(-${imageWidth}px)`;
+  carousel.appendChild(prevSlide);
 
-  const test = testimonials[0].cloneNode(true);
-
-  carousel.appendChild(test);
   setTimeout(() => {
-    // testimonials[prevIndex].remove();
+    btn.disabled = false;
+
     testimonials[0].remove();
-    console.log(prevIndex, testimonials);
-    // test.remove();
-    // carousel.appendChild(testimonials[prevIndex]);
+
     carousel.classList.remove('carousel--transition');
     carousel.style.transform = '';
   }, 500);
@@ -61,3 +59,6 @@ rightArrow.addEventListener('click', () => {
 //* to create an illusion of circular movement
 
 //! Problem: stops to delete slides after 1 full loop through the slides
+//! Problem: when the user clicks the button more often than 500ms there's a bug
+//! the previous slide is duplicated and also the original of the privous slide remains
+//* Solution 1: prevent the button from being clicked more than once in 500ms
