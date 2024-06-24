@@ -29,8 +29,8 @@ const rightArrow = document.querySelector('.arrow-button--right');
 //* IMPORTANT: live representation of the DOM
 const testimonials = carousel.children;
 
-// const imageWidth = images[1].getBoundingClientRect().x;
-const slideWidth = 406;
+const { gap } = getComputedStyle(carousel);
+const slideWidth = testimonials[0].offsetWidth + parseInt(gap, 10);
 
 leftArrow.addEventListener('click', function (e) {
   const btn = e.target;

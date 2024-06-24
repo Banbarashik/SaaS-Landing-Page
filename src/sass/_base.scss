@@ -561,8 +561,7 @@ img {
   flex-shrink: 0;
 
   height: var(--testimonial-height);
-  // max-width: 384px;
-  width: 384px;
+  max-width: 384px;
   padding: var(--testimonial-padding);
   border-radius: 12px;
 
