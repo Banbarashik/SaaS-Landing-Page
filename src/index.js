@@ -1,5 +1,7 @@
 import './sass/main.scss';
 
+const CAROUSEL_TRANSITION_TIME = 500;
+
 const toggleWithButtons = document.querySelector('.toggle-with-buttons');
 const toggleSwitch = document.querySelector('.toggle-switch');
 
@@ -30,7 +32,7 @@ const testimonials = carousel.children;
 // const imageWidth = images[1].getBoundingClientRect().x;
 const slideWidth = 406;
 
-leftArrow.addEventListener('click', (e) => {
+leftArrow.addEventListener('click', function (e) {
   const btn = e.target;
   const lastSlide = testimonials[testimonials.length - 1];
   const lastSlideClone = lastSlide.cloneNode(true);
@@ -53,22 +55,22 @@ leftArrow.addEventListener('click', (e) => {
   // the transition is happening
   carousel.appendChild(lastSlideClone);
 
-  setTimeout(() => {
+  setTimeout(function () {
     carousel.classList.add('carousel--transition');
     carousel.style.transform = '';
   }, 0);
 
-  setTimeout(() => {
+  setTimeout(function () {
     btn.disabled = false;
 
     // Remove the copy of the last slide because the transition has ended, and it is no longer needed
     lastSlideClone.remove();
 
     carousel.classList.remove('carousel--transition');
-  }, 500);
+  }, CAROUSEL_TRANSITION_TIME);
 });
 
-rightArrow.addEventListener('click', (e) => {
+rightArrow.addEventListener('click', function (e) {
   const btn = e.target;
   const firstSlide = testimonials[0];
   const firstSlideClone = firstSlide.cloneNode(true);
@@ -90,7 +92,7 @@ rightArrow.addEventListener('click', (e) => {
   // the transition is happening
   carousel.appendChild(firstSlideClone);
 
-  setTimeout(() => {
+  setTimeout(function () {
     btn.disabled = false;
 
     // Remove the first slide because the transition has ended, and it is no longer needed
@@ -98,5 +100,5 @@ rightArrow.addEventListener('click', (e) => {
 
     carousel.classList.remove('carousel--transition');
     carousel.style.transform = '';
-  }, 500);
+  }, CAROUSEL_TRANSITION_TIME);
 });
