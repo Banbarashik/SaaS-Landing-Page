@@ -348,59 +348,167 @@
           </div>
         </main>
       </section>
+
+      <section class="pricing-section">
+        <header class="pricing-section__header">
+          <h2 class="accessible-hidden">Pricing</h2>
+          <p class="heading-secondary pricing-section__heading-secondary">
+            Ready to Get Started?
+          </p>
+        </header>
+        <main class="pricing-section__main">
+          <p class="pricing-section__description">
+            Choose a plan that suits your business needs
+          </p>
+          <div class="">
+            <label for="monthly">Monthly</label>
+            <label for="yearly">Yearly</label>
+            <div class="toggle-switch">
+              <input type="radio" name="period" id="monthly" checked` />
+              <input type="radio" name="period" id="yearly" />
+            </div>
+          </div>
+          <ul class="pricings-list">
+            <li class="pricing-plan">
+              <div class="pricing-plan__title">
+                <svg
+                  class="pricing-plan__title-icon"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.8008 9.91016C17.6708 9.91016 16.6608 10.4602 16.0308 11.3002C15.4008 10.4602 14.3908 9.91016 13.2608 9.91016C11.3508 9.91016 9.80078 11.4702 9.80078 13.3902C9.80078 14.1302 9.92078 14.8202 10.1208 15.4502C11.1008 18.5602 14.1408 20.4302 15.6408 20.9402C15.8508 21.0102 16.2008 21.0102 16.4108 20.9402C17.9108 20.4302 20.9508 18.5702 21.9308 15.4502C22.1408 14.8102 22.2508 14.1302 22.2508 13.3902C22.2608 11.4702 20.7108 9.91016 18.8008 9.91016Z"
+                  />
+                  <path
+                    d="M20.75 8.34156C20.75 8.57156 20.52 8.72156 20.3 8.66156C18.95 8.31156 17.47 8.60156 16.35 9.40156C16.13 9.56156 15.83 9.56156 15.62 9.40156C14.83 8.82156 13.87 8.50156 12.86 8.50156C10.28 8.50156 8.18 10.6116 8.18 13.2116C8.18 16.0316 9.53 18.1416 10.89 19.5516C10.96 19.6216 10.9 19.7416 10.81 19.7016C8.08 18.7716 2 14.9116 2 8.34156C2 5.44156 4.33 3.10156 7.21 3.10156C8.92 3.10156 10.43 3.92156 11.38 5.19156C12.34 3.92156 13.85 3.10156 15.55 3.10156C18.42 3.10156 20.75 5.44156 20.75 8.34156Z"
+                  />
+                </svg>
+                <p class="pricing-plan__title-text">Free</p>
+              </div>
+              <p class="pricing-plan__description">
+                Perfect plan to get started
+              </p>
+              <div class="pricing-plan__price">
+                <span class="pricing-plan__amount">$0</span>
+                <span class="pricing-plan__period">/month</span>
+              </div>
+              <p class="pricing-plan__details">
+                A free plan grants you access to some cool features of Spend.In.
+              </p>
+              <ul class="pricing-plan__features-list">
+                <li class="pricing-plan__feature">Sync across device</li>
+                <li class="pricing-plan__feature">5 workspace</li>
+                <li class="pricing-plan__feature">Collaborate with 5 user</li>
+                <li
+                  class="pricing-plan__feature pricing-plan__feature--disabled"
+                >
+                  Sharing permission
+                </li>
+                <li
+                  class="pricing-plan__feature pricing-plan__feature--disabled"
+                >
+                  Admin tools
+                </li>
+                <li
+                  class="pricing-plan__feature pricing-plan__feature--disabled"
+                >
+                  100+ integrations
+                </li>
+              </ul>
+              <button class="pricing-plan__button btn btn--lg btn--primary">
+                Get Your Free Plan
+              </button>
+            </li>
+            <li class="pricing-plan">
+              <div class="pricing-plan__title">
+                <svg
+                  class="pricing-plan__title-icon"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 22H7C6.59 22 6.25 21.66 6.25 21.25C6.25 20.84 6.59 20.5 7 20.5H17C17.41 20.5 17.75 20.84 17.75 21.25C17.75 21.66 17.41 22 17 22Z"
+                  />
+                  <path
+                    d="M20.3502 5.51906L16.3502 8.37906C15.8202 8.75906 15.0602 8.52906 14.8302 7.91906L12.9402 2.87906C12.6202 2.00906 11.3902 2.00906 11.0702 2.87906L9.17022 7.90906C8.94022 8.52906 8.19022 8.75906 7.66022 8.36906L3.66022 5.50906C2.86022 4.94906 1.80022 5.73906 2.13022 6.66906L6.29022 18.3191C6.43022 18.7191 6.81022 18.9791 7.23022 18.9791H16.7602C17.1802 18.9791 17.5602 18.7091 17.7002 18.3191L21.8602 6.66906C22.2002 5.73906 21.1402 4.94906 20.3502 5.51906ZM14.5002 14.7491H9.50022C9.09022 14.7491 8.75022 14.4091 8.75022 13.9991C8.75022 13.5891 9.09022 13.2491 9.50022 13.2491H14.5002C14.9102 13.2491 15.2502 13.5891 15.2502 13.9991C15.2502 14.4091 14.9102 14.7491 14.5002 14.7491Z"
+                  />
+                </svg>
+                <p class="pricing-plan__title-text">Pro</p>
+              </div>
+              <p class="pricing-plan__description">
+                Perfect plan for professionals!
+              </p>
+              <div class="pricing-plan__price">
+                <span class="pricing-plan__amount">$12</span>
+                <span class="pricing-plan__period">/month</span>
+              </div>
+              <p class="pricing-plan__details">
+                For professional only! Start arranging your expenses with our
+                best templates.
+              </p>
+              <ul class="pricing-plan__features-list">
+                <li class="pricing-plan__feature">Everything in Free Plan</li>
+                <li class="pricing-plan__feature">Unlimited workspace</li>
+                <li class="pricing-plan__feature">Collaborative workspace</li>
+                <li class="pricing-plan__feature">Sharing permission</li>
+                <li class="pricing-plan__feature">Admin tools</li>
+                <li class="pricing-plan__feature">100+ integrations</li>
+              </ul>
+              <button class="pricing-plan__button btn btn--lg btn--primary">
+                Get Your Free Plan
+              </button>
+            </li>
+            <li class="pricing-plan">
+              <div class="pricing-plan__title">
+                <svg
+                  class="pricing-plan__title-icon"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.31994 13.2814H12.4099V20.4814C12.4099 21.5414 13.7299 22.0414 14.4299 21.2414L21.9999 12.6414C22.6599 11.8914 22.1299 10.7214 21.1299 10.7214H18.0399V3.52143C18.0399 2.46143 16.7199 1.96143 16.0199 2.76143L8.44994 11.3614C7.79994 12.1114 8.32994 13.2814 9.31994 13.2814Z"
+                  />
+                  <path
+                    d="M8.5 4.75H1.5C1.09 4.75 0.75 4.41 0.75 4C0.75 3.59 1.09 3.25 1.5 3.25H8.5C8.91 3.25 9.25 3.59 9.25 4C9.25 4.41 8.91 4.75 8.5 4.75Z"
+                  />
+                  <path
+                    d="M7.5 20.75H1.5C1.09 20.75 0.75 20.41 0.75 20C0.75 19.59 1.09 19.25 1.5 19.25H7.5C7.91 19.25 8.25 19.59 8.25 20C8.25 20.41 7.91 20.75 7.5 20.75Z"
+                  />
+                  <path
+                    d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z"
+                  />
+                </svg>
+                <p class="pricing-plan__title-text">Ultimate</p>
+              </div>
+              <p class="pricing-plan__description">
+                Best suits for great company!
+              </p>
+              <div class="pricing-plan__price">
+                <span class="pricing-plan__amount">$33</span>
+                <span class="pricing-plan__period">/month</span>
+              </div>
+              <p class="pricing-plan__details">
+                If you a finance manager at big company, this plan is a perfect
+                match.
+              </p>
+              <ul class="pricing-plan__features-list">
+                <li class="pricing-plan__feature">Everything in Free Plan</li>
+                <li class="pricing-plan__feature">Unlimited workspace</li>
+                <li class="pricing-plan__feature">Collaborative workspace</li>
+                <li class="pricing-plan__feature">Sharing permission</li>
+                <li class="pricing-plan__feature">Admin tools</li>
+                <li class="pricing-plan__feature">100+ integrations</li>
+              </ul>
+              <button class="pricing-plan__button btn btn--lg btn--primary">
+                Get Your Free Plan
+              </button>
+            </li>
+          </ul>
+        </main>
+      </section>
     </main>
 
-    <!-- <li class="testimonial" data-slide="4">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">
-                    No doubt, Spend.In is the best!
-                  </h3>
-                  <p class="testimonial__body">
-                    “The best”! That’s what I want to say to this platform,
-                    didn’t know that there’s a platform to help you manage your
-                    business expenses like this! Very recommended to you who
-                    have a big business!
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Moritika Kazuki</p>
-                    <p class="testimonial__author-description">
-                      Finance Manager at Mangan
-                    </p>
-                  </div>
-                  <img
-                    src="img/testimonial3.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li> -->
-    <!-- <li class="testimonial">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">It’s just incredible!</h3>
-                  <p class="testimonial__body">
-                    It’s just 1 month since I’m using Spend.In to manage my
-                    business expenses, but the result is very satisfying! My
-                    business finance now more neat than before, thanks to
-                    Spend.In!
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Jimmy Bartney</p>
-                    <p class="testimonial__author-description">
-                      Product Manager at Picko Lab
-                    </p>
-                  </div>
-                  <img
-                    src="img/testimonial1.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li> -->
-
+    <!-- PLAYGROUND -->
     <h1 class="heading-primary">All your business expenses in one place.</h1>
     <h1 class="heading-secondary">All your business expenses in one place.</h1>
     <h1 class="heading-tertiary">All your business expenses in one place.</h1>
