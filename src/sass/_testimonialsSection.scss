@@ -56,4 +56,5 @@
     ($testimonialCard-max-width + var(--testimonials-gap)) *
       var(--testimonials-visible-slides) - var(--testimonials-gap)
   );
+  margin-bottom: $spacing-9xl;
 }
