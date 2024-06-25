@@ -1,2 +1,33 @@
 .pricing-section {
+  @media (min-width: $bp-640) {
+  }
+  @media (min-width: $bp-768) {
+  }
+  @media (min-width: $bp-1024) {
+  }
+
+  &__header {
+  }
+
+  &__heading-secondary {
+    margin-bottom: $spacing-md;
+  }
+
+  &__main {
+  }
+
+  &__description {
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+.pricings-list {
+  @media (min-width: $bp-640) {
+  }
+  @media (min-width: $bp-768) {
+  }
+  @media (min-width: $bp-1024) {
+  }
+  @media (min-width: $bp-1440) {
+  }
 }
