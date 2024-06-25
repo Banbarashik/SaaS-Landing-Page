@@ -23,8 +23,8 @@ toggleSwitch.addEventListener('click', function (e) {
 // TODO make the following function universal so it can be easliy used with any '.carousel' block
 //* CAROUSEL *//
 const carousel = document.querySelector('.carousel');
-const leftArrow = document.querySelector('.arrow-button--left');
-const rightArrow = document.querySelector('.arrow-button--right');
+const carouselButtonLeft = document.querySelector('.carousel-button--left');
+const carouselButtonRight = document.querySelector('.carousel-button--right');
 
 //* IMPORTANT: live representation of the DOM
 const testimonials = carousel.children;
@@ -32,7 +32,7 @@ const testimonials = carousel.children;
 const { gap } = getComputedStyle(carousel);
 const slideWidth = testimonials[0].offsetWidth + parseInt(gap, 10);
 
-leftArrow.addEventListener('click', function (e) {
+carouselButtonLeft.addEventListener('click', function (e) {
   const btn = e.target;
   const lastSlide = testimonials[testimonials.length - 1];
   const lastSlideClone = lastSlide.cloneNode(true);
@@ -70,7 +70,7 @@ leftArrow.addEventListener('click', function (e) {
   }, CAROUSEL_TRANSITION_TIME);
 });
 
-rightArrow.addEventListener('click', function (e) {
+carouselButtonRight.addEventListener('click', function (e) {
   const btn = e.target;
   const firstSlide = testimonials[0];
   const firstSlideClone = firstSlide.cloneNode(true);

@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+@mixin square($length) {
+  width: $length;
+  height: $length;
+}
+
 @mixin circle($d) {
   width: $d;
   height: $d;
@@ -158,7 +163,7 @@ $bp-1024: 1024px;
 $bp-1280: 1280px;
 $bp-1440: 1440px;
 
-$testimonialsCard-max-width: 384px;
+$testimonialCard-max-width: 384px;
 
 :root {
   // light - less contrasting colors
@@ -272,22 +277,30 @@ img {
 
   cursor: pointer;
 
-  &--icon {
-    padding: $spacing-sm;
-  }
-
   // SIZE
   &--sm {
     padding: $spacing-xs $spacing-xl;
     font-size: $text-xs;
+
+    svg {
+      @include square(12px);
+    }
   }
   &--md {
     padding: $spacing-sm $spacing-xl;
     font-size: $text-xs;
+
+    svg {
+      @include square(14px);
+    }
   }
   &--lg {
     padding: $spacing-lg $spacing-4xl;
     font-size: $text-base;
+
+    svg {
+      @include square(18px);
+    }
   }
 
   // TYPE
@@ -343,6 +356,35 @@ img {
     }
     &:disabled {
       color: $color-secondary-400;
+    }
+  }
+
+  &--icon {
+    padding: 0;
+    border-radius: 50%;
+
+    &.btn--sm {
+      @include square(32px);
+
+      svg {
+        @include square(16px);
+      }
+    }
+
+    &.btn--md {
+      @include square(40px);
+
+      svg {
+        @include square(16px);
+      }
+    }
+
+    &.btn--lg {
+      @include square(50px);
+
+      svg {
+        @include square(18px);
+      }
     }
   }
 }
@@ -568,7 +610,7 @@ img {
   flex: 0 0 auto;
 
   height: var(--testimonial-height);
-  max-width: $testimonialsCard-max-width;
+  max-width: $testimonialCard-max-width;
   padding: var(--testimonial-padding);
   border-radius: 12px;
 
@@ -714,13 +756,19 @@ img {
 .button-pricing {
 }
 
+//**** CAROUSEL ****//
 .carousel-container {
+  position: relative;
+  overflow: hidden;
   width: fit-content;
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
 }
 
 .carousel--transition {
   transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+  fill: none;
+  stroke: $color-primary-0;
 }

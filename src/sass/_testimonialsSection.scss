@@ -53,7 +53,7 @@
   gap: var(--testimonials-gap);
   align-items: center;
   max-width: calc(
-    ($testimonialsCard-max-width + var(--testimonials-gap)) *
+    ($testimonialCard-max-width + var(--testimonials-gap)) *
       var(--testimonials-visible-slides) - var(--testimonials-gap)
   );
 }
