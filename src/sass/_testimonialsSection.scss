@@ -7,6 +7,8 @@
   --description_text-align: var(--header_text-align);
   --description_margin-bottom: #{$spacing-5xl};
 
+  --carousel-buttons-container__display: none;
+
   @media (min-width: $bp-640) {
     --header_text-align: center;
     --header_margin-bottom: #{$spacing-4xl};
@@ -18,6 +20,7 @@
   @media (min-width: $bp-768) {
   }
   @media (min-width: $bp-1024) {
+    --carousel-buttons-container__display: flex;
   }
 
   &__header {
@@ -28,6 +31,8 @@
   &__heading-tertiary {
     margin-bottom: var(--heading-tertiary_margin-bottom);
   }
+  &__heading-secondary {
+  }
 
   &__main {
   }
@@ -36,6 +41,10 @@
     text-align: var(--description_text-align);
     max-width: 580px;
     margin: 0 auto var(--description_margin-bottom);
+  }
+
+  &__carousel-buttons-container {
+    display: var(--carousel-buttons-container__display);
   }
 }
 
@@ -53,6 +62,8 @@
     --testimonials-flex-direction: row;
     --testimonials-gap: #{$spacing-4xl};
     --testimonials-visible-slides: 2;
+
+    margin-bottom: $spacing-9xl;
   }
   @media (min-width: $bp-1440) {
     --testimonials-visible-slides: 3;
@@ -66,5 +77,4 @@
     ($testimonialCard-max-width + var(--testimonials-gap)) *
       var(--testimonials-visible-slides) - var(--testimonials-gap)
   );
-  margin-bottom: $spacing-9xl;
 }

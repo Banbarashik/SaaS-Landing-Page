@@ -1,3 +1,12 @@
+@mixin hidden($accessible: true) {
+  @if $accessible {
+    position: absolute;
+    visibility: hidden;
+  } @else {
+    display: none;
+  }
+}
+
 @mixin center-flex($inline: false) {
   @if $inline {
     display: inline-flex;
@@ -173,6 +182,14 @@ $testimonialCard-max-width: 384px;
 
   --light-bg: #{$color-primary-0};
   --dark-bg: #{$color-secondary-700};
+}
+
+.hidden {
+  display: none;
+}
+.accessible-hidden {
+  position: absolute;
+  visibility: hidden;
 }
 
 body {
