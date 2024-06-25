@@ -34,7 +34,8 @@
 
   &__description {
     text-align: var(--description_text-align);
-    margin-bottom: var(--description_margin-bottom);
+    max-width: 580px;
+    margin: 0 auto var(--description_margin-bottom);
   }
 }
 
