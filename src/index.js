@@ -33,7 +33,7 @@ const { gap } = getComputedStyle(carousel);
 const slideWidth = testimonials[0].offsetWidth + parseInt(gap, 10);
 
 carouselButtonLeft.addEventListener('click', function (e) {
-  const btn = e.target;
+  const btn = e.target.closest('.carousel-button');
   const lastSlide = testimonials[testimonials.length - 1];
   const lastSlideClone = lastSlide.cloneNode(true);
 
@@ -71,7 +71,7 @@ carouselButtonLeft.addEventListener('click', function (e) {
 });
 
 carouselButtonRight.addEventListener('click', function (e) {
-  const btn = e.target;
+  const btn = e.target.closest('.carousel-button');
   const firstSlide = testimonials[0];
   const firstSlideClone = firstSlide.cloneNode(true);
 
