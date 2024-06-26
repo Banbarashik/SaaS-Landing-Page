@@ -23,7 +23,31 @@
   }
 
   &__toggle-switch-container {
-    margin-bottom: $spacing-48;
+    position: relative;
+    margin: 0 auto $spacing-48;
+
+    &::before {
+      content: 'Save 65%';
+      position: absolute;
+      bottom: -24px;
+      right: 63px;
+      transform: translateY(100%);
+
+      padding: $spacing-2 $spacing-6;
+      border-radius: 30px;
+
+      font-weight: $text-medium;
+
+      background-color: $color-primary-100;
+      color: $color-secondary-700;
+    }
+    &::after {
+      content: url('../img/arrow.svg');
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      transform: translateY(100%);
+    }
   }
 }
 
