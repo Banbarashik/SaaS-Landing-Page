@@ -28,6 +28,10 @@
 }
 
 .pricings-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-16;
+
   @media (min-width: $bp-640) {
   }
   @media (min-width: $bp-768) {
