@@ -1,10 +1,8 @@
 .pricing-section {
-  --heading-secondary_margin-bottom: #{$spacing-6};
   --description_margin-bottom: #{$spacing-16};
   --toggle-switch-container_margin-bottom: #{$spacing-48};
 
   @media (min-width: $bp-640) {
-    --heading-secondary_margin-bottom: #{$spacing-12};
     --description_margin-bottom: #{$spacing-32};
     --toggle-switch-container_margin-bottom: #{$spacing-42};
   }
@@ -17,10 +15,6 @@
 
   &__header {
     text-align: center;
-  }
-
-  &__heading-secondary {
-    margin-bottom: var(--heading-secondary_margin-bottom);
   }
 
   &__main {

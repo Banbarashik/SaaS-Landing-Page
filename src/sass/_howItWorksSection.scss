@@ -1,21 +1,10 @@
 .how-it-works-section {
-  --headingTertiary-margin-bottom: #{$spacing-3};
-  --headingSecondary-margin-bottom: #{$spacing-md};
   --description-margin: 0 auto #{$spacing-36};
 
   @media (min-width: $breakpoint) {
-    --headingTertiary-margin-bottom: #{$spacing-md};
-    --headingSecondary-margin-bottom: #{$spacing-4xl};
     --description-margin: 0 auto #{$spacing-9xl};
 
     text-align: center;
-  }
-
-  &__heading-tertiary {
-    margin-bottom: var(--headingTertiary-margin-bottom);
-  }
-  &__heading-secondary {
-    margin-bottom: var(--headingSecondary-margin-bottom);
   }
 
   &__description {

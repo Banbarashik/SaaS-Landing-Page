@@ -2,8 +2,6 @@
   --header_text-align: initial;
   --header_margin-bottom: #{$spacing-md};
 
-  --heading-tertiary_margin-bottom: #{$spacing-3};
-
   --description_text-align: var(--header_text-align);
   --description_margin-bottom: #{$spacing-5xl};
 
@@ -12,8 +10,6 @@
   @media (min-width: $bp-640) {
     --header_text-align: center;
     --header_margin-bottom: #{$spacing-4xl};
-
-    --heading-tertiary_margin-bottom: #{spacing-md};
 
     --description_margin-bottom: #{$spacing-9xl};
   }
@@ -26,12 +22,6 @@
   &__header {
     text-align: var(--header_text-align);
     margin-bottom: var(--header_margin-bottom);
-  }
-
-  &__heading-tertiary {
-    margin-bottom: var(--heading-tertiary_margin-bottom);
-  }
-  &__heading-secondary {
   }
 
   &__main {

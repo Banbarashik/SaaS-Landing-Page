@@ -16,13 +16,6 @@
     margin-bottom: var(--titleAndDescription-margin-bottom);
   }
 
-  &__heading-tertiary {
-    // TODO add 6px spacing to the system
-    margin-bottom: $spacing-3;
-  }
-  &__heading-secondary {
-  }
-
   &__description {
     grid-column: 2 / -1;
     max-width: 520px;

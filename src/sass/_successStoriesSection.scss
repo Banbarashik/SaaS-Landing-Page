@@ -2,13 +2,7 @@
   --main-flex-direction: column;
   --main-gap: 0;
   --main-max-height: auto;
-  --headingSecondary-margin-bottom: #{$spacing-5xl};
-  --headingTertiary-margin-bottom: #{$spacing-3};
 
-  @media (min-width: $breakpoint) {
-    --headingSecondary-margin-bottom: #{$spacing-9xl};
-    --headingTertiary-margin-bottom: #{$spacing-md};
-  }
   @media (min-width: $bp-768) {
     --main-flex-direction: row;
     --main-gap: #{$spacing-8xl};
@@ -28,14 +22,6 @@
     gap: var(--main-gap);
 
     max-height: var(--main-max-height);
-  }
-
-  &__heading-tertiary {
-    margin-bottom: var(--headingTertiary-margin-bottom);
-  }
-
-  &__heading-secondary {
-    margin-bottom: var(--headingSecondary-margin-bottom);
   }
 
   &__image-container {
