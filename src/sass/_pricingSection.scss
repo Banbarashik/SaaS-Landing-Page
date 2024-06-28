@@ -1,9 +1,18 @@
 .pricing-section {
+  --heading-secondary_margin-bottom: #{$spacing-6};
+  --description_margin-bottom: #{$spacing-16};
+  --toggle-switch-container_margin-bottom: #{$spacing-48};
+
   @media (min-width: $bp-640) {
+    --heading-secondary_margin-bottom: #{$spacing-12};
+    --description_margin-bottom: #{$spacing-32};
+    --toggle-switch-container_margin-bottom: #{$spacing-42};
   }
   @media (min-width: $bp-768) {
   }
   @media (min-width: $bp-1024) {
+  }
+  @media (min-width: $bp-1440) {
   }
 
   &__header {
@@ -11,7 +20,7 @@
   }
 
   &__heading-secondary {
-    margin-bottom: $spacing-md;
+    margin-bottom: var(--heading-secondary_margin-bottom);
   }
 
   &__main {
@@ -19,12 +28,12 @@
 
   &__description {
     text-align: center;
-    margin-bottom: $spacing-5xl;
+    margin-bottom: var(--description_margin-bottom);
   }
 
   &__toggle-switch-container {
     position: relative;
-    margin: 0 auto $spacing-48;
+    margin: 0 auto var(--toggle-switch-container_margin-bottom);
 
     &::before {
       content: 'Save 65%';
@@ -36,6 +45,7 @@
       padding: $spacing-2 $spacing-6;
       border-radius: 30px;
 
+      font-size: $text-sm;
       font-weight: $text-medium;
 
       background-color: $color-primary-100;
@@ -52,9 +62,12 @@
 }
 
 .pricings-list {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-16;
+  --pricings-list_flex-direction: column;
+  --pricings-list_gap: #{$spacing-16};
+
+  @include center-flex;
+  flex-direction: var(--pricings-list_flex-direction);
+  gap: var(--pricings-list_gap);
 
   @media (min-width: $bp-640) {
   }
@@ -63,5 +76,7 @@
   @media (min-width: $bp-1024) {
   }
   @media (min-width: $bp-1440) {
+    --pricings-list_flex-direction: row;
+    --pricings-list_gap: #{$spacing-12};
   }
 }
