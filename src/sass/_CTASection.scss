@@ -1,11 +1,12 @@
 .cta-section {
+  overflow: hidden;
   position: relative;
   padding-bottom: 372px;
 
   &__image {
     position: absolute;
     bottom: 0;
-    left: 28px;
+    left: $spacing-14;
     max-width: none;
   }
 }
