@@ -1,9 +1,7 @@
 .pricing-section {
-  --description_margin-bottom: #{$spacing-16};
   --toggle-switch-container_margin-bottom: #{$spacing-48};
 
   @media (min-width: $bp-640) {
-    --description_margin-bottom: #{$spacing-32};
     --toggle-switch-container_margin-bottom: #{$spacing-42};
   }
   @media (min-width: $bp-768) {
@@ -22,7 +20,6 @@
 
   &__description {
     text-align: center;
-    margin-bottom: var(--description_margin-bottom);
   }
 
   &__toggle-switch-container {

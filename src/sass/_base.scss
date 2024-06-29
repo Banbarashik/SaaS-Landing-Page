@@ -300,13 +300,16 @@ img {
   text-transform: uppercase;
 }
 
-.description {
-  --description_margin-bottom: #{$spacing-6};
+.home-page__section-description {
+  --description_margin-bottom: #{$spacing-16};
   --description--left-align_margin-bottom: var(--description_margin-bottom);
 
   @media (min-width: $bp-640) {
+    --description_margin-bottom: #{$spacing-32};
     --description--left-align_margin-bottom: 0;
   }
+
+  margin-bottom: var(--description_margin-bottom);
 
   .home-page__section--left-align & {
     margin-bottom: var(--description--left-align_margin-bottom);

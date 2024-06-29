@@ -1,15 +1,12 @@
 .how-it-works-section {
-  --description-margin: 0 auto #{$spacing-36};
-
-  @media (min-width: $breakpoint) {
-    --description-margin: 0 auto #{$spacing-9xl};
-
+  @media (min-width: $bp-640) {
     text-align: center;
   }
 
   &__description {
     max-width: 650px;
-    margin: var(--description-margin);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

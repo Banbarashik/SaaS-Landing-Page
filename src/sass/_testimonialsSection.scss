@@ -3,15 +3,12 @@
   --header_margin-bottom: #{$spacing-md};
 
   --description_text-align: var(--header_text-align);
-  --description_margin-bottom: #{$spacing-5xl};
 
   --carousel-buttons-container__display: none;
 
   @media (min-width: $bp-640) {
     --header_text-align: center;
     --header_margin-bottom: #{$spacing-4xl};
-
-    --description_margin-bottom: #{$spacing-9xl};
   }
   @media (min-width: $bp-768) {
   }
@@ -30,7 +27,8 @@
   &__description {
     text-align: var(--description_text-align);
     max-width: 580px;
-    margin: 0 auto var(--description_margin-bottom);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__carousel-buttons-container {
