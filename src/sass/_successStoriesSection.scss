@@ -2,18 +2,21 @@
   --main-flex-direction: column;
   --main-gap: 0;
   --main-max-height: auto;
+  --header_margin-bottom: #{$spacing-16};
 
   @media (min-width: $bp-768) {
     --main-flex-direction: row;
     --main-gap: #{$spacing-8xl};
+    --header_margin-bottom: #{$spacing-32};
   }
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $bp-1024) {
     --main-gap: #{$spacing-10xl};
     --main-max-height: 434px;
   }
 
   &__header {
     max-width: 680px;
+    margin-bottom: var(--header_margin-bottom);
   }
 
   &__main {
