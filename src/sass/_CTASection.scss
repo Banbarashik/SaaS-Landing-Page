@@ -1,9 +1,46 @@
 .cta-section {
+  //* temporary
+  @media (min-width: $bp-640) {
+    padding: $spacing-9xl;
+  }
+  @media (min-width: $bp-1024) {
+    padding: $spacing-10xl;
+  }
+  @media (min-width: $bp-1440) {
+    padding: $spacing-11xl;
+  }
+  //* /temporary
+
   overflow: hidden;
   position: relative;
   padding-bottom: 372px;
 
+  &__header {
+    @media (min-width: $bp-640) {
+      margin-bottom: $spacing-12;
+    }
+  }
+
+  &__heading-secondary,
+  &__description {
+    max-width: 570px;
+  }
+
+  &__description {
+    @media (min-width: $bp-640) {
+      --description--left-align_margin-bottom: #{$spacing-16};
+    }
+  }
+
   &__image {
+    @media (min-width: $bp-1024) {
+      left: 65vw;
+    }
+    @media (min-width: $bp-1440) {
+      left: auto;
+      right: 0;
+    }
+
     position: absolute;
     bottom: 0;
     left: $spacing-14;
