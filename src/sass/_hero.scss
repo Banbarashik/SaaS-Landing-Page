@@ -6,14 +6,12 @@
   --body-margin-bottom: #{$spacing-5xl};
   --image-max-height: 15vh;
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: $bp-640) {
     --container-margin-bottom: #{$spacing-10xl};
     --heading-margin-bottom: #{$spacing-4xl};
     --body-padding-top: #{$spacing-11xl};
     --body-margin-bottom: #{$spacing-6xl};
     --image-max-height: calc(15vh + 15vw);
-
-    text-align: center;
   }
 
   position: relative;
@@ -29,11 +27,9 @@
     margin-bottom: var(--heading-margin-bottom);
   }
 
-  // TODO change "body" to "description"
   //* Unlike other body text which changes from 14px to 20px, here it changes to 24px
   // TODO find out how to handle its font-size change
-  &__body {
-    margin-bottom: var(--body-margin-bottom);
+  &__description {
   }
 
   &__image {

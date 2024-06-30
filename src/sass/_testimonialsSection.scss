@@ -1,13 +1,8 @@
 .testimonials-section {
-  --header_text-align: initial;
   --header_margin-bottom: #{$spacing-md};
-
-  --description_text-align: var(--header_text-align);
-
   --carousel-buttons-container__display: none;
 
   @media (min-width: $bp-640) {
-    --header_text-align: center;
     --header_margin-bottom: #{$spacing-4xl};
   }
   @media (min-width: $bp-768) {
@@ -17,7 +12,6 @@
   }
 
   &__header {
-    text-align: var(--header_text-align);
     margin-bottom: var(--header_margin-bottom);
   }
 
@@ -25,7 +19,6 @@
   }
 
   &__description {
-    text-align: var(--description_text-align);
     max-width: 580px;
     margin-left: auto;
     margin-right: auto;
@@ -42,7 +35,7 @@
   --testimonials-max-width: auto;
   --testimonials-visible-slides: 1;
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: $bp-640) {
   }
   @media (min-width: $bp-768) {
   }
