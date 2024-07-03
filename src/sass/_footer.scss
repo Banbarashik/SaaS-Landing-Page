@@ -27,12 +27,14 @@
     @media (min-width: $bp-640) {
       grid-template-columns: none;
       grid-auto-flow: column;
+      column-gap: normal;
       flex-basis: 700px;
     }
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: $spacing-16;
+    column-gap: $spacing-12;
   }
 
   &__bottom {
