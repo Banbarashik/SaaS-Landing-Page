@@ -1,4 +1,14 @@
 .footer {
+  &__brand {
+    margin-bottom: $spacing-6;
+  }
+
+  &__company-mission {
+    max-width: 195px;
+    font-size: $text-lg;
+    color: var(--light-text);
+  }
+
   &__links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

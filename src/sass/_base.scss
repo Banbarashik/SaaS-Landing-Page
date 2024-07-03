@@ -262,7 +262,7 @@ img {
 a {
   font-size: $text-base;
 
-  color: $color-secondary-400;
+  color: var(--light-text);
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
@@ -884,6 +884,22 @@ a {
   flex-direction: var(--buttons-container_flex-direction);
   justify-content: center;
   gap: $spacing-12;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $spacing-7;
+
+  &__logo {
+    @include square(32px);
+    fill: $color-primary-500;
+  }
+
+  &__name {
+    font-size: $text-2xl;
+    font-weight: $text-bold;
+  }
 }
 
 //**** CAROUSEL ****//
