@@ -122,6 +122,8 @@ $line-height-auto: normal;
 
 $font-family: 'Plus Jakarta Sans', sans-serif;
 
+$letter-spacing: -0.02em;
+
 // TODO name font-sizes the way spacings are named
 $text-xs: 0.75rem; /* 12px */
 $text-sm: 0.875rem; /* 14px */
@@ -220,10 +222,10 @@ body {
     --body-font-size: #{$text-xl};
   }
 
+  line-height: $line-height-basic;
+  letter-spacing: $letter-spacing;
   font-family: $font-family;
   font-size: var(--body-font-size);
-
-  line-height: $line-height-basic;
 }
 
 .home-page__section {
