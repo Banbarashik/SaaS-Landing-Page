@@ -9,6 +9,11 @@
     flex-direction: column;
     gap: $spacing-16;
   }
+
+  &__policy {
+    font-size: $text-lg;
+    font-weight: $text-semibold;
+  }
 }
 
 .links {
