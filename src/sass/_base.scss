@@ -122,6 +122,7 @@ $line-height-auto: normal;
 
 $font-family: 'Plus Jakarta Sans', sans-serif;
 
+// TODO name font-sizes the way spacings are named
 $text-xs: 0.75rem; /* 12px */
 $text-sm: 0.875rem; /* 14px */
 $text-base: 1rem; /* 16px */
@@ -256,6 +257,30 @@ body > main > :nth-child(odd) {
 
 img {
   max-width: 100%;
+}
+
+a {
+  font-size: $text-base;
+
+  color: $color-secondary-400;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .heading-primary {
