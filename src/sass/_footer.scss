@@ -7,3 +7,13 @@
 
 .links {
 }
+
+.links-heading {
+  margin-bottom: $spacing-16;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-12;
+}
