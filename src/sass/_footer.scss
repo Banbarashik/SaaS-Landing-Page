@@ -3,6 +3,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  &__policies {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-16;
+  }
 }
 
 .links {
