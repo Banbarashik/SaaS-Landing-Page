@@ -29,7 +29,7 @@
   border-radius: 50%;
 }
 
-@mixin horizontal-line($color, $height: 1px, $opacity: 1, $x: 0px, $y: 0px) {
+@mixin horizontal-line($color, $height: 1px, $opacity: 1, $x: 0, $y: 0) {
   content: '';
   position: absolute;
   top: $y;
@@ -216,7 +216,7 @@ $order-last: 99;
 body {
   --body-font-size: #{$text-sm};
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: $bp-640) {
     --body-font-size: #{$text-xl};
   }
 
@@ -900,6 +900,12 @@ a {
     font-size: $text-2xl;
     font-weight: $text-bold;
   }
+}
+
+.copyright {
+  font-size: $text-base;
+  font-weight: $text-medium;
+  color: var(--light-text);
 }
 
 //**** CAROUSEL ****//

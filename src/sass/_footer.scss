@@ -5,6 +5,7 @@
 
   &__company-mission {
     max-width: 195px;
+    margin-bottom: $spacing-24;
     font-size: $text-lg;
     color: var(--light-text);
   }
@@ -12,12 +13,20 @@
   &__links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: $spacing-16;
+    margin-bottom: $spacing-32;
   }
 
   &__policies {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: $spacing-16;
+    margin-bottom: $spacing-24;
+
+    &::before {
+      @include horizontal-line($color-primary-200, $y: -$spacing-16);
+    }
   }
 
   &__policy {
