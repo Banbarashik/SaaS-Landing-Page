@@ -1,7 +1,10 @@
 .cta-section {
   //* temporary
   @media (min-width: $bp-640) {
-    padding: $spacing-9xl;
+    padding: $spacing-32 $spacing-32 372px;
+  }
+  @media (min-width: $bp-768) {
+    padding: $spacing-32 $spacing-32 500px;
   }
   @media (min-width: $bp-1024) {
     padding: $spacing-10xl;
@@ -23,7 +26,9 @@
 
   &__heading-secondary,
   &__description {
-    max-width: 570px;
+    @media (min-width: $bp-1024) {
+      max-width: 570px;
+    }
   }
 
   &__description {
@@ -33,12 +38,15 @@
   }
 
   &__image {
+    @media (min-width: $bp-640) {
+      left: $spacing-32;
+    }
     @media (min-width: $bp-1024) {
       left: 65vw;
+      max-height: calc(100% - $spacing-40);
     }
     @media (min-width: $bp-1440) {
-      left: auto;
-      right: 0;
+      left: 51vw;
     }
 
     position: absolute;
