@@ -23,6 +23,11 @@
   }
 
   &__policies {
+    @media (min-width: $bp-640) {
+      flex-direction: row;
+      gap: $spacing-36;
+    }
+
     position: relative;
     display: flex;
     flex-direction: column;
