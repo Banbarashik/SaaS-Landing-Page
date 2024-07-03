@@ -1,57 +1,54 @@
 .cta-section {
-  //* temporary
+  --cta-section_padding-bottom: 372px;
+  --header_max-width: none;
+  --header_margin-bottom: 0;
+  --description_max-width: var(--header_max-width);
+  --image_left: #{$spacing-14};
+  --image_max-height: none;
+
   @media (min-width: $bp-640) {
-    padding: $spacing-32 $spacing-32 372px;
+    --header_margin-bottom: #{$spacing-12};
+    --image_left: #{$spacing-32};
   }
   @media (min-width: $bp-768) {
-    padding: $spacing-32 $spacing-32 500px;
+    // TODO find out the math and change
+    --cta-section_padding-bottom: 500px;
   }
   @media (min-width: $bp-1024) {
-    padding: $spacing-10xl;
+    --cta-section_padding-bottom: #{$spacing-40}; // default
+    --header_max-width: 570px;
+    --image_left: 65vw;
+    --image_max-height: calc(100% - $spacing-40);
   }
   @media (min-width: $bp-1440) {
-    padding: $spacing-11xl;
+    --cta-section_padding-bottom: #{$spacing-60}; // default
+    --image_left: 51vw;
   }
-  //* /temporary
 
   overflow: hidden;
   position: relative;
-  padding-bottom: 372px;
+  padding-bottom: var(--cta-section_padding-bottom);
 
   &__header {
-    @media (min-width: $bp-640) {
-      margin-bottom: $spacing-12;
-    }
-  }
-
-  &__heading-secondary,
-  &__description {
-    @media (min-width: $bp-1024) {
-      max-width: 570px;
-    }
+    margin-bottom: var(--header_margin-bottom);
+    max-width: var(--header_max-width);
   }
 
   &__description {
-    @media (min-width: $bp-640) {
-      --description--left-align_margin-bottom: #{$spacing-16};
-    }
+    max-width: var(--description_max-width);
   }
 
   &__image {
-    @media (min-width: $bp-640) {
-      left: $spacing-32;
-    }
-    @media (min-width: $bp-1024) {
-      left: 65vw;
-      max-height: calc(100% - $spacing-40);
-    }
-    @media (min-width: $bp-1440) {
-      left: 51vw;
-    }
-
     position: absolute;
     bottom: 0;
-    left: $spacing-14;
+    left: var(--image_left);
+    max-height: var(--image_max-height);
     max-width: none;
+  }
+}
+
+.cta-section__description {
+  @media (min-width: $bp-640) {
+    --description--left-align_margin-bottom: #{$spacing-16};
   }
 }
