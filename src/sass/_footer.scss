@@ -1,11 +1,24 @@
 .footer {
-  &__brand {
-    margin-bottom: $spacing-6;
+  &__top {
+    @media (min-width: $bp-640) {
+      flex-direction: row;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $spacing-24;
+    margin-bottom: $spacing-32;
+  }
+
+  &__company-info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6;
   }
 
   &__company-mission {
     max-width: 195px;
-    margin-bottom: $spacing-24;
     font-size: $text-lg;
     color: var(--light-text);
   }
@@ -14,12 +27,12 @@
     @media (min-width: $bp-640) {
       grid-template-columns: none;
       grid-auto-flow: column;
+      flex-basis: 700px;
     }
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: $spacing-16;
-    margin-bottom: $spacing-32;
   }
 
   &__bottom {
