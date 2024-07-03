@@ -227,21 +227,21 @@ body {
 
 // TODO use another selector to handle the rule
 body > main > * {
-  padding: $spacing-5xl $spacing-4\.5xl;
+  --padding: #{$spacing-16} #{$spacing-14};
 
   // TODO move the query selector to the place where all query selectors are handled
   @media (min-width: $bp-640) {
-    padding: $spacing-9xl;
+    --padding: #{$spacing-32};
   }
   @media (min-width: $bp-1024) {
-    padding: $spacing-10xl;
+    --padding: #{$spacing-40};
   }
   @media (min-width: $bp-1440) {
-    padding: $spacing-11xl;
+    --padding: #{$spacing-60};
   }
 
+  padding: var(--padding);
   background-color: var(--light-bg);
-
   color: var(--light-text);
 }
 
