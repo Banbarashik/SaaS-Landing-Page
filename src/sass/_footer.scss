@@ -22,21 +22,32 @@
     margin-bottom: $spacing-32;
   }
 
+  &__bottom {
+    @media (min-width: $bp-640) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-24;
+
+    &::before {
+      @include horizontal-line($color-primary-200, $y: -$spacing-16);
+    }
+  }
+
   &__policies {
     @media (min-width: $bp-640) {
       flex-direction: row;
       gap: $spacing-36;
     }
 
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: $spacing-16;
-    margin-bottom: $spacing-24;
-
-    &::before {
-      @include horizontal-line($color-primary-200, $y: -$spacing-16);
-    }
   }
 
   &__policy {
