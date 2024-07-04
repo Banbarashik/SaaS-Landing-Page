@@ -921,6 +921,20 @@ a {
   color: var(--light-text);
 }
 
+.links {
+  &__heading {
+    margin-bottom: $spacing-16;
+    font-size: $text-xl;
+    font-weight: $text-semibold;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-12;
+  }
+}
+
 //**** CAROUSEL ****//
 .carousel-container {
   position: relative;

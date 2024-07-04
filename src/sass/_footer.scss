@@ -100,15 +100,3 @@
     font-weight: $text-semibold;
   }
 }
-
-.links-heading {
-  margin-bottom: $spacing-16;
-  font-size: $text-xl;
-  font-weight: $text-semibold;
-}
-
-.links-list {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-12;
-}
