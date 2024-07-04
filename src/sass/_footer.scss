@@ -1,4 +1,10 @@
 .footer {
+  --policy-horizontal-line_opacity: 0;
+
+  @media (min-width: $bp-640) {
+    --policy-horizontal-line_opacity: 1;
+  }
+
   &__top {
     @media (min-width: $bp-640) {
       flex-direction: row;
@@ -78,7 +84,8 @@
         $color-secondary-500,
         $width: 2px,
         $height: 60%,
-        $x: $spacing-16
+        $x: $spacing-16,
+        $opacity: var(--policy-horizontal-line_opacity)
       );
     }
   }
