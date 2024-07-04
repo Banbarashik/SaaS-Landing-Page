@@ -1,0 +1,31 @@
+.nav {
+  position: relative;
+  display: flex;
+  height: 90px;
+  padding: 0 var(--home-page_padding-x);
+  background-color: var(--dark-bg);
+  color: $color-primary-0;
+
+  &__brand-logo {
+    fill: $color-primary-0;
+  }
+
+  &__main {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    display: flex;
+    justify-content: space-evenly;
+    padding: $spacing-12 0;
+    background-color: #3a8354;
+  }
+
+  &__actions {
+    @include center-flex;
+    flex-direction: column;
+    gap: $spacing-10;
+  }
+}
