@@ -71,6 +71,19 @@
   }
 
   &__policy {
+    position: relative;
+
+    &:not(:last-child)::after {
+      @include vertical-line(
+        $color-secondary-500,
+        $width: 2px,
+        $height: 60%,
+        $x: $spacing-16
+      );
+    }
+  }
+
+  &__policy-link {
     font-size: $text-lg;
     font-weight: $text-semibold;
   }
