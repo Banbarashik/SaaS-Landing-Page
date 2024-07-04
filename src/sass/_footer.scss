@@ -1,13 +1,14 @@
 .footer {
   --policy-horizontal-line_opacity: 0;
 
-  @media (min-width: $bp-640) {
+  @media (min-width: $bp-768) {
     --policy-horizontal-line_opacity: 1;
   }
 
   &__top {
-    @media (min-width: $bp-640) {
+    @media (min-width: $bp-1024) {
       flex-direction: row;
+      gap: $spacing-40;
       margin-bottom: $spacing-48;
     }
 
@@ -19,7 +20,7 @@
   }
 
   &__company-info {
-    @media (min-width: $bp-640) {
+    @media (min-width: $bp-1024) {
       gap: $spacing-16;
     }
 
@@ -35,10 +36,12 @@
   }
 
   &__links {
-    @media (min-width: $bp-640) {
+    @media (min-width: $bp-768) {
       grid-template-columns: none;
       grid-auto-flow: column;
       column-gap: normal;
+    }
+    @media (min-width: $bp-1024) {
       flex-basis: 792px;
     }
 
@@ -49,7 +52,7 @@
   }
 
   &__bottom {
-    @media (min-width: $bp-640) {
+    @media (min-width: $bp-1024) {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -66,7 +69,7 @@
   }
 
   &__policies {
-    @media (min-width: $bp-640) {
+    @media (min-width: $bp-768) {
       flex-direction: row;
       gap: $spacing-36;
     }
