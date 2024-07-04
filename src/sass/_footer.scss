@@ -33,6 +33,8 @@
     --bottom_justify-content: space-between;
   }
 
+  padding: var(--home-page_padding-x) var(--home-page_padding-y);
+
   &__top {
     display: flex;
     flex-direction: var(--top_flex-direction);
