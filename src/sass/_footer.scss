@@ -2,6 +2,7 @@
   &__top {
     @media (min-width: $bp-640) {
       flex-direction: row;
+      margin-bottom: $spacing-48;
     }
 
     display: flex;
@@ -12,6 +13,10 @@
   }
 
   &__company-info {
+    @media (min-width: $bp-640) {
+      gap: $spacing-16;
+    }
+
     display: flex;
     flex-direction: column;
     gap: $spacing-6;
