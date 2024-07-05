@@ -1,8 +1,4 @@
 .nav {
-  @media (min-width: $bp-1024) {
-    // align-items: ;
-  }
-
   position: relative;
   display: flex;
   align-items: center;
@@ -13,11 +9,15 @@
   background-color: var(--dark-bg);
   color: $color-primary-0;
 
+  &__hamburger-button {
+    @media (min-width: $bp-1024) {
+      display: none;
+    }
+  }
+
   &__brand {
     @media (min-width: $bp-1024) {
       flex: 0 1 27%;
-    }
-    @media (min-width: $bp-1280) {
     }
   }
 
@@ -29,6 +29,7 @@
     @media (min-width: $bp-1024) {
       position: static;
       transform: none;
+      display: flex;
       align-items: center;
       justify-content: space-between;
       gap: $spacing-16;
@@ -41,10 +42,14 @@
     right: 0;
     bottom: -1px;
     transform: translateY(100%);
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     padding: $spacing-20 0;
     background-color: inherit;
+
+    &--open {
+      display: flex;
+    }
   }
 
   &__menu {

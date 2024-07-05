@@ -20,6 +20,12 @@ toggleSwitch.addEventListener('click', function (e) {
   e.target.classList.toggle('toggle-switch--right');
 });
 
+document
+  .querySelector('.nav__hamburger-button')
+  .addEventListener('click', () =>
+    document.querySelector('.nav__main').classList.toggle('nav__main--open')
+  );
+
 // TODO make the following function universal so it can be easliy used with any '.carousel' block
 //* CAROUSEL *//
 const carousel = document.querySelector('.carousel');
