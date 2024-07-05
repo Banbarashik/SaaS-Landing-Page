@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-evenly;
     padding: $spacing-20 0;
-    background-color: #3a8354;
+    background-color: inherit;
   }
 
   &__menu {
@@ -35,6 +35,15 @@
     @include center-flex;
     flex-direction: column;
     gap: $spacing-16;
+  }
+
+  &__login-link {
+    font-weight: $text-medium;
+
+    &,
+    &:visited {
+      color: $color-secondary-200;
+    }
   }
 
   &__link {
