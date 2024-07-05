@@ -1,6 +1,8 @@
 .nav {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 90px;
   padding: 0 var(--home-page_padding-x);
   background-color: var(--dark-bg);
@@ -32,7 +34,7 @@
   &__actions {
     @include center-flex;
     flex-direction: column;
-    gap: $spacing-10;
+    gap: $spacing-16;
   }
 
   &__link {
