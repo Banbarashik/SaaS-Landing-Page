@@ -67,6 +67,10 @@
 
     &-item-link {
       color: $color-primary-0;
+
+      &:hover {
+        color: $color-primary-200;
+      }
     }
   }
 
@@ -83,10 +87,10 @@
 
   &__login-link {
     font-weight: $text-medium;
+    color: $color-secondary-200;
 
-    &,
-    &:visited {
-      color: $color-secondary-200;
+    &:hover {
+      color: $color-secondary-300;
     }
   }
 
