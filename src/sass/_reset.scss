@@ -155,3 +155,8 @@ button {
   -moz-appearance: none; /* Remove default Mozilla appearance */
   appearance: none; /* Remove default appearance for all browsers */
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

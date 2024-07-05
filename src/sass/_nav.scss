@@ -7,7 +7,6 @@
   border-bottom: 1px solid rgba($color: $color-primary-0, $alpha: 0.16);
   padding: 0 var(--home-page_padding-x);
   background-color: var(--dark-bg);
-  color: $color-primary-0;
 
   &__hamburger-button {
     @media (min-width: $bp-1024) {
@@ -19,6 +18,8 @@
     @media (min-width: $bp-1024) {
       flex: 0 1 27%;
     }
+
+    color: $color-primary-0;
   }
 
   &__brand-logo {
@@ -63,6 +64,10 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-10;
+
+    &-item-link {
+      color: $color-primary-0;
+    }
   }
 
   &__actions {
