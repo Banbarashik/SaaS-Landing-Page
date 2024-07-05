@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   height: 90px;
+  border-bottom: 1px solid rgba($color: $color-primary-0, $alpha: 0.16);
   padding: 0 var(--home-page_padding-x);
   background-color: var(--dark-bg);
   color: $color-primary-0;
@@ -17,7 +18,7 @@
     z-index: 1;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     transform: translateY(100%);
     display: flex;
     justify-content: space-evenly;
