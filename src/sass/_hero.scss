@@ -4,6 +4,7 @@
   --heading-margin-bottom: #{$spacing-md};
   --body-padding-top: #{$spacing-7xl};
   --body-margin-bottom: #{$spacing-5xl};
+  --description_font-size: inherit;
   --image-max-height: 15vh;
 
   @media (min-width: $bp-640) {
@@ -11,6 +12,7 @@
     --heading-margin-bottom: #{$spacing-4xl};
     --body-padding-top: #{$spacing-11xl};
     --body-margin-bottom: #{$spacing-6xl};
+    --description_font-size: #{$text-2xl};
     --image-max-height: calc(15vh + 15vw);
   }
 
@@ -27,9 +29,8 @@
     margin-bottom: var(--heading-margin-bottom);
   }
 
-  //* Unlike other body text which changes from 14px to 20px, here it changes to 24px
-  // TODO find out how to handle its font-size change
   &__description {
+    font-size: var(--description_font-size);
   }
 
   &__image {

@@ -224,7 +224,7 @@ $rounded-full: 9999px;
   --dark-bg: #{$color-secondary-700};
 }
 
-//! Should be at the end of style sheets because it can easily be overriden by other classes
+//! Should be at the end of the style sheets because it can easily be overriden by other classes
 .accessible-hidden {
   position: absolute;
   visibility: hidden;
