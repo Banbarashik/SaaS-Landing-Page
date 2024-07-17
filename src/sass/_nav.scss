@@ -9,6 +9,10 @@
   --main_gap: 0;
   --main_flex: 0 1 auto;
   --main_padding: #{$spacing-24} 0;
+  --menu_position: static;
+  --menu_top: 50%;
+  --menu_left: 50%;
+  --menu_transform: none;
   --menu_flex-direction: column;
   --menu_gap: #{$spacing-10};
   --actions_flex-direction: column;
@@ -33,6 +37,11 @@
   }
   @media (min-width: $bp-1280) {
     --menu_gap: #{$spacing-20};
+  }
+  @media (min-width: $bp-1440) {
+    --main_justify-content: end;
+    --menu_position: absolute;
+    --menu_transform: translate(-50%, -50%);
   }
 
   position: relative;
@@ -78,6 +87,10 @@
   }
 
   &__menu {
+    position: var(--menu_position);
+    top: var(--menu_top);
+    left: var(--menu_left);
+    transform: var(--menu_transform);
     display: flex;
     flex-direction: var(--menu_flex-direction);
     gap: var(--menu_gap);
