@@ -1,4 +1,40 @@
 .nav {
+  --hamburger-button_display: flex;
+  --brand_flex: 0 1 auto;
+  --main_position: absolute;
+  --main_transform: translateY(100%);
+  --main_display: none;
+  --main_align-items: normal;
+  --main_justify-content: space-evenly;
+  --main_gap: 0;
+  --main_flex: 0 1 auto;
+  --main_padding: #{$spacing-24} 0;
+  --menu_flex-direction: column;
+  --menu_gap: #{$spacing-10};
+  --actions_flex-direction: column;
+  --actions_gap: #{$spacing-16};
+  --link_font-size: #{$text-xl};
+
+  @media (min-width: $bp-1024) {
+    --hamburger-button_display: none;
+    --brand_flex: 0 1 27%;
+    --main_position: static;
+    --main_transform: none;
+    --main_display: flex;
+    --main_align-items: center;
+    --main_justify-content: space-between;
+    --main_gap: #{$spacing-16};
+    --main_flex: 1 0 auto;
+    --main_padding: 0;
+    --menu_flex-direction: row;
+    --actions_flex-direction: row;
+    --actions_gap: #{$spacing-12};
+    --link_font-size: #{$text-lg};
+  }
+  @media (min-width: $bp-1280) {
+    --menu_gap: #{$spacing-20};
+  }
+
   position: relative;
   display: flex;
   align-items: center;
@@ -9,16 +45,11 @@
   background-color: var(--dark-bg);
 
   &__hamburger-button {
-    @media (min-width: $bp-1024) {
-      display: none;
-    }
+    display: var(--hamburger-button_display);
   }
 
   &__brand {
-    @media (min-width: $bp-1024) {
-      flex: 0 1 27%;
-    }
-
+    flex: var(--brand_flex);
     color: $color-primary-0;
   }
 
@@ -27,26 +58,18 @@
   }
 
   &__main {
-    @media (min-width: $bp-1024) {
-      position: static;
-      transform: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: $spacing-16;
-      flex: 1 0 auto;
-      padding: 0;
-    }
-
-    position: absolute;
+    position: var(--main_position);
     z-index: 1;
     left: 0;
     right: 0;
     bottom: -1px;
-    transform: translateY(100%);
-    display: none;
-    justify-content: space-evenly;
-    padding: $spacing-24 0;
+    transform: var(--main_transform);
+    display: var(--main_display);
+    justify-content: var(--main_justify-content);
+    align-items: var(--main_align-items);
+    gap: var(--main_gap);
+    flex: var(--main_flex);
+    padding: var(--main_padding);
     background-color: inherit;
 
     &--open {
@@ -55,16 +78,9 @@
   }
 
   &__menu {
-    @media (min-width: $bp-1024) {
-      flex-direction: row;
-    }
-    @media (min-width: $bp-1280) {
-      gap: $spacing-20;
-    }
-
     display: flex;
-    flex-direction: column;
-    gap: $spacing-10;
+    flex-direction: var(--menu_flex-direction);
+    gap: var(--menu_gap);
 
     &-item-link {
       color: $color-primary-0;
@@ -76,14 +92,9 @@
   }
 
   &__actions {
-    @media (min-width: $bp-1024) {
-      flex-direction: row;
-      gap: $spacing-12;
-    }
-
     @include center-flex;
-    flex-direction: column;
-    gap: $spacing-16;
+    flex-direction: var(--actions_flex-direction);
+    gap: var(--actions_gap);
   }
 
   &__login-link {
@@ -96,10 +107,6 @@
   }
 
   &__link {
-    @media (min-width: $bp-1024) {
-      font-size: $text-lg;
-    }
-
-    font-size: $text-xl;
+    font-size: var(--link_font-size);
   }
 }
