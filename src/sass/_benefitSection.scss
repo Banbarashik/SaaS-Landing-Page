@@ -2,11 +2,28 @@
   --grid-columns: 1fr;
   --titleAndDescription-gap: #{$spacing-md};
   --titleAndDescription-margin-bottom: #{$spacing-5xl};
+  --description_grid-column: auto;
+  --description_max-width: none;
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: $bp-640) {
     --grid-columns: repeat(3, 1fr);
     --titleAndDescription-gap: #{$spacing-5xl};
     --titleAndDescription-margin-bottom: #{$spacing-9xl};
+    --description_grid-column: 2 / -1;
+    --description_max-width: 520px;
+  }
+
+  //* temporary
+  & &__heading-secondary {
+    --heading-secondary--left-align__margin-bottom: 0;
+  }
+  & &__description {
+    --description--left-align_margin-bottom: 0;
+  }
+  //* /temporary
+
+  &__heading-secondary {
+    max-width: 245px;
   }
 
   &__title-and-description {
@@ -17,8 +34,8 @@
   }
 
   &__description {
-    grid-column: 2 / -1;
-    max-width: 520px;
+    grid-column: var(--description_grid-column);
+    max-width: var(--description_max-width);
   }
 }
 
