@@ -91,7 +91,7 @@
     }
 
     &--disadvantage::before {
-      @include icon('../img/icon/close-circle.svg');
+      @include icon('../img/icon/close-circle--red.svg');
     }
   }
 }

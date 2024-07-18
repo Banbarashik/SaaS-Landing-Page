@@ -678,7 +678,10 @@ img {
       color: $color-secondary-400;
 
       &::before {
-        @include icon('../img/icon/close-circle.svg', var(--feature-icon-size));
+        @include icon(
+          '../img/icon/close-circle--grey.svg',
+          var(--feature-icon-size)
+        );
       }
     }
   }
