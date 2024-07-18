@@ -604,11 +604,26 @@ img {
     --feature-margin-bottom: #{$spacing-4xl};
   }
 
+  position: relative;
   max-width: 384px;
   padding: var(--pricingPlan-padding);
   border-radius: var(--pricingPlan-border-radius);
 
   background-color: $color-secondary-100;
+
+  &--popular::before {
+    content: 'Popular';
+    position: absolute;
+    top: var(--pricingPlan-padding);
+    right: var(--pricingPlan-padding);
+    transform: translateY(25%);
+    padding: $spacing-2 $spacing-8;
+    border-radius: $rounded-full;
+    font-size: $text-base;
+    font-weight: $text-medium;
+    background-color: $color-secondary-700;
+    color: $color-primary-0;
+  }
 
   &__title {
     display: flex;
@@ -825,7 +840,7 @@ img {
     background-color: $color-primary-0;
     transition: {
       property: margin-left transform;
-      duration: 1s;
+      duration: 0.3s;
     }
   }
 
