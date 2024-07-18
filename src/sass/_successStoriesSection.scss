@@ -89,5 +89,9 @@
     &::before {
       @include icon('../img/icon/tick-circle.svg');
     }
+
+    &--disadvantage::before {
+      @include icon('../img/icon/close-circle.svg');
+    }
   }
 }

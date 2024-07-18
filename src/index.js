@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import SuccessImageUp from './img/success_story--up.svg';
+import SuccessImageDown from './img/success_story--down.svg';
 
 const CAROUSEL_TRANSITION_TIME = 500;
 
@@ -25,6 +27,53 @@ document
   .addEventListener('click', () =>
     document.querySelector('.nav__main').classList.toggle('nav__main--open')
   );
+
+const toggleButtonWith = document.getElementById('with');
+const toggleButtonWithout = document.getElementById('without');
+const advantagesHeading = document.querySelector('.advantages__heading');
+const advantagesList = document.querySelector('.advantages__list');
+const advantagesImage = document.querySelector('.success-stories__image');
+
+toggleButtonWith.addEventListener('change', function () {
+  advantagesHeading.textContent =
+    'Track Business Expenses until its Milisecond';
+
+  advantagesList.innerHTML = `
+    <li class="advantages__list-item">
+      Analyze your business cost easily with group transaction through
+      tagging feature.
+    </li>
+    <li class="advantages__list-item">
+      Add more than one card for payment. Integrated with more than
+      50+ payment method and support bulk payment.
+    </li>
+    <li class="advantages__list-item">
+      Arrange your business expenses by date, name, etc., with just
+      one click.
+    </li>`;
+
+  advantagesImage.src = SuccessImageUp;
+  advantagesImage.alt = 'Positive balance change graph';
+});
+
+toggleButtonWithout.addEventListener('change', function () {
+  advantagesHeading.textContent =
+    'Taking too long to tidy up administrative files makes it unproductive';
+
+  advantagesList.innerHTML = `
+    <li class="advantages__list-item advantages__list-item--disadvantage">
+      Complex recording process due to every administrative file in a different place.
+    </li>
+    <li class="advantages__list-item advantages__list-item--disadvantage">
+      Need more effort to pay manually one by one invoice because there is no payment accommodation.
+    </li>
+    <li class="advantages__list-item advantages__list-item--disadvantage">
+      Manual data arranging needs a long time because the different months/years are not in the same place.
+    </li>`;
+
+  advantagesImage.src = SuccessImageDown;
+  advantagesImage.alt = 'Negative balance change graph';
+});
 
 // TODO make the following function universal so it can be easliy used with any '.carousel' block
 //* CAROUSEL *//
