@@ -54,8 +54,6 @@
   align-items: center;
   justify-content: space-between;
   height: 90px;
-  max-width: $page-max-width;
-  margin: 0 auto;
   border-bottom: 1px solid rgba($color: $color-primary-0, $alpha: 0.16);
 
   &__hamburger-button {

@@ -244,6 +244,11 @@ body {
   font-size: var(--body-font-size);
 }
 
+.container {
+  max-width: $page-max-width;
+  margin: 0 auto;
+}
+
 .home-page {
   --home-page_padding-x: #{$spacing-16};
   --home-page_padding-y: #{$spacing-14};
@@ -266,11 +271,6 @@ body {
   padding: var(--home-page_padding-y) var(--home-page_padding-x);
   background-color: var(--light-bg);
   color: var(--light-text);
-
-  &-content {
-    max-width: $page-max-width;
-    margin: 0 auto;
-  }
 }
 
 main :nth-child(odd of .home-page__section) {

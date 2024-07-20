@@ -35,11 +35,6 @@
 
   padding: var(--home-page_padding-y) var(--home-page_padding-x);
 
-  &-content {
-    max-width: $page-max-width;
-    margin: 0 auto;
-  }
-
   &__top {
     display: flex;
     flex-direction: var(--top_flex-direction);
