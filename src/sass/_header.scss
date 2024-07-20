@@ -55,6 +55,7 @@
   justify-content: space-between;
   height: 90px;
   border-bottom: 1px solid rgba($color: $color-primary-0, $alpha: 0.16);
+  background-color: var(--dark-bg);
 
   &__hamburger-button {
     display: var(--hamburger-button_display);

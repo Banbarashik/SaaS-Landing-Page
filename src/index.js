@@ -4,6 +4,16 @@ import SuccessImageDown from './img/success_story--down.svg';
 
 const CAROUSEL_TRANSITION_TIME = 500;
 
+const hamburgerButton = document.querySelector('.nav__hamburger-button');
+const navMain = document.querySelector('.nav__main');
+
+document.addEventListener('click', function (e) {
+  if (e.target === hamburgerButton) navMain.classList.toggle('nav__main--open');
+  else if (!e.target.closest('.nav__main')) {
+    navMain.classList.remove('nav__main--open');
+  }
+});
+
 const toggleWithButtons = document.querySelector('.toggle-with-buttons');
 
 toggleWithButtons.addEventListener('input', function (e) {
@@ -16,12 +26,6 @@ toggleWithButtons.addEventListener('input', function (e) {
 
   label.classList.add('toggle-button--active');
 });
-
-document
-  .querySelector('.nav__hamburger-button')
-  .addEventListener('click', () =>
-    document.querySelector('.nav__main').classList.toggle('nav__main--open')
-  );
 
 const toggleButtonWith = document.getElementById('with');
 const toggleButtonWithout = document.getElementById('without');
