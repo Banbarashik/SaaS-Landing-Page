@@ -5,7 +5,6 @@ import SuccessImageDown from './img/success_story--down.svg';
 const CAROUSEL_TRANSITION_TIME = 500;
 
 const toggleWithButtons = document.querySelector('.toggle-with-buttons');
-const toggleSwitch = document.querySelector('.toggle-switch');
 
 toggleWithButtons.addEventListener('input', function (e) {
   const toggle = e.currentTarget;
@@ -16,10 +15,6 @@ toggleWithButtons.addEventListener('input', function (e) {
     .forEach((button) => button.classList.remove('toggle-button--active'));
 
   label.classList.add('toggle-button--active');
-});
-
-toggleSwitch.addEventListener('click', function (e) {
-  e.target.classList.toggle('toggle-switch--right');
 });
 
 document
@@ -73,6 +68,41 @@ toggleButtonWithout.addEventListener('change', function () {
 
   advantagesImage.src = SuccessImageDown;
   advantagesImage.alt = 'Negative balance change graph';
+});
+
+const toggleSwitch = document.querySelector('.toggle-switch');
+const toggleMonthly = document.querySelector('#monthly');
+const toggleYearly = document.querySelector('#yearly');
+const prices = document.querySelectorAll('.pricing-plan__amount');
+const periods = document.querySelectorAll('.pricing-plan__period');
+
+toggleSwitch.addEventListener('click', function (e) {
+  e.target.classList.toggle('toggle-switch--right');
+
+  // Implement the radio button type interaction in JS
+  if (toggleMonthly.checked) {
+    toggleMonthly.checked = false;
+    toggleYearly.checked = true;
+  } else if (toggleYearly.checked) {
+    toggleYearly.checked = false;
+    toggleMonthly.checked = true;
+  }
+
+  periods.forEach(
+    (period) =>
+      (period.textContent = toggleMonthly.checked ? '/month' : '/year')
+  );
+
+  prices.forEach((price) => {
+    const numRegExp = /\d+/;
+    const priceNum = parseInt(numRegExp.exec(price.textContent)[0], 10);
+
+    price.textContent =
+      '$' +
+      (toggleYearly.checked
+        ? Math.round(priceNum * 0.35 * 12)
+        : Math.round(priceNum / 0.35 / 12));
+  });
 });
 
 // TODO make the following function universal so it can be easliy used with any '.carousel' block
