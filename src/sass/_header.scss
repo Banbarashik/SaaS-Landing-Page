@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background-color: var(--dark-bg);
   padding: 0 var(--home-page_padding-x);
 }
@@ -49,7 +50,6 @@
     --menu_transform: translate(-50%, -50%);
   }
 
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
