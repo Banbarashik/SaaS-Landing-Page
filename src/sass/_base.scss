@@ -273,7 +273,7 @@ body {
   color: var(--light-text);
 }
 
-main :nth-child(odd of .home-page__section) {
+:nth-child(odd of .home-page__section) {
   --light-text: #{$color-secondary-300};
   --dark-text: #{$color-primary-0};
 
