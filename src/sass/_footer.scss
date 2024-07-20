@@ -33,7 +33,12 @@
     --bottom_justify-content: space-between;
   }
 
-  padding: var(--home-page_padding-x) var(--home-page_padding-y);
+  padding: var(--home-page_padding-y) var(--home-page_padding-x);
+
+  &-content {
+    max-width: $page-max-width;
+    margin: 0 auto;
+  }
 
   &__top {
     display: flex;

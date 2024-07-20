@@ -206,6 +206,7 @@ $bp-1024: 1024px;
 $bp-1280: 1280px;
 $bp-1440: 1440px;
 
+$page-max-width: 1200px;
 $testimonialCard-max-width: 384px;
 
 $order-first: -1;
@@ -256,15 +257,20 @@ body {
     --home-page_padding-y: #{$spacing-40};
   }
   @media (min-width: $bp-1440) {
-    --home-page_padding-x: #{$spacing-60};
+    --home-page_padding-x: 0;
     --home-page_padding-y: #{$spacing-60};
   }
 }
 
 .home-page__section {
-  padding: var(--home-page_padding-x) var(--home-page_padding-y);
+  padding: var(--home-page_padding-y) var(--home-page_padding-x);
   background-color: var(--light-bg);
   color: var(--light-text);
+
+  &-content {
+    max-width: $page-max-width;
+    margin: 0 auto;
+  }
 }
 
 main :nth-child(odd of .home-page__section) {

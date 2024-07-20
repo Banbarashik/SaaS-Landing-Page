@@ -3,7 +3,6 @@
   --container-margin-bottom: #{$spacing-8xl};
   --heading-margin-bottom: #{$spacing-md};
   --body-padding-top: #{$spacing-7xl};
-  --body-margin-bottom: #{$spacing-5xl};
   --description_font-size: inherit;
   --image-max-height: 15vh;
 
@@ -11,13 +10,12 @@
     --container-margin-bottom: #{$spacing-10xl};
     --heading-margin-bottom: #{$spacing-4xl};
     --body-padding-top: #{$spacing-11xl};
-    --body-margin-bottom: #{$spacing-6xl};
     --description_font-size: #{$text-2xl};
     --image-max-height: calc(15vh + 15vw);
   }
 
   position: relative;
-  padding: var(--body-padding-top) $spacing-4\.5xl 0;
+  padding: var(--body-padding-top) var(--home-page_padding-x) 0;
   overflow-y: hidden;
 
   &__container {

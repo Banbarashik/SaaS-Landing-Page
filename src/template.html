@@ -6,7 +6,7 @@
     <title>Pickolab Studio</title>
   </head>
   <body class="home-page">
-    <header>
+    <header class="header">
       <nav class="nav">
         <div class="brand nav__brand">
           <svg
@@ -71,21 +71,23 @@
     </header>
     <main>
       <section class="hero home-page__section">
-        <div class="hero__container">
-          <h1 class="heading-primary hero__heading">
-            All your business expenses in one place.
-          </h1>
-          <p class="home-page__section-description hero__description">
-            Your one-stop finance empower platform. Manage all your business
-            expenses with our supafast app.
-          </p>
-          <div class="buttons-container">
-            <button class="btn btn--primary btn--lg">Get a Free Demo</button>
-            <button class="btn btn--minimal btn--lg">See Pricing</button>
+        <div class="home-page__section-content">
+          <div class="hero__container">
+            <h1 class="heading-primary hero__heading">
+              All your business expenses in one place.
+            </h1>
+            <p class="home-page__section-description hero__description">
+              Your one-stop finance empower platform. Manage all your business
+              expenses with our supafast app.
+            </p>
+            <div class="buttons-container">
+              <button class="btn btn--primary btn--lg">Get a Free Demo</button>
+              <button class="btn btn--minimal btn--lg">See Pricing</button>
+            </div>
           </div>
-        </div>
-        <div class="hero__image">
-          <img src="img/dashboard.png" alt="Spend.In Dashboard" />
+          <div class="hero__image">
+            <img src="img/dashboard.png" alt="Spend.In Dashboard" />
+          </div>
         </div>
       </section>
 
@@ -93,107 +95,114 @@
         id="benefit"
         class="benefit-section home-page__section home-page__section--left-align"
       >
-        <h2 class="heading-tertiary">Why use Spend.In</h2>
-        <div class="benefit-section__title-and-description">
-          <p class="benefit-section__heading-secondary heading-secondary">
-            Easy, Simple, Affordable
-          </p>
-          <p
-            class="home-page__section-description benefit-section__description"
-          >
-            Our platform helps your business in managing expenses. These are
-            some of the reasons why you should use our platform in managing
-            business finances.
-          </p>
+        <div class="home-page__section-content">
+          <h2 class="heading-tertiary">Why use Spend.In</h2>
+          <div class="benefit-section__title-and-description">
+            <p class="benefit-section__heading-secondary heading-secondary">
+              Easy, Simple, Affordable
+            </p>
+            <p
+              class="home-page__section-description benefit-section__description"
+            >
+              Our platform helps your business in managing expenses. These are
+              some of the reasons why you should use our platform in managing
+              business finances.
+            </p>
+          </div>
+          <ul class="benefits">
+            <li class="benefit benefit-item">
+              <h3 class="benefit__title">Automatic Invoice Payment</h3>
+              <p class="benefit__description">
+                No need to pay manually, we provide automatic invoice payment
+                service! Set a payment schedule and you're done, it's that easy!
+              </p>
+              <img
+                src="img/benefit1.svg"
+                alt="Invoice Payment"
+                class="benefit__image"
+              />
+            </li>
+            <li class="benefit benefit-item">
+              <h3 class="benefit__title">Clear payment history</h3>
+              <p class="benefit__description">
+                Still writing manual expenses? Our platform breaks down every
+                expense you log down to the millisecond!
+              </p>
+              <img
+                src="img/benefit2.svg"
+                alt="Payment history"
+                class="benefit__image"
+              />
+            </li>
+            <li class="benefit benefit-item">
+              <h3 class="benefit__title">Use of multi-card payments</h3>
+              <p class="benefit__description">
+                Have more than 1 bank account or credit/debit card? Our platform
+                is already integrated with many banks around the world, for
+                easier payments!
+              </p>
+              <img
+                src="img/benefit3.svg"
+                alt="Bank cards"
+                class="benefit__image"
+              />
+            </li>
+          </ul>
         </div>
-
-        <ul class="benefits">
-          <li class="benefit benefit-item">
-            <h3 class="benefit__title">Automatic Invoice Payment</h3>
-            <p class="benefit__description">
-              No need to pay manually, we provide automatic invoice payment
-              service! Set a payment schedule and you're done, it's that easy!
-            </p>
-            <img
-              src="img/benefit1.svg"
-              alt="Invoice Payment"
-              class="benefit__image"
-            />
-          </li>
-          <li class="benefit benefit-item">
-            <h3 class="benefit__title">Clear payment history</h3>
-            <p class="benefit__description">
-              Still writing manual expenses? Our platform breaks down every
-              expense you log down to the millisecond!
-            </p>
-            <img
-              src="img/benefit2.svg"
-              alt="Payment history"
-              class="benefit__image"
-            />
-          </li>
-          <li class="benefit benefit-item">
-            <h3 class="benefit__title">Use of multi-card payments</h3>
-            <p class="benefit__description">
-              Have more than 1 bank account or credit/debit card? Our platform
-              is already integrated with many banks around the world, for easier
-              payments!
-            </p>
-            <img
-              src="img/benefit3.svg"
-              alt="Bank cards"
-              class="benefit__image"
-            />
-          </li>
-        </ul>
       </section>
 
       <section
         id="how-it-works"
         class="how-it-works-section home-page__section"
       >
-        <h2 class="heading-tertiary">How it works</h2>
-        <p class="heading-secondary">Few Easy Steps and Done</p>
-        <p
-          class="home-page__section-description how-it-works-section__description"
-        >
-          In just few easy step, you are all set to manage your business
-          finances. Manage all expenses with Spend.In all in one place.
-        </p>
-        <ul class="how-it-works-list">
-          <li class="how-it-works">
-            <h3 class="how-it-works__title">Register your Spend.In account.</h3>
-            <img
-              src="img/how_it_works1.svg"
-              alt="Login form"
-              class="how-it-works__image"
-            />
-            <div class="how-it-works__number">1</div>
-          </li>
-          <li class="how-it-works">
-            <h3 class="how-it-works__title">
-              Fill in the list of your business expenses.
-            </h3>
-            <img
-              src="img/how_it_works2.svg"
-              alt="Expenses list"
-              class="how-it-works__image"
-            />
-            <div class="how-it-works__number">2</div>
-          </li>
-          <li class="how-it-works">
-            <h3 class="how-it-works__title">Done, let’s continue the work.</h3>
-            <img
-              src="img/how_it_works3.svg"
-              alt="Completed"
-              class="how-it-works__image"
-            />
-            <div class="how-it-works__number">3</div>
-          </li>
-        </ul>
-        <div class="buttons-container">
-          <button class="btn btn--primary btn--lg">Get a Free Demo</button>
-          <button class="btn btn--minimal btn--lg">See Pricing</button>
+        <div class="home-page__section-content">
+          <h2 class="heading-tertiary">How it works</h2>
+          <p class="heading-secondary">Few Easy Steps and Done</p>
+          <p
+            class="home-page__section-description how-it-works-section__description"
+          >
+            In just few easy step, you are all set to manage your business
+            finances. Manage all expenses with Spend.In all in one place.
+          </p>
+          <ul class="how-it-works-list">
+            <li class="how-it-works">
+              <h3 class="how-it-works__title">
+                Register your Spend.In account.
+              </h3>
+              <img
+                src="img/how_it_works1.svg"
+                alt="Login form"
+                class="how-it-works__image"
+              />
+              <div class="how-it-works__number">1</div>
+            </li>
+            <li class="how-it-works">
+              <h3 class="how-it-works__title">
+                Fill in the list of your business expenses.
+              </h3>
+              <img
+                src="img/how_it_works2.svg"
+                alt="Expenses list"
+                class="how-it-works__image"
+              />
+              <div class="how-it-works__number">2</div>
+            </li>
+            <li class="how-it-works">
+              <h3 class="how-it-works__title">
+                Done, let’s continue the work.
+              </h3>
+              <img
+                src="img/how_it_works3.svg"
+                alt="Completed"
+                class="how-it-works__image"
+              />
+              <div class="how-it-works__number">3</div>
+            </li>
+          </ul>
+          <div class="buttons-container">
+            <button class="btn btn--primary btn--lg">Get a Free Demo</button>
+            <button class="btn btn--minimal btn--lg">See Pricing</button>
+          </div>
         </div>
       </section>
 
@@ -201,490 +210,481 @@
       <section
         class="success-stories home-page__section home-page__section--left-align"
       >
-        <header class="success-stories__header">
-          <h2 style="display: none">Succsess stories</h2>
-          <p class="heading-tertiary">Increase productivity</p>
-          <p class="heading-secondary">
-            Reduce Time in Doing Manual Work Managing Expenses
-          </p>
-        </header>
-        <main class="success-stories__main">
-          <div class="advantages">
-            <div class="toggle-with-buttons advantages__toggle-with-buttons">
-              <label for="with" class="toggle-button toggle-button--active btn"
-                >With Spend.In</label
-              >
-              <input type="radio" name="spendIn" id="with" checked />
-              <label for="without" class="toggle-button btn"
-                >Without Spend.In</label
-              >
-              <input type="radio" name="spendIn" id="without" />
-            </div>
-            <p class="advantages__heading">
-              Track Business Expenses until its Milisecond
+        <div class="home-page__section-content">
+          <header class="success-stories__header">
+            <h2 style="display: none">Succsess stories</h2>
+            <p class="heading-tertiary">Increase productivity</p>
+            <p class="heading-secondary">
+              Reduce Time in Doing Manual Work Managing Expenses
             </p>
-            <ul class="advantages__list">
-              <li class="advantages__list-item">
-                Analyze your business cost easily with group transaction through
-                tagging feature.
-              </li>
-              <li class="advantages__list-item">
-                Add more than one card for payment. Integrated with more than
-                50+ payment method and support bulk payment.
-              </li>
-              <li class="advantages__list-item">
-                Arrange your business expenses by date, name, etc., with just
-                one click.
-              </li>
-            </ul>
-          </div>
-          <div class="success-stories__image-container">
-            <img
-              class="success-stories__image"
-              src="img/success_story--up.svg"
-              alt="Positive balance grow graph"
-            />
-          </div>
-        </main>
+          </header>
+          <main class="success-stories__main">
+            <div class="advantages">
+              <div class="toggle-with-buttons advantages__toggle-with-buttons">
+                <label
+                  for="with"
+                  class="toggle-button toggle-button--active btn"
+                  >With Spend.In</label
+                >
+                <input type="radio" name="spendIn" id="with" checked />
+                <label for="without" class="toggle-button btn"
+                  >Without Spend.In</label
+                >
+                <input type="radio" name="spendIn" id="without" />
+              </div>
+              <p class="advantages__heading">
+                Track Business Expenses until its Milisecond
+              </p>
+              <ul class="advantages__list">
+                <li class="advantages__list-item">
+                  Analyze your business cost easily with group transaction
+                  through tagging feature.
+                </li>
+                <li class="advantages__list-item">
+                  Add more than one card for payment. Integrated with more than
+                  50+ payment method and support bulk payment.
+                </li>
+                <li class="advantages__list-item">
+                  Arrange your business expenses by date, name, etc., with just
+                  one click.
+                </li>
+              </ul>
+            </div>
+            <div class="success-stories__image-container">
+              <img
+                class="success-stories__image"
+                src="img/success_story--up.svg"
+                alt="Positive balance grow graph"
+              />
+            </div>
+          </main>
+        </div>
       </section>
 
       <section class="testimonials-section home-page__section">
-        <header class="testimonials-section__header">
-          <!-- TODO create a class "accessible-hidden" and use it instead of the inline style -->
-          <h2 style="display: none">Testimonials</h2>
-          <p class="heading-tertiary">What they say</p>
-          <p class="heading-secondary">Our user kind words</p>
-        </header>
-        <main class="testimonials-section__main">
-          <p
-            class="home-page__section-description testimonials-section__description"
-          >
-            Here are some testimonials from our user after using Spend.In to
-            manage their business expenses.
-          </p>
-          <div class="carousel-container">
-            <ul class="testimonials-list carousel">
-              <li class="testimonial" data-slide="1">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">It’s just incredible!</h3>
-                  <p class="testimonial__body">
-                    It’s just 1 month since I’m using Spend.In to manage my
-                    business expenses, but the result is very satisfying! My
-                    business finance now more neat than before, thanks to
-                    Spend.In!
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Jimmy Bartney</p>
-                    <p class="testimonial__author-description">
-                      Product Manager at Picko Lab
-                    </p>
-                  </div>
-                  <img
-                    src="img/testimonial1.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li>
-              <li class="testimonial" data-slide="2">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">Satisfied User Here!</h3>
-                  <p class="testimonial__body">
-                    Never thought that with Spend.In managing my business
-                    expenses is so easy! Been using this platform for 3 months
-                    and still counting!
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Natasha Romanoff</p>
-                    <p class="testimonial__author-description">Black Widow</p>
-                  </div>
-                  <img
-                    src="img/testimonial2.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li>
-              <li class="testimonial" data-slide="3">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">
-                    No doubt, Spend.In is the best!
-                  </h3>
-                  <p class="testimonial__body">
-                    “The best”! That’s what I want to say to this platform,
-                    didn’t know that there’s a platform to help you manage your
-                    business expenses like this! Very recommended to you who
-                    have a big business!
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Moritika Kazuki</p>
-                    <p class="testimonial__author-description">
-                      Finance Manager at Mangan
-                    </p>
-                  </div>
-                  <img
-                    src="img/testimonial3.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li>
-              <!-- <li class="testimonial" data-slide="4">
-                <div class="testimonial__statemenent">
-                  <h3 class="testimonial__heading">Lorem Ipsum</h3>
-                  <p class="testimonial__body">
-                    Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
-                    IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                  </p>
-                </div>
-                <div class="testimonial__author">
-                  <div class="testimonial__author-text">
-                    <p class="testimonial__author-name">Jimmy Bartney</p>
-                    <p class="testimonial__author-description">
-                      Product Manager at Picko Lab
-                    </p>
-                  </div>
-                  <img
-                    src="img/testimonial1.jpg"
-                    alt="Testimonial author's photo"
-                    class="testimonial__author-image"
-                  />
-                </div>
-              </li> -->
-            </ul>
-            <div
-              class="carousel-buttons-container testimonials-section__carousel-buttons-container"
+        <div class="home-page__section-content">
+          <header class="testimonials-section__header">
+            <!-- TODO create a class "accessible-hidden" and use it instead of the inline style -->
+            <h2 style="display: none">Testimonials</h2>
+            <p class="heading-tertiary">What they say</p>
+            <p class="heading-secondary">Our user kind words</p>
+          </header>
+          <main class="testimonials-section__main">
+            <p
+              class="home-page__section-description testimonials-section__description"
             >
-              <button
-                class="carousel-button carousel-button--left btn btn--primary btn--lg btn--icon"
+              Here are some testimonials from our user after using Spend.In to
+              manage their business expenses.
+            </p>
+            <div class="carousel-container">
+              <ul class="testimonials-list carousel">
+                <li class="testimonial" data-slide="1">
+                  <div class="testimonial__statemenent">
+                    <h3 class="testimonial__heading">It’s just incredible!</h3>
+                    <p class="testimonial__body">
+                      It’s just 1 month since I’m using Spend.In to manage my
+                      business expenses, but the result is very satisfying! My
+                      business finance now more neat than before, thanks to
+                      Spend.In!
+                    </p>
+                  </div>
+                  <div class="testimonial__author">
+                    <div class="testimonial__author-text">
+                      <p class="testimonial__author-name">Jimmy Bartney</p>
+                      <p class="testimonial__author-description">
+                        Product Manager at Picko Lab
+                      </p>
+                    </div>
+                    <img
+                      src="img/testimonial1.jpg"
+                      alt="Testimonial author's photo"
+                      class="testimonial__author-image"
+                    />
+                  </div>
+                </li>
+                <li class="testimonial" data-slide="2">
+                  <div class="testimonial__statemenent">
+                    <h3 class="testimonial__heading">Satisfied User Here!</h3>
+                    <p class="testimonial__body">
+                      Never thought that with Spend.In managing my business
+                      expenses is so easy! Been using this platform for 3 months
+                      and still counting!
+                    </p>
+                  </div>
+                  <div class="testimonial__author">
+                    <div class="testimonial__author-text">
+                      <p class="testimonial__author-name">Natasha Romanoff</p>
+                      <p class="testimonial__author-description">Black Widow</p>
+                    </div>
+                    <img
+                      src="img/testimonial2.jpg"
+                      alt="Testimonial author's photo"
+                      class="testimonial__author-image"
+                    />
+                  </div>
+                </li>
+                <li class="testimonial" data-slide="3">
+                  <div class="testimonial__statemenent">
+                    <h3 class="testimonial__heading">
+                      No doubt, Spend.In is the best!
+                    </h3>
+                    <p class="testimonial__body">
+                      “The best”! That’s what I want to say to this platform,
+                      didn’t know that there’s a platform to help you manage
+                      your business expenses like this! Very recommended to you
+                      who have a big business!
+                    </p>
+                  </div>
+                  <div class="testimonial__author">
+                    <div class="testimonial__author-text">
+                      <p class="testimonial__author-name">Moritika Kazuki</p>
+                      <p class="testimonial__author-description">
+                        Finance Manager at Mangan
+                      </p>
+                    </div>
+                    <img
+                      src="img/testimonial3.jpg"
+                      alt="Testimonial author's photo"
+                      class="testimonial__author-image"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <div
+                class="carousel-buttons-container testimonials-section__carousel-buttons-container"
               >
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M20.5 12H3.67004"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <button
-                class="carousel-button carousel-button--right btn btn--primary btn--lg btn--icon"
-              >
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14.4301 5.92993L20.5001 11.9999L14.4301 18.0699"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3.5 12H20.33"
-                    stroke-width="1.5"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
+                <button
+                  class="carousel-button carousel-button--left btn btn--primary btn--lg btn--icon"
+                >
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.5 12H3.67004"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="carousel-button carousel-button--right btn btn--primary btn--lg btn--icon"
+                >
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.4301 5.92993L20.5001 11.9999L14.4301 18.0699"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
       </section>
 
       <section id="pricing" class="pricing-section home-page__section">
-        <header class="pricing-section__header">
-          <h2 class="accessible-hidden">Pricing</h2>
-          <p class="heading-secondary pricing-section__heading-secondary">
-            Ready to Get Started?
-          </p>
-        </header>
-        <main class="pricing-section__main">
-          <p
-            class="home-page__section-description pricing-section__description"
-          >
-            Choose a plan that suits your business needs
-          </p>
-          <div
-            class="toggle-switch-container pricing-section__toggle-switch-container"
-          >
-            <label
-              for="monthly"
-              class="toggle-switch-text toggle-switch-text--left"
-              >Monthly</label
+        <div class="home-page__section-content">
+          <header class="pricing-section__header">
+            <h2 class="accessible-hidden">Pricing</h2>
+            <p class="heading-secondary pricing-section__heading-secondary">
+              Ready to Get Started?
+            </p>
+          </header>
+          <main class="pricing-section__main">
+            <p
+              class="home-page__section-description pricing-section__description"
             >
-            <label
-              for="yearly"
-              class="toggle-switch-text toggle-switch-text--right"
-              >Yearly</label
+              Choose a plan that suits your business needs
+            </p>
+            <div
+              class="toggle-switch-container pricing-section__toggle-switch-container"
             >
-            <div class="toggle-switch toggle-switch--right">
-              <input type="radio" name="period" id="monthly" />
-              <input type="radio" name="period" id="yearly" checked />
+              <label
+                for="monthly"
+                class="toggle-switch-text toggle-switch-text--left"
+                >Monthly</label
+              >
+              <label
+                for="yearly"
+                class="toggle-switch-text toggle-switch-text--right"
+                >Yearly</label
+              >
+              <div class="toggle-switch toggle-switch--right">
+                <input type="radio" name="period" id="monthly" />
+                <input type="radio" name="period" id="yearly" checked />
+              </div>
             </div>
-          </div>
-          <ul class="pricings-list">
-            <li class="pricing-plan">
-              <div class="pricing-plan__title">
-                <svg
-                  class="pricing-plan__title-icon"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18.8008 9.91016C17.6708 9.91016 16.6608 10.4602 16.0308 11.3002C15.4008 10.4602 14.3908 9.91016 13.2608 9.91016C11.3508 9.91016 9.80078 11.4702 9.80078 13.3902C9.80078 14.1302 9.92078 14.8202 10.1208 15.4502C11.1008 18.5602 14.1408 20.4302 15.6408 20.9402C15.8508 21.0102 16.2008 21.0102 16.4108 20.9402C17.9108 20.4302 20.9508 18.5702 21.9308 15.4502C22.1408 14.8102 22.2508 14.1302 22.2508 13.3902C22.2608 11.4702 20.7108 9.91016 18.8008 9.91016Z"
-                  />
-                  <path
-                    d="M20.75 8.34156C20.75 8.57156 20.52 8.72156 20.3 8.66156C18.95 8.31156 17.47 8.60156 16.35 9.40156C16.13 9.56156 15.83 9.56156 15.62 9.40156C14.83 8.82156 13.87 8.50156 12.86 8.50156C10.28 8.50156 8.18 10.6116 8.18 13.2116C8.18 16.0316 9.53 18.1416 10.89 19.5516C10.96 19.6216 10.9 19.7416 10.81 19.7016C8.08 18.7716 2 14.9116 2 8.34156C2 5.44156 4.33 3.10156 7.21 3.10156C8.92 3.10156 10.43 3.92156 11.38 5.19156C12.34 3.92156 13.85 3.10156 15.55 3.10156C18.42 3.10156 20.75 5.44156 20.75 8.34156Z"
-                  />
-                </svg>
-                <p class="pricing-plan__title-text">Free</p>
-              </div>
-              <p class="pricing-plan__description">
-                Perfect plan to get started
-              </p>
-              <div class="pricing-plan__price">
-                <span class="pricing-plan__amount">$0</span>
-                <span class="pricing-plan__period">/year</span>
-              </div>
-              <p class="pricing-plan__details">
-                A free plan grants you access to some cool features of Spend.In.
-              </p>
-              <ul class="pricing-plan__features-list">
-                <li class="pricing-plan__feature">Sync across device</li>
-                <li class="pricing-plan__feature">5 workspace</li>
-                <li class="pricing-plan__feature">Collaborate with 5 user</li>
-                <li
-                  class="pricing-plan__feature pricing-plan__feature--disabled"
-                >
-                  Sharing permission
-                </li>
-                <li
-                  class="pricing-plan__feature pricing-plan__feature--disabled"
-                >
-                  Admin tools
-                </li>
-                <li
-                  class="pricing-plan__feature pricing-plan__feature--disabled"
-                >
-                  100+ integrations
-                </li>
-              </ul>
-              <button class="pricing-plan__button btn btn--lg btn--primary">
-                Get Your Free Plan
-              </button>
-            </li>
-            <li class="pricing-plan pricing-plan--popular">
-              <div class="pricing-plan__title">
-                <svg
-                  class="pricing-plan__title-icon"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 22H7C6.59 22 6.25 21.66 6.25 21.25C6.25 20.84 6.59 20.5 7 20.5H17C17.41 20.5 17.75 20.84 17.75 21.25C17.75 21.66 17.41 22 17 22Z"
-                  />
-                  <path
-                    d="M20.3502 5.51906L16.3502 8.37906C15.8202 8.75906 15.0602 8.52906 14.8302 7.91906L12.9402 2.87906C12.6202 2.00906 11.3902 2.00906 11.0702 2.87906L9.17022 7.90906C8.94022 8.52906 8.19022 8.75906 7.66022 8.36906L3.66022 5.50906C2.86022 4.94906 1.80022 5.73906 2.13022 6.66906L6.29022 18.3191C6.43022 18.7191 6.81022 18.9791 7.23022 18.9791H16.7602C17.1802 18.9791 17.5602 18.7091 17.7002 18.3191L21.8602 6.66906C22.2002 5.73906 21.1402 4.94906 20.3502 5.51906ZM14.5002 14.7491H9.50022C9.09022 14.7491 8.75022 14.4091 8.75022 13.9991C8.75022 13.5891 9.09022 13.2491 9.50022 13.2491H14.5002C14.9102 13.2491 15.2502 13.5891 15.2502 13.9991C15.2502 14.4091 14.9102 14.7491 14.5002 14.7491Z"
-                  />
-                </svg>
-                <p class="pricing-plan__title-text">Pro</p>
-              </div>
-              <p class="pricing-plan__description">
-                Perfect plan for professionals!
-              </p>
-              <div class="pricing-plan__price">
-                <span class="pricing-plan__amount">$50</span>
-                <span class="pricing-plan__period">/year</span>
-              </div>
-              <p class="pricing-plan__details">
-                For professional only! Start arranging your expenses with our
-                best templates.
-              </p>
-              <ul class="pricing-plan__features-list">
-                <li class="pricing-plan__feature">Everything in Free Plan</li>
-                <li class="pricing-plan__feature">Unlimited workspace</li>
-                <li class="pricing-plan__feature">Collaborative workspace</li>
-                <li class="pricing-plan__feature">Sharing permission</li>
-                <li class="pricing-plan__feature">Admin tools</li>
-                <li class="pricing-plan__feature">100+ integrations</li>
-              </ul>
-              <button class="pricing-plan__button btn btn--lg btn--primary">
-                Get Your Free Plan
-              </button>
-            </li>
-            <li class="pricing-plan">
-              <div class="pricing-plan__title">
-                <svg
-                  class="pricing-plan__title-icon"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.31994 13.2814H12.4099V20.4814C12.4099 21.5414 13.7299 22.0414 14.4299 21.2414L21.9999 12.6414C22.6599 11.8914 22.1299 10.7214 21.1299 10.7214H18.0399V3.52143C18.0399 2.46143 16.7199 1.96143 16.0199 2.76143L8.44994 11.3614C7.79994 12.1114 8.32994 13.2814 9.31994 13.2814Z"
-                  />
-                  <path
-                    d="M8.5 4.75H1.5C1.09 4.75 0.75 4.41 0.75 4C0.75 3.59 1.09 3.25 1.5 3.25H8.5C8.91 3.25 9.25 3.59 9.25 4C9.25 4.41 8.91 4.75 8.5 4.75Z"
-                  />
-                  <path
-                    d="M7.5 20.75H1.5C1.09 20.75 0.75 20.41 0.75 20C0.75 19.59 1.09 19.25 1.5 19.25H7.5C7.91 19.25 8.25 19.59 8.25 20C8.25 20.41 7.91 20.75 7.5 20.75Z"
-                  />
-                  <path
-                    d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z"
-                  />
-                </svg>
-                <p class="pricing-plan__title-text">Ultimate</p>
-              </div>
-              <p class="pricing-plan__description">
-                Best suits for great company!
-              </p>
-              <div class="pricing-plan__price">
-                <span class="pricing-plan__amount">$139</span>
-                <span class="pricing-plan__period">/year</span>
-              </div>
-              <p class="pricing-plan__details">
-                If you a finance manager at big company, this plan is a perfect
-                match.
-              </p>
-              <ul class="pricing-plan__features-list">
-                <li class="pricing-plan__feature">Everything in Free Plan</li>
-                <li class="pricing-plan__feature">Unlimited workspace</li>
-                <li class="pricing-plan__feature">Collaborative workspace</li>
-                <li class="pricing-plan__feature">Sharing permission</li>
-                <li class="pricing-plan__feature">Admin tools</li>
-                <li class="pricing-plan__feature">100+ integrations</li>
-              </ul>
-              <button class="pricing-plan__button btn btn--lg btn--primary">
-                Get Your Free Plan
-              </button>
-            </li>
-          </ul>
-        </main>
+            <ul class="pricings-list">
+              <li class="pricing-plan">
+                <div class="pricing-plan__title">
+                  <svg
+                    class="pricing-plan__title-icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.8008 9.91016C17.6708 9.91016 16.6608 10.4602 16.0308 11.3002C15.4008 10.4602 14.3908 9.91016 13.2608 9.91016C11.3508 9.91016 9.80078 11.4702 9.80078 13.3902C9.80078 14.1302 9.92078 14.8202 10.1208 15.4502C11.1008 18.5602 14.1408 20.4302 15.6408 20.9402C15.8508 21.0102 16.2008 21.0102 16.4108 20.9402C17.9108 20.4302 20.9508 18.5702 21.9308 15.4502C22.1408 14.8102 22.2508 14.1302 22.2508 13.3902C22.2608 11.4702 20.7108 9.91016 18.8008 9.91016Z"
+                    />
+                    <path
+                      d="M20.75 8.34156C20.75 8.57156 20.52 8.72156 20.3 8.66156C18.95 8.31156 17.47 8.60156 16.35 9.40156C16.13 9.56156 15.83 9.56156 15.62 9.40156C14.83 8.82156 13.87 8.50156 12.86 8.50156C10.28 8.50156 8.18 10.6116 8.18 13.2116C8.18 16.0316 9.53 18.1416 10.89 19.5516C10.96 19.6216 10.9 19.7416 10.81 19.7016C8.08 18.7716 2 14.9116 2 8.34156C2 5.44156 4.33 3.10156 7.21 3.10156C8.92 3.10156 10.43 3.92156 11.38 5.19156C12.34 3.92156 13.85 3.10156 15.55 3.10156C18.42 3.10156 20.75 5.44156 20.75 8.34156Z"
+                    />
+                  </svg>
+                  <p class="pricing-plan__title-text">Free</p>
+                </div>
+                <p class="pricing-plan__description">
+                  Perfect plan to get started
+                </p>
+                <div class="pricing-plan__price">
+                  <span class="pricing-plan__amount">$0</span>
+                  <span class="pricing-plan__period">/year</span>
+                </div>
+                <p class="pricing-plan__details">
+                  A free plan grants you access to some cool features of
+                  Spend.In.
+                </p>
+                <ul class="pricing-plan__features-list">
+                  <li class="pricing-plan__feature">Sync across device</li>
+                  <li class="pricing-plan__feature">5 workspace</li>
+                  <li class="pricing-plan__feature">Collaborate with 5 user</li>
+                  <li
+                    class="pricing-plan__feature pricing-plan__feature--disabled"
+                  >
+                    Sharing permission
+                  </li>
+                  <li
+                    class="pricing-plan__feature pricing-plan__feature--disabled"
+                  >
+                    Admin tools
+                  </li>
+                  <li
+                    class="pricing-plan__feature pricing-plan__feature--disabled"
+                  >
+                    100+ integrations
+                  </li>
+                </ul>
+                <button class="pricing-plan__button btn btn--lg btn--primary">
+                  Get Your Free Plan
+                </button>
+              </li>
+              <li class="pricing-plan pricing-plan--popular">
+                <div class="pricing-plan__title">
+                  <svg
+                    class="pricing-plan__title-icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 22H7C6.59 22 6.25 21.66 6.25 21.25C6.25 20.84 6.59 20.5 7 20.5H17C17.41 20.5 17.75 20.84 17.75 21.25C17.75 21.66 17.41 22 17 22Z"
+                    />
+                    <path
+                      d="M20.3502 5.51906L16.3502 8.37906C15.8202 8.75906 15.0602 8.52906 14.8302 7.91906L12.9402 2.87906C12.6202 2.00906 11.3902 2.00906 11.0702 2.87906L9.17022 7.90906C8.94022 8.52906 8.19022 8.75906 7.66022 8.36906L3.66022 5.50906C2.86022 4.94906 1.80022 5.73906 2.13022 6.66906L6.29022 18.3191C6.43022 18.7191 6.81022 18.9791 7.23022 18.9791H16.7602C17.1802 18.9791 17.5602 18.7091 17.7002 18.3191L21.8602 6.66906C22.2002 5.73906 21.1402 4.94906 20.3502 5.51906ZM14.5002 14.7491H9.50022C9.09022 14.7491 8.75022 14.4091 8.75022 13.9991C8.75022 13.5891 9.09022 13.2491 9.50022 13.2491H14.5002C14.9102 13.2491 15.2502 13.5891 15.2502 13.9991C15.2502 14.4091 14.9102 14.7491 14.5002 14.7491Z"
+                    />
+                  </svg>
+                  <p class="pricing-plan__title-text">Pro</p>
+                </div>
+                <p class="pricing-plan__description">
+                  Perfect plan for professionals!
+                </p>
+                <div class="pricing-plan__price">
+                  <span class="pricing-plan__amount">$50</span>
+                  <span class="pricing-plan__period">/year</span>
+                </div>
+                <p class="pricing-plan__details">
+                  For professional only! Start arranging your expenses with our
+                  best templates.
+                </p>
+                <ul class="pricing-plan__features-list">
+                  <li class="pricing-plan__feature">Everything in Free Plan</li>
+                  <li class="pricing-plan__feature">Unlimited workspace</li>
+                  <li class="pricing-plan__feature">Collaborative workspace</li>
+                  <li class="pricing-plan__feature">Sharing permission</li>
+                  <li class="pricing-plan__feature">Admin tools</li>
+                  <li class="pricing-plan__feature">100+ integrations</li>
+                </ul>
+                <button class="pricing-plan__button btn btn--lg btn--primary">
+                  Get Your Free Plan
+                </button>
+              </li>
+              <li class="pricing-plan">
+                <div class="pricing-plan__title">
+                  <svg
+                    class="pricing-plan__title-icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.31994 13.2814H12.4099V20.4814C12.4099 21.5414 13.7299 22.0414 14.4299 21.2414L21.9999 12.6414C22.6599 11.8914 22.1299 10.7214 21.1299 10.7214H18.0399V3.52143C18.0399 2.46143 16.7199 1.96143 16.0199 2.76143L8.44994 11.3614C7.79994 12.1114 8.32994 13.2814 9.31994 13.2814Z"
+                    />
+                    <path
+                      d="M8.5 4.75H1.5C1.09 4.75 0.75 4.41 0.75 4C0.75 3.59 1.09 3.25 1.5 3.25H8.5C8.91 3.25 9.25 3.59 9.25 4C9.25 4.41 8.91 4.75 8.5 4.75Z"
+                    />
+                    <path
+                      d="M7.5 20.75H1.5C1.09 20.75 0.75 20.41 0.75 20C0.75 19.59 1.09 19.25 1.5 19.25H7.5C7.91 19.25 8.25 19.59 8.25 20C8.25 20.41 7.91 20.75 7.5 20.75Z"
+                    />
+                    <path
+                      d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z"
+                    />
+                  </svg>
+                  <p class="pricing-plan__title-text">Ultimate</p>
+                </div>
+                <p class="pricing-plan__description">
+                  Best suits for great company!
+                </p>
+                <div class="pricing-plan__price">
+                  <span class="pricing-plan__amount">$139</span>
+                  <span class="pricing-plan__period">/year</span>
+                </div>
+                <p class="pricing-plan__details">
+                  If you a finance manager at big company, this plan is a
+                  perfect match.
+                </p>
+                <ul class="pricing-plan__features-list">
+                  <li class="pricing-plan__feature">Everything in Free Plan</li>
+                  <li class="pricing-plan__feature">Unlimited workspace</li>
+                  <li class="pricing-plan__feature">Collaborative workspace</li>
+                  <li class="pricing-plan__feature">Sharing permission</li>
+                  <li class="pricing-plan__feature">Admin tools</li>
+                  <li class="pricing-plan__feature">100+ integrations</li>
+                </ul>
+                <button class="pricing-plan__button btn btn--lg btn--primary">
+                  Get Your Free Plan
+                </button>
+              </li>
+            </ul>
+          </main>
+        </div>
       </section>
 
       <section
         class="cta-section home-page__section home-page__section--left-align"
       >
-        <header class="cta-section__header">
-          <h2 class="accessible-hidden">Download</h2>
-          <p class="heading-tertiary">Download now!</p>
-          <p class="heading-secondary cta-section__heading-secondary">
-            Start Track Your Business Expenses Today
-          </p>
-        </header>
-        <main class="cta-section__main">
-          <p class="home-page__section-description cta-section__description">
-            Are you ready to make your business more organized? Download
-            Spend.In now!
-          </p>
-          <button class="btn btn--primary btn--lg">Get a Free Demo</button>
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="img/dashboard_spending.png"
-            />
-            <img
-              class="cta-section__image"
-              src="img/mobile_dashboard_spending.png"
-              alt="Dashboard spending statistics"
-            />
-          </picture>
-        </main>
+        <div class="home-page__section-content">
+          <header class="cta-section__header">
+            <h2 class="accessible-hidden">Download</h2>
+            <p class="heading-tertiary">Download now!</p>
+            <p class="heading-secondary cta-section__heading-secondary">
+              Start Track Your Business Expenses Today
+            </p>
+          </header>
+          <main class="cta-section__main">
+            <p class="home-page__section-description cta-section__description">
+              Are you ready to make your business more organized? Download
+              Spend.In now!
+            </p>
+            <button class="btn btn--primary btn--lg">Get a Free Demo</button>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="img/dashboard_spending.png"
+              />
+              <img
+                class="cta-section__image"
+                src="img/mobile_dashboard_spending.png"
+                alt="Dashboard spending statistics"
+              />
+            </picture>
+          </main>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__top">
-        <div class="footer__company-info">
-          <div class="brand">
-            <svg
-              class="brand__logo"
-              viewBox="0 0 21 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.5386 21.4371C13.3904 21.5854 13.2144 21.703 13.0208 21.7833C12.8271 21.8635 12.6195 21.9048 12.4099 21.9048C12.2003 21.9048 11.9927 21.8635 11.799 21.7833C11.6053 21.703 11.4294 21.5854 11.2812 21.4371L2.09921 12.2566C0.774913 10.9053 0.0374108 9.08593 0.0469667 7.19391C0.0565226 5.30188 0.812364 3.49008 2.15024 2.1522C3.48812 0.814317 5.29993 0.0584758 7.19195 0.0489198C9.08398 0.0393639 10.9033 0.776866 12.2547 2.10116L18.0578 7.90427C18.3563 8.20439 18.5235 8.61083 18.5224 9.03418C18.5213 9.45752 18.3521 9.8631 18.052 10.1617C17.7518 10.4603 17.3454 10.6274 16.9221 10.6263C16.4987 10.6252 16.0931 10.456 15.7945 10.1559L9.99869 4.35277C9.24993 3.60401 8.23439 3.18336 7.17548 3.18336C6.11657 3.18336 5.10103 3.60401 4.35227 4.35277C3.6035 5.10153 3.18285 6.11707 3.18285 7.17598C3.18285 8.23489 3.6035 9.25043 4.35227 9.99919L13.5342 19.1812C13.8338 19.4798 14.0026 19.8852 14.0034 20.3082C14.0042 20.7313 13.837 21.1373 13.5386 21.4371Z"
-              />
-              <path
-                d="M18.0012 25.8997C16.6533 27.2441 14.8272 27.9992 12.9234 27.9992C11.0197 27.9992 9.19358 27.2441 7.84571 25.8997L2.04986 20.0966C1.88902 19.9515 1.75941 19.7751 1.66891 19.5784C1.57841 19.3816 1.52892 19.1684 1.52346 18.9519C1.51799 18.7353 1.55667 18.5199 1.63713 18.3188C1.71758 18.1177 1.83814 17.9351 1.99145 17.7821C2.14477 17.6291 2.32762 17.5089 2.52889 17.4288C2.73015 17.3487 2.94561 17.3105 3.16214 17.3163C3.37867 17.3222 3.59173 17.3721 3.78835 17.463C3.98497 17.5539 4.16104 17.6838 4.30582 17.8449L10.1017 23.6481C10.8516 24.388 11.8637 24.8013 12.9172 24.7977C13.9707 24.7942 14.98 24.3741 15.7249 23.6292C16.4698 22.8843 16.8899 21.875 16.8934 20.8215C16.8969 19.768 16.4837 18.7559 15.7437 18.006L6.56177 8.81966C6.26242 8.52031 6.09425 8.1143 6.09425 7.69096C6.09425 7.26761 6.26242 6.8616 6.56177 6.56225C6.86112 6.2629 7.26713 6.09473 7.69048 6.09473C8.11382 6.09473 8.51983 6.2629 8.81918 6.56225L18.0012 15.7442C19.346 17.0919 20.1013 18.918 20.1013 20.8219C20.1013 22.7258 19.346 24.552 18.0012 25.8997Z"
-              />
-            </svg>
-            <span class="brand__name">Spend.In</span>
+      <div class="footer-content">
+        <div class="footer__top">
+          <div class="footer__company-info">
+            <div class="brand">
+              <svg
+                class="brand__logo"
+                viewBox="0 0 21 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5386 21.4371C13.3904 21.5854 13.2144 21.703 13.0208 21.7833C12.8271 21.8635 12.6195 21.9048 12.4099 21.9048C12.2003 21.9048 11.9927 21.8635 11.799 21.7833C11.6053 21.703 11.4294 21.5854 11.2812 21.4371L2.09921 12.2566C0.774913 10.9053 0.0374108 9.08593 0.0469667 7.19391C0.0565226 5.30188 0.812364 3.49008 2.15024 2.1522C3.48812 0.814317 5.29993 0.0584758 7.19195 0.0489198C9.08398 0.0393639 10.9033 0.776866 12.2547 2.10116L18.0578 7.90427C18.3563 8.20439 18.5235 8.61083 18.5224 9.03418C18.5213 9.45752 18.3521 9.8631 18.052 10.1617C17.7518 10.4603 17.3454 10.6274 16.9221 10.6263C16.4987 10.6252 16.0931 10.456 15.7945 10.1559L9.99869 4.35277C9.24993 3.60401 8.23439 3.18336 7.17548 3.18336C6.11657 3.18336 5.10103 3.60401 4.35227 4.35277C3.6035 5.10153 3.18285 6.11707 3.18285 7.17598C3.18285 8.23489 3.6035 9.25043 4.35227 9.99919L13.5342 19.1812C13.8338 19.4798 14.0026 19.8852 14.0034 20.3082C14.0042 20.7313 13.837 21.1373 13.5386 21.4371Z"
+                />
+                <path
+                  d="M18.0012 25.8997C16.6533 27.2441 14.8272 27.9992 12.9234 27.9992C11.0197 27.9992 9.19358 27.2441 7.84571 25.8997L2.04986 20.0966C1.88902 19.9515 1.75941 19.7751 1.66891 19.5784C1.57841 19.3816 1.52892 19.1684 1.52346 18.9519C1.51799 18.7353 1.55667 18.5199 1.63713 18.3188C1.71758 18.1177 1.83814 17.9351 1.99145 17.7821C2.14477 17.6291 2.32762 17.5089 2.52889 17.4288C2.73015 17.3487 2.94561 17.3105 3.16214 17.3163C3.37867 17.3222 3.59173 17.3721 3.78835 17.463C3.98497 17.5539 4.16104 17.6838 4.30582 17.8449L10.1017 23.6481C10.8516 24.388 11.8637 24.8013 12.9172 24.7977C13.9707 24.7942 14.98 24.3741 15.7249 23.6292C16.4698 22.8843 16.8899 21.875 16.8934 20.8215C16.8969 19.768 16.4837 18.7559 15.7437 18.006L6.56177 8.81966C6.26242 8.52031 6.09425 8.1143 6.09425 7.69096C6.09425 7.26761 6.26242 6.8616 6.56177 6.56225C6.86112 6.2629 7.26713 6.09473 7.69048 6.09473C8.11382 6.09473 8.51983 6.2629 8.81918 6.56225L18.0012 15.7442C19.346 17.0919 20.1013 18.918 20.1013 20.8219C20.1013 22.7258 19.346 24.552 18.0012 25.8997Z"
+                />
+              </svg>
+              <span class="brand__name">Spend.In</span>
+            </div>
+            <p class="footer__company-mission">
+              Data visualization, and expense management for your business.
+            </p>
           </div>
-          <p class="footer__company-mission">
-            Data visualization, and expense management for your business.
-          </p>
+          <ul class="footer__links">
+            <li class="links product-links">
+              <h3 class="links__heading">Product</h3>
+              <ul class="links__list">
+                <li><a class="link" href="#">Digital Invoice</a></li>
+                <li><a class="link" href="#">Insights</a></li>
+                <li><a class="link" href="#">Reimbursements</a></li>
+                <li><a class="link" href="#">Virtual Assistant</a></li>
+                <li><a class="link" href="#">Artificial Intelligence</a></li>
+              </ul>
+            </li>
+            <li class="links company-links">
+              <h3 class="links__heading">Company</h3>
+              <ul class="links__list">
+                <li><a class="link" href="#">About Us</a></li>
+                <li><a class="link" href="#">Newsletters</a></li>
+                <li><a class="link" href="#">Our Partners</a></li>
+                <li><a class="link" href="#">Career</a></li>
+                <li><a class="link" href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="links resources-links">
+              <h3 class="links__heading">Resources</h3>
+              <ul class="links__list">
+                <li><a class="link" href="#">Blog</a></li>
+                <li><a class="link" href="#">Pricing</a></li>
+                <li><a class="link" href="#">FAQ</a></li>
+                <li><a class="link" href="#">Events</a></li>
+                <li><a class="link" href="#">Ebook & Guide</a></li>
+              </ul>
+            </li>
+            <li class="links follow-us-links">
+              <h3 class="links__heading">Follow Us</h3>
+              <ul class="links__list">
+                <li><a class="link" href="#">LinkedIn</a></li>
+                <li><a class="link" href="#">Twitter</a></li>
+                <li><a class="link" href="#">Instagram</a></li>
+                <li><a class="link" href="#">Facebook</a></li>
+                <li><a class="link" href="#">YouTube</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul class="footer__links">
-          <li class="links product-links">
-            <h3 class="links__heading">Product</h3>
-            <ul class="links__list">
-              <li><a class="link" href="#">Digital Invoice</a></li>
-              <li><a class="link" href="#">Insights</a></li>
-              <li><a class="link" href="#">Reimbursements</a></li>
-              <li><a class="link" href="#">Virtual Assistant</a></li>
-              <li><a class="link" href="#">Artificial Intelligence</a></li>
-            </ul>
-          </li>
-          <li class="links company-links">
-            <h3 class="links__heading">Company</h3>
-            <ul class="links__list">
-              <li><a class="link" href="#">About Us</a></li>
-              <li><a class="link" href="#">Newsletters</a></li>
-              <li><a class="link" href="#">Our Partners</a></li>
-              <li><a class="link" href="#">Career</a></li>
-              <li><a class="link" href="#">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="links resources-links">
-            <h3 class="links__heading">Resources</h3>
-            <ul class="links__list">
-              <li><a class="link" href="#">Blog</a></li>
-              <li><a class="link" href="#">Pricing</a></li>
-              <li><a class="link" href="#">FAQ</a></li>
-              <li><a class="link" href="#">Events</a></li>
-              <li><a class="link" href="#">Ebook & Guide</a></li>
-            </ul>
-          </li>
-          <li class="links follow-us-links">
-            <h3 class="links__heading">Follow Us</h3>
-            <ul class="links__list">
-              <li><a class="link" href="#">LinkedIn</a></li>
-              <li><a class="link" href="#">Twitter</a></li>
-              <li><a class="link" href="#">Instagram</a></li>
-              <li><a class="link" href="#">Facebook</a></li>
-              <li><a class="link" href="#">YouTube</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__bottom">
-        <ul class="footer__policies">
-          <li class="footer__policy">
-            <a class="footer__policy-link" href="#">Privacy Policy</a>
-          </li>
-          <li class="footer__policy">
-            <a class="footer__policy-link" href="#">Terms & Conditions</a>
-          </li>
-          <li class="footer__policy">
-            <a class="footer__policy-link" href="#">Cookie Policy</a>
-          </li>
-        </ul>
-        <p class="copyright">&copy; Picko Lab 2022</p>
+        <div class="footer__bottom">
+          <ul class="footer__policies">
+            <li class="footer__policy">
+              <a class="footer__policy-link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__policy">
+              <a class="footer__policy-link" href="#">Terms & Conditions</a>
+            </li>
+            <li class="footer__policy">
+              <a class="footer__policy-link" href="#">Cookie Policy</a>
+            </li>
+          </ul>
+          <p class="copyright">&copy; Picko Lab 2022</p>
+        </div>
       </div>
     </footer>
   </body>
