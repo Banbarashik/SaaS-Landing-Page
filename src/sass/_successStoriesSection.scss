@@ -59,6 +59,7 @@
 
   flex-basis: var(--advantages-flex-basis);
   margin-bottom: var(--advantages-margin-bottom);
+  color: var(--dark-text);
 
   &__toggle-with-buttons {
     margin-bottom: var(--toggleWithButtons-margin-bottom);
@@ -69,13 +70,11 @@
 
     font-size: var(--heading-font-size);
     font-weight: $text-bold;
-    color: $color-secondary-700;
   }
 
   &__list {
     font-size: var(--list-font-size);
     font-weight: $text-medium;
-    color: $color-secondary-700;
   }
 
   &__list-item {

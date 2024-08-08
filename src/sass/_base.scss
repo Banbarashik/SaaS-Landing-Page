@@ -219,7 +219,7 @@ $rounded-full: 9999px;
   // light - less contrasting colors
   // dark - higher contrasting colors
   --light-text: #{$color-secondary-400};
-  --dark-text: #{$color-secondary-900};
+  --dark-text: #{$color-secondary-700};
 
   --light-bg: #{$color-primary-0};
   --dark-bg: #{$color-secondary-700};
@@ -274,6 +274,14 @@ body {
 }
 
 :nth-child(odd of .home-page__section) {
+  --light-text: #{$color-secondary-300};
+  --dark-text: #{$color-primary-0};
+
+  // TODO think if it's better to set bg color on children elements and then change the global prop here
+  background-color: var(--dark-bg);
+}
+
+.dark-theme .home-page__section {
   --light-text: #{$color-secondary-300};
   --dark-text: #{$color-primary-0};
 
@@ -461,7 +469,7 @@ img {
 
     &:focus {
       @include inset-outline($color-secondary-300);
-      color: $color-secondary-500;
+      // color: $color-secondary-500; temporary fix so that the text doesn't merge into the dark bg
     }
     &:hover {
       background-color: $color-primary-0;
@@ -569,6 +577,7 @@ img {
     font-size: var(--title-font-size);
     font-weight: $text-semibold;
     margin-bottom: $spacing-md;
+    color: var(--dark-text);
   }
   &__description {
     font-size: var(--description-font-size);
